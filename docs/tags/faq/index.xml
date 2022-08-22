@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>faq on cbrtl</title>
+    <link>https://cbrtl.github.io/tags/faq/</link>
+    <description>Recent content in faq on cbrtl</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 28 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cbrtl.github.io/tags/faq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FAQ</title>
+      <link>https://cbrtl.github.io/posts/faq/</link>
+      <pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cbrtl.github.io/posts/faq/</guid>
+      <description>Before you ask...</description>
+      <content:encoded><![CDATA[<h3 id="why-the-weird-name">Why the weird name?</h3>
+<p>It comes from the C stdlib function <a href="https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/cbrt-cbrtf-cbrtl?view=msvc-160">cbrtl</a>.</p>
+<p>But why does the C standard library have these weird names?</p>
+<p>Well there is a little bit of trivia to it, in older versions of ANSI C, only the first 6 characters of an
+identifier were considered in the compiler.
+So most standard library functions in C have odd names like <code>strstr</code>, <code>strtod</code>, <code>alloca</code> and so on&hellip;</p>
+<p>Oh, and also because every other GitHub organization name was taken&hellip;</p>
+<h3 id="why-conjure-a-community-out-of-nowhere">Why conjure a community out of nowhere?</h3>
+<p>Some of my acquaintances from other colleges have clubs, groups and spaces dedicated to open source and software
+development. Couple of days ago, I came across IIT Roorkee&rsquo;s <a href="https://sdslabs.co/">SDSLabs </a> and PES Uni&rsquo;s <a href="https://pesos.github.io/">PES Open Source</a>.  After looking into it
+a bit more, turns out most colleges these days have their own groups for related stuff.</p>
+<p>We thought it would be fun to have a similar group of like minded developers from our college.</p>
+<p>Is it too ambitious? We won&rsquo;t know until we don&rsquo;t try.</p>
+<h3 id="what-is-it-that-cbrtl-aims-to-do-exactly">What is it that cbrtl aims to do exactly?</h3>
+<p>Good question. We don&rsquo;t have a concrete answer because the direction we end up going in will be decided by the fellow community members. That said, I&rsquo;ll throw in most of what we&rsquo;ve gathered from our goal so far, and you decide if you like the sound of it.</p>
+<ul>
+<li>Contributing to Open Source.</li>
+<li>Forming teams for hackathons and CP events.</li>
+<li>Collaborating on projects together.</li>
+<li>Showcasing projects from individuals and teams.</li>
+<li>Code reviews and educational blogs (ones that haven&rsquo;t been done to death before&hellip;).</li>
+</ul>
+<h3 id="what-platforms-are-you-present-on">What platforms are you present on?</h3>
+<p>For now, our presence is limited to <a href="https://discord.gg/3qry3u569v">Discord</a> and the <a href="https://github.com/cbrtl">GitHub organization</a>.
+Mostly because these are very solid platforms and we are tight on the number of people moderating.</p>
+<h3 id="what-skills-do-i-need">What skills do I need?</h3>
+<p>Not much.</p>
+<ul>
+<li>The ability to code.</li>
+<li>The willingness to learn.</li>
+<li>Basic knowledge of Git and GitHub.</li>
+</ul>
+<p>Even 1 and 3 are optional.</p>
+<h3 id="where-do-i-join">Where do I join?</h3>
+<p>As mentioned earlier,  you can join the <a href="https://discord.gg/3qry3u569v">Discord</a> and the <a href="https://github.com/cbrtl">GitHub organization</a>.
+More info on <a href="/">Getting started with cbrtl and Open Source</a>.</p>
+<h3 id="is-there-anything-i-can-do-to-help">Is there anything I can do to help?</h3>
+<p>Yes. <del>PayTM me some cash</del>. <em>ahem</em>, you can volunteer to help us keep the community thriving. We are looking for volunteers who can help with:</p>
+<ul>
+<li><strong>Front end development</strong>: To touch up the current blog site.</li>
+<li><strong>Moderation</strong>: To manage the discord server and the GitHub org.</li>
+<li><strong>Code reviews</strong>: To mandate some code quality for those who demand it.</li>
+<li><strong>Technical Writers</strong>: To aid in writing blog posts.</li>
+<li><strong>Editors</strong>: A second pair of eyes helps catch common mistakes in writing :)</li>
+</ul>
+<h3 id="is-this-an-official-college-club">Is this an official college club?</h3>
+<p>Nope, not yet. This is an entirely independent student initiative that is looking for active participation.
+This is a mostly decentralized group of like-minded programmers.</p>
+<h3 id="will-there-be-exciting-cash-prizes">Will there be exciting cash prizes?</h3>
+<p>No. I want to be upfront about it. Those of us who end up forming hackathon teams may earn some on their own,
+but we want to keep this community closeted to people who code because they like making fun stuff. Of course,
+that is not to say we discredit any other motivation you may have.</p>
+<p>As such, we won&rsquo;t conduct any competitions with cash prizes for the foreseeable future.
+Other clubs (which are official) in our college do a great job at that regardless.</p>
+<h3 id="what-kinds-of-events-can-i-expect">What kinds of events can I expect?</h3>
+<p>Other than project showcases and on-demand code review sessions, we are open to other ideas.</p>
+<p>Not as much of an &rsquo;event&rsquo; but you can expect group projects that will (hopefully) be active throughout.</p>
+<h3 id="i-have-some-other-questions-where-can-i-ask">I have some other questions, where can I ask?</h3>
+<p>You&rsquo;re more than welcome on the mailing list, or in the discord server 😁</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

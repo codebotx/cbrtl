@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>general on cbrtl</title>
+    <link>https://cbrtl.github.io/tags/general/</link>
+    <description>Recent content in general on cbrtl</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 27 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cbrtl.github.io/tags/general/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello world!</title>
+      <link>https://cbrtl.github.io/posts/what-and-why/</link>
+      <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cbrtl.github.io/posts/what-and-why/</guid>
+      <description>Introducing cbrtl to the world</description>
+      <content:encoded><![CDATA[<h1 id="what-is-cbrtl">What is cbrtl?</h1>
+<p><strong>cbrtl</strong> is an attempt at creating a tight knit group of programmers who like making fun
+stuff and being involved in Open Source development. We are based out of Silicon Institute of
+Technology, Odisha.</p>
+<h2 id="what-do-we-do-here">What do we do here?</h2>
+<p>A lot of stuff, actually!</p>
+<ul>
+<li><strong>Create</strong> <em>fun</em> and <em>unique</em> projects. Either in groups or in isolation.</li>
+<li>Organize community and online <strong>showcases</strong> for group and individual projects.</li>
+<li><strong>Contribute</strong> to Open Source projects both in cbrtl and in other communities.</li>
+<li>Conduct <strong>code reviews</strong> and <strong>JAM</strong>s.</li>
+<li>Share lesser known <strong>resources</strong> to learn.</li>
+<li>Write blog posts about the eccentricities of everyday software. Ones that you wish you&rsquo;d have found
+when starting out.</li>
+</ul>
+<h2 id="what-is-the-end-goal">What is the end goal?</h2>
+<p>Merely to promote Open Source culture and proper software development within our college.</p>
+<h2 id="where-does-cbrtl-operate-from">Where does cbrtl operate from?</h2>
+<p>Primarily, we are a bunch of students from Silicon Institute of Technology, Odisha.
+The idea has been to promote the spirit of open source among our students. That said,
+we are always open to having new members from anywhere.</p>
+<h2 id="how-far-down-the-road-are-we">How far down the road are we?</h2>
+<p>Not that far, the egg has just been laid. As of the time of writing this post, we have just started out. Remember that cbrtl is an <em>attempt</em> at creating a place for people to forge software.
+For the effort to work out, we are looking for active participation from <em>you</em>.</p>
+<h2 id="what-can-i-do">What can I do?</h2>
+<p>Just what you&rsquo;ve been doing so far, but with more people!</p>
+<p>If you have projects that you have already been working on, let us know and we&rsquo;ll put them on the
+cbrtl page for more people to see.
+Note that there is some criteria that projects must qualify, some of these are intentionally vague.
+But as long as you&rsquo;re doing more than following a course or tutorial, it&rsquo;s most likely going to be accepted :)</p>
+<h1 id="volunteering-to-cbrtl">Volunteering to cbrtl</h1>
+<p>We are looking for volunteers for some roles.
+Note however, that there is no strict mandate for responsibilities.
+As long as you&rsquo;re capable of adding <em>something</em> of value, no matter how small, shoot us a message!
+We&rsquo;re looking for some help with:</p>
+<ul>
+<li>
+<p><strong>Code reviewers</strong>: If you have experience contributing to FOSS or writing code for user/developer
+facing products, perhaps you can volunteer and help us out here :)</p>
+</li>
+<li>
+<p><strong>Editors</strong>: We plan on writing frequent blog posts. But both the technical content and the english
+material can use a second pair of eyes to help catch mistakes or inconsistent writing. If you have
+done some technical writing before, you can volunteer for reviewing the content in blog posts!</p>
+</li>
+<li>
+<p><strong>Technical Writers</strong>: If you have experience writing code but are usually on a tight schedule, you
+may be able to join us and share your knowledge. We want to mandate a high quality in our posts, so any
+tutorial/how-to guide that has been done a million times before is generally discouraged. We want
+to avoid redundant topics like &ldquo;How to build a todo app with React&rdquo; and promote posts and dev-logs /
+journals that are fun to read and explore.</p>
+</li>
+<li>
+<p><strong>Frontend devs</strong>: Currently, the cbrtl website is bland and not-so-catchy.
+While minimalism is the core idea, we can definitely use some front-end developers to help keep the UI fresh, responsive and modern.</p>
+</li>
+<li>
+<p><strong>Moderators</strong>: To help keep the community together on discord and github.</p>
+</li>
+</ul>
+<p><strong>NOTE</strong> We do not expect any level of time commitment from volunteers, as long as you can make small
+contributions, we appreciate it. That is what <em>volunteering</em> is after all :)</p>
+<h1 id="the-kind-of-software-we-want-to-write">The kind of software we want to write</h1>
+<p>We firmly believe in re-inventing the wheel.
+Writing software close to the metal helps us closely understand the inner workings of tools we use
+everyday and take for granted.
+While any creative project is welcome, here are some ideas that adhere to the aforementioned:</p>
+<ul>
+<li>Compilers</li>
+<li>Virtual Machines and Interpreters</li>
+<li>Game Engines</li>
+<li>Operating Systems</li>
+<li>Search Engines</li>
+<li>Database engines</li>
+<li>Voxel renderers</li>
+<li>TCP/IP stack</li>
+<li>VCS</li>
+</ul>
+<p>In short, we encourage all kinds of creative projects no matter how basic. But you can expect
+the above group projects to come to life as the community grows. Remember that all of the above
+is also regular software that we tend to take for granted which can be (and has been) written from scratch.</p>
+<h2 id="showcasing-your-project">Showcasing your project</h2>
+<p><a href="https://cbrtl.github.io/posts/project-showcase/">This</a> post has something to say about project showcases, so you can go read up on that.
+If you want to showcase your project on our github org, then reach out to us on discord or the mailing list :)</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

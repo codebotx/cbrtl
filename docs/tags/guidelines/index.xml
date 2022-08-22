@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>guidelines on cbrtl</title>
+    <link>https://cbrtl.github.io/tags/guidelines/</link>
+    <description>Recent content in guidelines on cbrtl</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 28 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cbrtl.github.io/tags/guidelines/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Showcasing your project on cbrtl</title>
+      <link>https://cbrtl.github.io/posts/project-showcase/</link>
+      <pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cbrtl.github.io/posts/project-showcase/</guid>
+      <description>Some things to keep in mind while adding your project</description>
+      <content:encoded><![CDATA[<p>Helloo again.</p>
+<p>This post intends to establish some minor ordinances surrounding project ideas and showcases.
+cbrtl was created with the intent of promoting the spirit of Open Source.
+Often times, some of the most interesting Open Source projects live in lesser known corners of GitHub, gathering dust on a lonesome profile with 3-5 followers and an occasionally active commit graph.</p>
+<p>With cbrtl, we can shine some light on these pieces of software, benefitting both the
+creator/maintainer and the people who can use these projects as reference.</p>
+<p>That said, the word &ldquo;interesting&rdquo; isn&rsquo;t nearly enough to distinguish a project that
+can be showcased from one that is a jotted down YouTube tutorial.
+It is in everyone&rsquo;s benefit to maintain a certain standard and few (lax) rules.</p>
+<h1 id="what-constitutes-showcase-worthy-software">What constitutes showcase-worthy software?</h1>
+<p>Anything that <strong>serves a clear purpose</strong>.</p>
+<p>I have the urge to say &ldquo;anything that <strong>you</strong> create&rdquo;, but this statement leaves a lot of leeway
+for lazy/tutorial projects. The rules will still be rather lax.</p>
+<p>A project can be showcased if it satisfies the following criteria:</p>
+<ul>
+<li>Has a proper github <code>README.md</code></li>
+<li>Is <strong>not</strong> tutorial material. So anything along these lines is generally discouraged:
+<ul>
+<li>&ldquo;todo app in react&rdquo;</li>
+<li>&ldquo;planner app in vue&rdquo;</li>
+<li>&ldquo;terminal tic-tac-toe with C&rdquo;</li>
+<li>and so on&hellip;</li>
+</ul>
+</li>
+<li>Is being actively worked on by it&rsquo;s developer(s).
+It is <strong>OK</strong> even if it&rsquo;s in infancy when the project
+is first showcased.</li>
+<li>Is open to contribution from people.</li>
+<li>Is not a lazy fork (Forks that are some-what different from the parent repos are absolutely okay).</li>
+</ul>
+<p>If you cross out any projects that don&rsquo;t match the above criteria, all that remains is an honest-to-god
+project that could use some publicity :)</p>
+<h2 id="examples">Examples</h2>
+<p>Here&rsquo;s a few examples to show what we mean by &ldquo;showcase-able projects&rdquo;.
+Note that not all of them are from the members of cbrtl, since we&rsquo;re just getting started out.</p>
+<ul>
+<li><a href="https://github.com/karnkaul/LittleEngineVk">levk</a>: A 3D Game engine written in C++ and
+Vulkan. <strong>Author: <a href="https://github.com/karnkaul">karnage</a></strong></li>
+<li><a href="https://aitikgupta.github.io/sociomark/">SocioMark</a>: A social media platform with
+plagiarism and attack-proof authenticity checks for user uploaded content.
+<strong>Author: <a href="https://github.com/aitikgupta">Aitik Gupta</a></strong></li>
+<li><a href="https://github.com/srijan-paul/snap">vyse</a>: A fast, dynamically typed and interpreted programming
+language. <strong>Author: <a href="https://github.com/srijan-paul">srijan_</a></strong> (<em>cough</em> self-plug)</li>
+<li><a href="https://github.com/karnkaul/locc">locc</a>: A C++ utility to count lines of code in a project.
+<strong>Author: <a href="https://github.com/karnkaul">karnage</a></strong></li>
+<li><a href="https://github.com/rxi/lume">lume</a>: A Lua library for gamedev. <strong>Author: <a href="https://github.com/rxi">rxi</a></strong></li>
+</ul>
+<p><strong>NOTE</strong>: Not all future project additions need to be nearly as complex as the projects listed above.</p>
+<p>But there is a common running theme with these that you may have caught on to by now.
+All these projects are really <em>cool</em> but <em>under-represented</em>.
+That right there, is what we&rsquo;re trying to solve.</p>
+<p>We want <em>your</em> projects that you build individually or in teams, to get the recognized in a community and to get feedback from
+reviewers/users.</p>
+<h1 id="getting-your-project-showcased">Getting your project showcased.</h1>
+<p>Wooookay, now we get to the point.
+You have made something, or at least the skeleton of something that will go on to become
+a full fledged project. How do you put your code and product on cbrtl? Heres how.</p>
+<ol>
+<li>Reach out to use either on the mailing list, or on the discord server</li>
+<li>Have the following ready:
+<ul>
+<li>A GitHub repo with a well set-up <code>README</code></li>
+<li>A short/long write-up describing the scope, aim, tech-stack and architecture
+of your project. (Need not be serious at all)</li>
+</ul>
+</li>
+<li>Shoot any moderator with the aforementioned and we&rsquo;ll give you:
+<ul>
+<li>A GitHub repo symlink (<em>symlink?</em>) on the <a href="https://github.com/cbrtl">cbrtl org page</a>.</li>
+<li>A community showcase.</li>
+<li>A blog post referencing the content from your write-up, describing the project.</li>
+<li>Encourage other members to collaborate and contribute.</li>
+</ul>
+</li>
+</ol>
+<p>A good place to start getting involved can be our <a href="https://discord.gg/3qry3u569v">Discord server</a>.</p>
+<h1 id="have-an-idea-want-a-team">Have an idea? Want a team?</h1>
+<p>It is not so uncommon for programmers to get an idea but not have enough
+time commitment (or knowledge) to drive the idea to fruition. If that&rsquo;s how things end up
+for you, then let us know about your ideas and we can see if enough members in the community
+are interested to collaborate.</p>
+<p>We may be able to help turn your solo idea into a collaborative work environment.
+You can choose to have the repo be on the org, or on your GitHub profile.</p>
+<h1 id="closing-with-some-general-thoughts-and-other-goals">Closing with some general thoughts and other goals.</h1>
+<p>In the future, we also want to create teams for <strong>Hackathons</strong> and <strong>Competitive Programming</strong> events
+(I&rsquo;m <strong>not</strong> a fan of the latter personally, but I understand people will have differing opinions).</p>
+<p>As mentioned in the previous post, we are looking for some volunteers in content writing, editing, front-end dev,
+code reviews and moderation.
+If you have any other ideas in general that can help us grow, let us know :)</p>
+<p>Reach out to us if you&rsquo;re a programmer and want to join a community of people who
+like to create.</p>
+<p>What else do I say, we&rsquo;re just getting started out after all.</p>
+<p>Adios.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

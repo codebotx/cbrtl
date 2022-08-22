@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>project on cbrtl</title>
+    <link>https://cbrtl.github.io/tags/project/</link>
+    <description>Recent content in project on cbrtl</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 27 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cbrtl.github.io/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>zuzu</title>
+      <link>https://cbrtl.github.io/posts/zuzu/</link>
+      <pubDate>Mon, 27 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cbrtl.github.io/posts/zuzu/</guid>
+      <description>Zuzu is a static site generator that converts all your markdown files into static htmls pages. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets.</description>
+      <content:encoded><![CDATA[<h1 id="zuzu">Zuzu</h1>
+<blockquote>
+<p>Static Site Generator</p>
+</blockquote>
+<h3 id="zuzu-is-a-minimal-static-site-generator">Zuzu is a minimal static site generator.</h3>
+<p>Zuzu converts all your markdown files into static htmls pages to be rendered quickly. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets. <a href="https://anubhavp.me/blog">This blog</a>, for example, has been written using this generator. This enables noobs like me to write blogs without having to learn a lot of code! It is a very simple and easy to use generator. All you need to do is to write a markdown file and it will be rendered as a page ;) You can create a new page by creating a new markdown file.</p>
+<h2 id="how-does-it-work-">How does it work ?</h2>
+<p>Zuzu parses the markdown file using <em>javascript</em> and renders it as <em>html documents</em>. It then saves the html files in the <code>public</code> folder. The public folder, with <code>index.html</code> file, is the final output of the generator and this can be deployed and hosted in various platforms. This particular blog has been deployed on <a href="https://anubhavp.me/blog/">Github Pages</a>.</p>
+<h3 id="1-create-a-markdown-file">1. Create a markdown file</h3>
+<pre><code># This is a title
+This is a paragraph
+This is another paragraph
+This is a list:
+* Item 1
+* Item 2
+* Item 3
+This is a code block:
+```
+print(&quot;Hello World&quot;)
+```
+This is a table:
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| 1        | 2        | 3        |
+| 4        | 5        | 6        |
+| 7        | 8        | 9        |
+This is a link: [zuzu](https://anubhavp.me/blog/zuzu.html)
+</code></pre>
+<h3 id="2-run-the-generator-and-find-your-blog">2. Run the generator and find your blog</h3>
+<p>Run <code>npm run generate</code> in the console.
+You&rsquo;ll now see the blog in the public folder! Run the index.html file in your browser to see your blog. You may now deploy your site
+to a server.</p>
+<h2 id="the-static-site-generator">The Static Site Generator</h2>
+<h3 id="1-libraries-used">1. Libraries used</h3>
+<ul>
+<li><a href="https://www.npmjs.com/package/markdown-it">MarkdownIt</a> <em>Markdown parser done right.</em></li>
+<li><a href="https://www.npmjs.com/package/markdown-it-anchor">MarkdownItAnchor</a> <em>Header anchors for markdown-it.</em></li>
+<li><a href="https://www.npmjs.com/package/glob">Glob</a> <em>&ldquo;Globs&rdquo; are the patterns you type when you do stuff like ls .js on the command line, or put build/ in a .gitignore file.</em></li>
+<li><a href="https://www.npmjs.com/package/gray-matter">Gray-Matter</a> <em>Parse front-matter from a string or file.</em></li>
+<li><a href="https://npmjs.com/package/mkdirp">Mkdirp</a> <em>Create Dirs if they do not exist.</em></li>
+</ul>
+<h3 id="2-workflow">2. Workflow</h3>
+<p>This is the code for the generator.js.
+The code works in the following way:</p>
+<ol>
+<li><code>fs.readfile() from fs</code> reads all the files from the said directory and stores then in <code>filename</code> using <code>glob</code>. It is a <code>glob</code> that matches all the files in the directory. The <code>file system</code> module allows you to work with the file system on your computer.</li>
+<li><code>gray-matter</code> helps extracting front matter from the a string or file.
+Converts a string with front-matter, like this:</li>
+</ol>
+<pre tabindex="0"><code>    title: Hello
+    slug: home
+    ---
+    &lt;h1&gt;Hello world!&lt;/h1&gt;
+</code></pre><p>Into an object like this:</p>
+<pre><code>{
+content: '&lt;h1&gt;Hello world!&lt;/h1&gt;',
+data: { 
+    title: 'Hello', 
+    slug: 'home' 
+}
+}
+</code></pre>
+<p>It then extracts the front matter and stores it in <code>data</code>. It then stores the content in <code>content</code> and returns the <code>filename</code> to the <code>main()</code> function. It then repeats the process for all the files in the directory.</p>
+<ol start="3">
+<li>
+<p>The <code>main()</code> function then takes in one <code>filename</code> at a time and then parses it through <code>markdownit( ,{markdownitanchor})</code>. <code>markdownit</code> parses the file and converts the markdown content into HTML files. It then creates a <code>html</code> file and writes the parsed content into it. It then saves the <code>html</code> file in the <code>public</code> folder. This process repeats for all the files in the directory.</p>
+</li>
+<li>
+<p>The converted html files are stored in the specified directories then using <code>mkdirp</code>. The <code>index.html</code> file isalready present in the <code>public</code> folder. <code>mkdirp</code> creates the directories if they do not exist.</p>
+</li>
+</ol>
+<h3 id="3-generator-code">3. Generator Code</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">fs</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;fs&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">glob</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;glob&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">matter</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;gray-matter&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">mkdirp</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;mkdirp&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">path</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;path&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">hljs</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;highlight.js&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">MarkdownIt</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;markdown-it&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">markdownItAnchor</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;markdown-it-anchor&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">string</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;string&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">slugify</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s</span> =&gt; <span style="color:#a6e22e">string</span>(<span style="color:#a6e22e">s</span>).<span style="color:#a6e22e">slugify</span>().<span style="color:#a6e22e">toString</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">md</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">MarkdownIt</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">html</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">linkify</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">typographer</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">highlight</span>(<span style="color:#a6e22e">str</span>, <span style="color:#a6e22e">language</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">language</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">hljs</span>.<span style="color:#a6e22e">getLanguage</span>(<span style="color:#a6e22e">language</span>)) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">hljs</span>.<span style="color:#a6e22e">highlight</span>(<span style="color:#a6e22e">str</span>, { <span style="color:#a6e22e">language</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">language</span> }).<span style="color:#a6e22e">value</span>;
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">err</span>) {
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}).<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">markdownItAnchor</span>, { <span style="color:#a6e22e">slugify</span> });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">readFile</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">filename</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rawFile</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">filename</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">parsed</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">matter</span>(<span style="color:#a6e22e">rawFile</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">html</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">md</span>.<span style="color:#a6e22e">render</span>(<span style="color:#a6e22e">parsed</span>.<span style="color:#a6e22e">content</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {...<span style="color:#a6e22e">parsed</span>, <span style="color:#a6e22e">html</span> }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">templatize</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">template</span>, { <span style="color:#a6e22e">date</span>, <span style="color:#a6e22e">title</span>, <span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">author</span> }) =&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">template</span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/&lt;!-- PUBLISH_DATE --&gt;/g</span>, <span style="color:#a6e22e">date</span>)
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/&lt;!-- TITLE --&gt;/g</span>, <span style="color:#a6e22e">title</span>)
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/&lt;!-- CONTENT --&gt;/g</span>, <span style="color:#a6e22e">content</span>)
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/&lt;!-- AUTHOR --&gt;/g</span>, <span style="color:#a6e22e">author</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">saveFile</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">filename</span>, <span style="color:#a6e22e">contents</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">dir</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">dirname</span>(<span style="color:#a6e22e">filename</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">mkdirp</span>.<span style="color:#a6e22e">sync</span>(<span style="color:#a6e22e">dir</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">filename</span>, <span style="color:#a6e22e">contents</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">getOutputFilename</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">filename</span>, <span style="color:#a6e22e">outPath</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">basename</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">basename</span>(<span style="color:#a6e22e">filename</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">newfilename</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">basename</span>.<span style="color:#a6e22e">substring</span>(<span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">basename</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.html&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">outfile</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">outPath</span>, <span style="color:#a6e22e">newfilename</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">outfile</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">processFile</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">filename</span>, <span style="color:#a6e22e">template</span>, <span style="color:#a6e22e">outPath</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">file</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">readFile</span>(<span style="color:#a6e22e">filename</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">outfilename</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getOutputFilename</span>(<span style="color:#a6e22e">filename</span>, <span style="color:#a6e22e">outPath</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">templatized</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">templatize</span>(<span style="color:#a6e22e">template</span>, {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">date</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">date</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">title</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">html</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">author</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">author</span>,
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">saveFile</span>(<span style="color:#a6e22e">outfilename</span>, <span style="color:#a6e22e">templatized</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`📝 </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">outfilename</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">srcPath</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#39;content&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">outPath</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#39;public&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">template</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#e6db74">&#39;./templates/initial/template.html&#39;</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">filenames</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">glob</span>.<span style="color:#a6e22e">sync</span>(<span style="color:#a6e22e">srcPath</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/**/*.md&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">filenames</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">filename</span>) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">processFile</span>(<span style="color:#a6e22e">filename</span>, <span style="color:#a6e22e">template</span>, <span style="color:#a6e22e">outPath</span>)
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">main</span>()
+</span></span></code></pre></div><h2 id="get-started-with-zuzu">Get started with zuzu</h2>
+<p>Fork and clone this repo.
+Add your markdown files in the content folder, run <code>npm run generate</code> and find beautifully rendered html files in the public folder :)</p>
+<h2 id="to-do">To-do</h2>
+<ul>
+<li>Add a proper template file in the initial folder with index.html and respective assets.</li>
+<li>Create an executable for zuzu.</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>vyse</title>
+      <link>https://cbrtl.github.io/posts/vyse/</link>
+      <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cbrtl.github.io/posts/vyse/</guid>
+      <description>Vyse is a dynamically typed, interpreted and fast scriptling language inspired by Lua for rapid prototyping of applications like video games.</description>
+      <content:encoded><![CDATA[<h1 id="vyse">Vyse</h1>
+<br />
+<p align="center">
+  <a href="#">
+    <img src="/assets/vyse_logo.svg" alt="Logo" width="200" height="200">
+  </a>
+  <h2 align="center">Vyse</h2>
+  <p align="center">
+   An elegant and embeddable programming language
+    <br />
+    <a href="https://github.com/srijan-paul/snap/blob/main/doc/manual.md"><b>Visit the language spec »</b></a>
+    <a href="https://srijan-paul.github.io/vyse"><b>Website »</b>
+    </a>
+    <br />
+    <br />
+    <a href="https://github.com/srijan-paul/vyse/issues">Report Bug</a>
+     •
+    <a href="https://github.com/srijan-paul/vyse/issues">Request Feature</a>
+  </p>
+</p>
+<p><a href="https://github.com/srijan-paul/snap/actions/workflows/test.yml/badge.svg">CI Status</a>
+[<a href="https://img.shields.io/apm/l/atomic-design-ui.svg?">MIT License</a>](<a href="https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs">https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs</a>)</p>
+<p>Vyse is a dynamically typed, interpreted and fast scriptling language inspired by Lua for rapid prototyping of applications like video games. Programmers familiar with Lua/Javascript can pick up the language within an hour.
+Vyse also comes with a C++ API for frictionless embedding in projects.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#vyse">Vyse</a>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#goal">Goal</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#roadmap">Roadmap</a></li>
+<li><a href="#implementation">Implementation</a>
+<ul>
+<li><a href="#lexing--tokenizing-source-string---token">Lexing / Tokenizing (Source string -&gt; Token)</a></li>
+<li><a href="#compiling-tokens---bytecode">Compiling (Tokens -&gt; Bytecode)</a></li>
+<li><a href="#vyvm">VyVM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#building">Building</a></li>
+<li><a href="#benchmarks">Benchmarks</a></li>
+<li><a href="#tests">Tests</a></li>
+<li><a href="#editor-support">Editor-Support</a></li>
+<li><a href="#development">Development</a></li>
+</ul>
+<h2 id="goal">Goal</h2>
+<p>Vyse aims to pick up after the Lua programming language, by adding popularly desired features on top of it,
+whilst providing similar speed and minimalism as Lua.
+There exist some quirks in Lua that Vyse aims to change.</p>
+<ul>
+<li>
+<p>Variables are global by default</p>
+</li>
+<li>
+<p>Long keywords like <code>local</code> and the use of <code>do .. end</code> to designate blocks instead of <code>{}</code> makes it unlikeable to programmers coming from C.</p>
+</li>
+<li>
+<p>The concept of metatables and metamethods is somewhat unintuitive to new programmers.</p>
+</li>
+<li>
+<p>Tables being used as both arrays and maps can have unwanted side effects.</p>
+</li>
+<li>
+<p>Lacks many features that are common in other languages such as :</p>
+<ul>
+<li>Compound assignment operators (<code>+=</code>, <code>-=</code>, <code>*=</code>) and decrement and increment operators (<code>++</code>, <code>--</code>) .</li>
+<li><code>continue</code> statement for skipping over some loop iterations.</li>
+<li><code>switch</code> statements.</li>
+</ul>
+</li>
+<li>
+<p>Arrays starting at 1 is a a minor issue to some.</p>
+</li>
+</ul>
+<p>Vyse aims to keep most of what Lua provides, but address the aforementioned issues and offer the following QoL feautures:</p>
+<ul>
+<li>A Familiar syntax for programmers migrating from Javascript and C</li>
+<li>An easy to integrate C++ API for easy embedding in applications</li>
+<li>Syntactic sugar for JS like OOP that boils down to the very same metatable and metamethod heirarchy.</li>
+</ul>
+<h2 id="overview">Overview</h2>
+<p>Here is a rough overview of the language&rsquo;s syntax and features:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#75715e">-- importing modules is done with the builtin &#39;import&#39; function</span>
+</span></span><span style="display:flex;"><span>const math <span style="color:#f92672">=</span> import(<span style="color:#e6db74">&#34;math&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--  variable declaration and assignment</span>
+</span></span><span style="display:flex;"><span>const PI <span style="color:#f92672">=</span> math.pi <span style="color:#75715e">-- variables declared with const are immutable</span>
+</span></span><span style="display:flex;"><span>let radius <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--  Function declaration</span>
+</span></span><span style="display:flex;"><span>fn calculate_area(r) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> PI <span style="color:#f92672">*</span> r <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span> <span style="color:#75715e">-- &#39;**&#39; operator is used for exponentiation.</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>let area <span style="color:#f92672">=</span> calculate_area(radius) <span style="color:#75715e">-- function calling</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--  constructing objects is very similar to Javascript.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>let goblin <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  name: <span style="color:#e6db74">&#34;Bobo&#34;</span>,
+</span></span><span style="display:flex;"><span>  health: <span style="color:#ae81ff">12</span>,
+</span></span><span style="display:flex;"><span>  damage: <span style="color:#ae81ff">4</span>,
+</span></span><span style="display:flex;"><span>  attack(target) {
+</span></span><span style="display:flex;"><span>    target.health <span style="color:#f92672">-=</span> this.damage
+</span></span><span style="display:flex;"><span>		print(<span style="color:#e6db74">&#34;Goblin attacks!&#34;</span>)
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--  methods is done with the `:` operator.</span>
+</span></span><span style="display:flex;"><span>let wolf <span style="color:#f92672">=</span> { health: <span style="color:#ae81ff">20</span> }
+</span></span><span style="display:flex;"><span>goblin:attack(wolf)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--  Arrays are intuitive too</span>
+</span></span><span style="display:flex;"><span>let numbers <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">9</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- the &#39;#&#39; operator returns length of lists or strings.</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;I have &#39;</span> <span style="color:#f92672">..</span> <span style="color:#f92672">#</span>numbers <span style="color:#f92672">..</span> <span style="color:#e6db74">&#39;numbers!&#39;</span>) <span style="color:#f92672">//</span> <span style="color:#e6db74">&#39;..&#39;</span> is the concat operator
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- the `&lt;&lt;&lt;` operator can be used to push to arrays</span>
+</span></span><span style="display:flex;"><span>numbers <span style="color:#f92672">&lt;&lt;&lt;</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">&lt;&lt;&lt;</span> <span style="color:#ae81ff">11</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- looping is very similar to lua.</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, <span style="color:#f92672">#</span>numbers  {
+</span></span><span style="display:flex;"><span>	print(numbers[i])
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--  conditionals</span>
+</span></span><span style="display:flex;"><span>math.randseed(time.now());
+</span></span><span style="display:flex;"><span>const number <span style="color:#f92672">=</span> math.random(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>let guess <span style="color:#f92672">=</span> input():to_number(); <span style="color:#75715e">-- read user input and parse as a number</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">true</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> guess <span style="color:#f92672">&lt;</span> number {
+</span></span><span style="display:flex;"><span>		print(<span style="color:#e6db74">&#34;Too low! Try higher&#34;</span>)
+</span></span><span style="display:flex;"><span>	} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> guess <span style="color:#f92672">&gt;</span> number {
+</span></span><span style="display:flex;"><span>		print(<span style="color:#e6db74">&#34;Too hight! Guess lower&#34;</span>)
+</span></span><span style="display:flex;"><span>	} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>		print(<span style="color:#e6db74">&#34;You guessed it! The number was &#34;</span> <span style="color:#f92672">..</span> number);
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>For a more complete spec of the language, and all it&rsquo;s features visit <a href="./doc/manual.md">manual.md</a>.
+Alternatively, read the documentation on <a href="https://srijan-paul.github.io/vyse/book/">this</a> page.</p>
+<h2 id="roadmap">Roadmap</h2>
+<p>Currently, vyse supports basic control flow, variable declaration, usage and basic collection data structures.
+To move towards a more complete implementation, the following tasks have to be attended to:</p>
+<ol>
+<li><input checked="" disabled="" type="checkbox"> Implement parent tables (metatables in Lua). (<strong>DONE</strong>)</li>
+<li><input checked="" disabled="" type="checkbox"> Add a complete list of collection types (Arrays and tables). (<strong>DONE</strong>)</li>
+<li><input checked="" disabled="" type="checkbox"> Implement proper error reporting in all the passes. (<strong>DONE</strong>)</li>
+<li><input checked="" disabled="" type="checkbox"> Full support for Lambdas and closures. (<strong>DONE</strong>)</li>
+<li><input disabled="" type="checkbox"> Optimze value representation to optionally NaN boxed values.</li>
+<li><input disabled="" type="checkbox"> Optimize the garbage collector for incremental collection.</li>
+<li><input disabled="" type="checkbox"> Optimize the VM&rsquo;s loop-dispatch to computed jumps.</li>
+<li><input disabled="" type="checkbox"> Add more compiler passes for better optimization.</li>
+</ol>
+<h2 id="implementation">Implementation</h2>
+<p>Vyse runs on the Vyse Virtual Machine (svm for short). The VM has a stack based architechture that operates on 1 byte long opcodes. To keep the implementation concise and simple, vyse uses a single pass compiler that directly consumes tokens
+and emits bytecode.</p>
+<p>The stages involved are :</p>
+<h3 id="lexing--tokenizing-source-string---token">Lexing / Tokenizing (Source string -&gt; Token)</h3>
+<p>The vyse lexer resides in the <code>include/scanner.hpp</code> file, A simple hand written lexer that accepts a string returns a
+token whenever the method <code>next_token()</code> is called.
+The Lexer is called from within the Compiler, but can also be instantiated and used stand-alone for testing purposes.</p>
+<h3 id="compiling-tokens---bytecode">Compiling (Tokens -&gt; Bytecode)</h3>
+<p>The Compiler compiles tokens to Bytecode following the Vyse Bytecode Instruction format (<code>include/x_opcode.hpp</code>).
+Every instruction is 1 byte long. The compiler returns a function containing all the bytecode from the script, which is
+then loaded into the VM and called.</p>
+<h3 id="vyvm">VyVM</h3>
+<p>The design of the VyVM is very similar to the Lua Virtual Machine despite the fact that it&rsquo;s Stack based as opposed to LuaVM&rsquo;s register based design (after version 5.1). It consists of a value stack and an accumulator register.
+It has full support for lambdas and closures following Lua&rsquo;s upvalue design.</p>
+<h1 id="building">Building</h1>
+<p>To build vyse from source, it is recommended that you use CMake (version 3.13 or higher).
+The build tool used here is Ninja, but you can use any other build tool of your preference (eg- <code>'Unix Makefiles'</code>).</p>
+<p>After downloading/cloning vyse into a directory, <code>cd</code> into it and run the following commands to run the tests:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir build
+</span></span><span style="display:flex;"><span>cd build
+</span></span><span style="display:flex;"><span>cmake .. -G Ninja -DBUILD_TESTS<span style="color:#f92672">=</span>true -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Debug -DSTRESS_GC<span style="color:#f92672">=</span>true -DCMAKE_EXPORT_COMPILE_COMMANDS<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> -DCMAKE_C_COMPILER<span style="color:#f92672">=</span>clang -DCMAKE_CXX_COMPILER<span style="color:#f92672">=</span>clang++
+</span></span><span style="display:flex;"><span>ninja
+</span></span><span style="display:flex;"><span>./vy &lt;filename&gt;
+</span></span></code></pre></div><p>The CMake script accepts some options, namely:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-DCMAKE_BUILD_TYPE</code></td>
+<td><code>Release</code>/<code>Debug</code></td>
+<td>Compilation mode for the C++ compiler. Also enables runtime assertions.</td>
+</tr>
+<tr>
+<td><code>-DBUILD_TESTS</code></td>
+<td><code>true</code>/<code>false</code></td>
+<td>Whether to build the test suite.</td>
+</tr>
+<tr>
+<td><code>-DSTRESS_GC</code></td>
+<td><code>true</code>/<code>false</code></td>
+<td>When <code>true</code>, runs the garbage collector whenever possible. Useful for catching GC bugs.</td>
+</tr>
+<tr>
+<td><code>-DLOG_GC</code></td>
+<td><code>true</code>/<code>false</code></td>
+<td>When <code>true</code>, logs the GC status on every cycle.</td>
+</tr>
+<tr>
+<td><code>-DLOG_DISASM</code></td>
+<td><code>true</code>/<code>false</code></td>
+<td>When <code>true</code>, dumps the bytecode disassembly of every program after the compiler pass, before running it on the VM</td>
+</tr>
+</tbody>
+</table>
+<p>Note that <code>-CMAKE_C_COMPILER=clang -CMAKE_CXX_COMPILER=clang++</code> are optional, and you can use any C++ compiler toolchain of your liking.
+The aforementioned snippet will build the project in debug mode, which is preferred for development but is much, much slower.</p>
+<p>For an optimized release build, use:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cmake .. -G Ninja -DBUILD_TESTS<span style="color:#f92672">=</span>true -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release -DSTRESS_GC<span style="color:#f92672">=</span>false -DLOG_GC<span style="color:#f92672">=</span>false -DLOG_DISASM<span style="color:#f92672">=</span>false
+</span></span></code></pre></div><h1 id="benchmarks">Benchmarks</h1>
+<p>The benchmarks for vyuse are present in the <code>benchmark</code> directory.
+The <code>benchmark/run.py</code> script can be used to compare Vyse against other languages.
+You can either run all benchmarks, or run specific benchmarks.</p>
+<p>First, create and activate a virtual environment:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cd benchmarks
+</span></span><span style="display:flex;"><span>python3 -m venv env
+</span></span><span style="display:flex;"><span>source env/bin/activate
+</span></span></code></pre></div><p>Then, install all the dependencies inside the virtual environment:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python3 -m pip install -r requirements.txt
+</span></span></code></pre></div><p>To run all benchmarks, enter the following into your shell:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cd benchmarks
+</span></span><span style="display:flex;"><span>python3 run.py
+</span></span></code></pre></div><p>To run, a specific benchmark, use the <code>--bench</code> option:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python3 run.py --bench<span style="color:#f92672">=</span>fib
+</span></span></code></pre></div><h1 id="tests">Tests</h1>
+<p>For testing, the <code>ctest</code> utility is used along with some hand written helper headers.
+To run existing tests, run <code>ctest</code> inside the build directory (<code>bin</code> or <code>out</code>).
+Tests of all kinds can be found under the <code>test</code> directory.</p>
+<p></p>
+<p>(Note: time is in seconds)</p>
+<p>If your terminal does not have ASNI support, or you want to pipe the benchmarks to a
+file for reporting, then you can use the <code>--nocolor</code> flag.</p>
+<h1 id="editor-support">Editor-Support</h1>
+<p>Currently, syntax highlighting and code completion snippets are supported on the following code editors:</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <a href="https://github.com/srijan-paul/vscode-vyse">VS Code</a></li>
+<li><input disabled="" type="checkbox"> Sublime text [In Progress]</li>
+<li><input disabled="" type="checkbox"> Vim [Coming soon]</li>
+<li><input disabled="" type="checkbox"> Atom [Coming soon]</li>
+</ul>
+<h1 id="development">Development</h1>
+<p>If you&rsquo;re looking to contribute to vyse, It is recommended to have clang-format for formatting and clangd language server for your text editor.
+On VSCode, the <code>C/C++</code> extension can be used to debug the executable.
+Alternatively, you can use GDC/LLDB or other debuggers to your liking.</p>
+<p>The sources are in <code>src/</code> while the public headers are in <code>include/</code>.
+A basic CLI module is present under <code>cli/</code>.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Project: Ratenect</title>
+      <link>https://cbrtl.github.io/posts/ratenect/</link>
+      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cbrtl.github.io/posts/ratenect/</guid>
+      <description>Connecting Help and Transparency</description>
+      <content:encoded><![CDATA[<blockquote>
+<p><strong>NOTE</strong>: This project is being maintained by <a href="https://github.com/Ankur-Khandelwal">Ankur Khandelwal</a></p>
+</blockquote>
+<p></p>
+<p>India has over <a href="https://www.icnl.org/resources/civic-freedom-monitor/india#:~:text=The%20Central%20Statistical%20Institute%20of,certified%20NGOs%20on%20its%20portal.">3.2 million</a> registered <a href="https://en.wikipedia.org/wiki/Non-governmental_organization">NGOs</a> (Non-Governmental Organisations) across its territory. The voluntary sector has always played an important role in supporting the government as a partner in nation-building and is heavily funded by the government as well as by private institutions. In 2018 only, companies contributed US$1 Billion to <a href="https://www.india-briefing.com/news/corporate-social-responsibility-india-5511.html">CSR</a> initiatives, according to a survey.</p>
+<p>Considering the vast impact and significance of the sector, it becomes very important to tackle the challenges present here as well as to improve and increase its accessibility.</p>
+<p>We have noticed two major problems in this sector:</p>
+<ul>
+<li>The credibility of NGOs is a major concern for fund donors especially Government and Corporate Institutions.</li>
+<li>No easy way exists for the general public to find reliable local NGOs and volunteer for them.</li>
+</ul>
+<p>With the vision to tackle both the problems together, we propose a solution called <strong>Ratenect</strong>.</p>
+<p>Ratenect is a web/mobile platform with a two-way rating system. The workflow of Ratenect is depicted by the illustration below:</p>
+<p></p>
+<h2 id="what-will-the-interface-look-like">What will the interface look like?</h2>
+<p>For the start, we have to keep things simple and eventually we shall ramp up the platform. The simple web/mobile interface will be as:</p>
+<ul>
+<li>
+<h3 id="for-ngos">For NGOS:</h3>
+<ul>
+<li>Sign up and login pages.</li>
+<li>An account page, where there will be overview volunteers applied, donations received through this platform, and the option to update their details.</li>
+<li>An applications page, where they can see the details of the volunteers applied and can accept and reject the applications.</li>
+<li>A donations page, where they can see details of donations.</li>
+<li>A page to make public posts about their work for which they need volunteers to lend help.</li>
+<li>A feeds page where they can see other NGOs posts.</li>
+</ul>
+</li>
+<li>
+<h3 id="for-volunteers">For Volunteers:</h3>
+<ul>
+<li>Sign up and login pages.</li>
+<li>An account page where there will be an overview of their own work, account details, updating details option.</li>
+<li>A feed (landing page) where they can see the NGOs available nearby them, a search bar through which NGOs can be searched based on location entered.</li>
+<li>When they can click on an NGO name, they can see the complete details of the NGO, its posts, location and click on the &lsquo;Apply&rsquo; button to express their interest to volunteer.</li>
+</ul>
+</li>
+</ul>
+<p>An estimated interface design of the mobile application:</p>
+<p></p>
+<p></p>
+<h2 id="proposed-technical-implementation">Proposed Technical Implementation:</h2>
+<p>There shall be two platforms - Web and Mobile. For both the platforms we shall have the same backend for API and endpoints. The proposed tech stack is as follows:</p>
+<h3 id="web">Web</h3>
+<ul>
+<li><strong>Frontend</strong>: React</li>
+<li><strong>Backend</strong>: Node, Express</li>
+<li><strong>Database</strong>: MongoDB</li>
+<li><strong>Hosting</strong>: AWS</li>
+</ul>
+<h3 id="mobile">Mobile:</h3>
+<ul>
+<li><strong>Frontend</strong>: Flutter</li>
+<li><strong>Backend</strong>: Same as above</li>
+</ul>
+<h3 id="link-to-the-repositories">Link to the repositories:</h3>
+<ul>
+<li><strong>Backend</strong>:  <a href="https://github.com/cbrtl/ratenect-backend">https://github.com/cbrtl/ratenect-backend</a></li>
+<li><strong>Frontend</strong>: <a href="https://github.com/cbrtl/ratenect-frontend">https://github.com/cbrtl/ratenect-frontend</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
