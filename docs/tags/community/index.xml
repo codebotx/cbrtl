@@ -116,24 +116,24 @@ Vyse also comes with a C++ API for frictionless embedding in projects.</p>
 <p>Since the language already has detailed (but remarkably outdated) documentation on <a href="https://injuly.in/vyse">its website</a>,
 I won&rsquo;t bother rewriting any of that here.</p>
 <p>Instead, here is the simple number-guessing program:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="color:#66d9ef">const</span> math <span style="color:#f92672">=</span> import(<span style="color:#e6db74">&#34;math&#34;</span>)
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="font-weight:bold">const</span> math = import(<span style="font-style:italic">&#34;math&#34;</span>)
 
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">play</span>() {
-  <span style="color:#66d9ef">const</span> num <span style="color:#f92672">=</span> math.randint(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>)
-  <span style="color:#66d9ef">let</span> guess <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;guess: &#34;</span>):<span style="color:#a6e22e">to_num</span>()
-  <span style="color:#66d9ef">let</span> n_attempts <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-  <span style="color:#66d9ef">while</span> guess <span style="color:#f92672">!=</span> num {
-    <span style="color:#66d9ef">if</span> guess <span style="color:#f92672">&lt;</span> num {
-      print(<span style="color:#e6db74">&#34;Too low! Try higher.&#34;</span>)
-    } <span style="color:#66d9ef">else</span> {
-      print(<span style="color:#e6db74">&#34;Too high! Try lower.&#34;</span>)
+<span style="font-weight:bold">fn</span> play() {
+  <span style="font-weight:bold">const</span> num = math.randint(0, 100)
+  <span style="font-weight:bold">let</span> guess = input(<span style="font-style:italic">&#34;guess: &#34;</span>):<span style="font-weight:bold">to_num</span>()
+  <span style="font-weight:bold">let</span> n_attempts = 1
+  <span style="font-weight:bold">while</span> guess != num {
+    <span style="font-weight:bold">if</span> guess &lt; num {
+      print(<span style="font-style:italic">&#34;Too low! Try higher.&#34;</span>)
+    } <span style="font-weight:bold">else</span> {
+      print(<span style="font-style:italic">&#34;Too high! Try lower.&#34;</span>)
     }
 
-    n_attempts <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-    guess <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;guess: &#34;</span>):<span style="color:#a6e22e">to_num</span>()
+    n_attempts += 1
+    guess = input(<span style="font-style:italic">&#34;guess: &#34;</span>):<span style="font-weight:bold">to_num</span>()
   }
 
-  print(<span style="color:#e6db74">&#34;Well done! number of attempts: &#34;</span>, n_attempts)
+  print(<span style="font-style:italic">&#34;Well done! number of attempts: &#34;</span>, n_attempts)
 }
 
 play()
@@ -156,19 +156,19 @@ There are some bugs that I&rsquo;ve yet to prune out before I can make a stable 
       
       <guid>https://cbrtl.github.io/posts/faq/</guid>
       <description>Before you ask...</description>
-      <content:encoded><![CDATA[<h3 id="what-does-cbrtl-mean">What does &lsquo;cbrtl&rsquo; mean?</h3>
+      <content:encoded><![CDATA[<h2 id="why-is-it-called-cbrtl">Why is it called &lsquo;cbrtl&rsquo;?</h2>
 <p><del>Because every other GitHub org name was taken</del>.</p>
 <p>It comes from the C stdlib function <a href="https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/cbrt-cbrtf-cbrtl?view=msvc-160">cbrtl</a>.</p>
 <p>There is a some trivia to the oddly text-to-speechified name.</p>
 <p>In older versions of ANSI C, only the first 6 characters of an identifier were considered when compiling source code.
 So most standard library functions in C have odd names like <code>strstr</code>, <code>strtod</code>, <code>alloca</code> and so on&hellip;</p>
-<h3 id="why-at-all">Why at all?</h3>
+<h2 id="why-at-all">Why at all?</h2>
 <p>Some of my acquaintances from other colleges have clubs, groups and spaces dedicated to open source and software
 development. Couple of days ago, I came across IIT Roorkee&rsquo;s <a href="https://sdslabs.co/">SDSLabs </a> and PES Uni&rsquo;s <a href="https://pesos.github.io/">PES Open Source</a>.  After looking into it
 a bit more, turns out most colleges these days have their own groups for related stuff.</p>
 <p>We thought it would be fun to have a similar group of like minded developers from our college.</p>
 <p>Is it too ambitious? We won&rsquo;t know until we don&rsquo;t try.</p>
-<h3 id="what-is-it-that-cbrtl-aims-to-do-exactly">What is it that cbrtl aims to do exactly?</h3>
+<h2 id="what-is-it-that-cbrtl-aims-to-do-exactly">What is it that cbrtl aims to do exactly?</h2>
 <p>Good question.
 We don&rsquo;t have a concrete answer.
 That said, I&rsquo;ll throw in most of what we&rsquo;ve gathered from our goal so far, and you decide if you like the sound of it.</p>
@@ -178,10 +178,10 @@ That said, I&rsquo;ll throw in most of what we&rsquo;ve gathered from our goal s
 <li>Showcasing projects from individuals and teams.</li>
 <li>Code reviews and educational blogs (hopefully ones that haven&rsquo;t been done to death before&hellip;).</li>
 </ul>
-<h3 id="what-platforms-are-you-present-on">What platforms are you present on?</h3>
+<h2 id="what-platforms-are-you-present-on">What platforms are you present on?</h2>
 <p>For now, our presence is limited to <a href="">Discord</a> and the <a href="https://github.com/cbrtl">GitHub organization</a>.
 Mostly because these are very solid platforms and we are tight on the number of people moderating.</p>
-<h3 id="what-skills-do-i-need">What skills do I need?</h3>
+<h2 id="what-skills-do-i-need">What skills do I need?</h2>
 <p>Not much.</p>
 <ul>
 <li>The ability to code.</li>
@@ -189,10 +189,10 @@ Mostly because these are very solid platforms and we are tight on the number of 
 <li>Basic knowledge of Git and GitHub.</li>
 </ul>
 <p>Even 1 and 3 are optional.</p>
-<h3 id="where-do-i-join">Where do I join?</h3>
+<h2 id="where-do-i-join">Where do I join?</h2>
 <p>As mentioned earlier,  you can join the <a href="">Discord</a> and the <a href="https://github.com/cbrtl">GitHub organization</a>.
 More info on <a href="/">Getting started with cbrtl and Open Source</a>.</p>
-<h3 id="is-there-anything-i-can-do-to-help">Is there anything I can do to help?</h3>
+<h2 id="is-there-anything-i-can-do-to-help">Is there anything I can do to help?</h2>
 <p>You can volunteer to help us keep the community thriving.
 We are looking for volunteers who can help with:</p>
 <ul>
@@ -202,22 +202,22 @@ We are looking for volunteers who can help with:</p>
 <li><strong>Technical Writers</strong>: To aid in writing blog posts.</li>
 <li><strong>Editors</strong>: A second pair of eyes helps catch common mistakes in writing :)</li>
 </ul>
-<h3 id="is-this-an-official-college-club">Is this an official college club?</h3>
+<h2 id="is-this-an-official-college-club">Is this an official college club?</h2>
 <p>No.
 This is an entirely independent student initiative that is looking for active participation.
 A decentralized group of like-minded programmers.</p>
-<h3 id="will-there-be-exciting-cash-prizes">Will there be exciting cash prizes?</h3>
-<p>No. And we want to be upfront about it.
-Those of us who end up forming hackathon teams may earn some on their own,
-but we want to keep this community closeted to people who code because they like making fun stuff. Of course,
-that is not to say we discredit any other motivation you may have.</p>
+<h2 id="will-there-be-events-with-cash-prizes">Will there be events with cash prizes?</h2>
+<p>No.
+And we want to be upfront about it.
+We want to keep this community closed to people who code because they like creating.
+Of course, that is not to say we discredit any other motivation you may have.</p>
 <p>As such, we won&rsquo;t conduct any competitions with cash prizes for the foreseeable future.
-Other clubs (which are official) in our college do a great job at that regardless.</p>
-<h3 id="what-kinds-of-events-can-i-expect">What kinds of events can I expect?</h3>
+Other clubs (which are official) in our college do a great (<del>citation needed*</del>) job at that regardless.</p>
+<h2 id="what-kinds-of-events-can-i-expect">What kinds of events can I expect?</h2>
 <p>Other than project showcases and on-demand code review sessions, we are open to other ideas.</p>
 <p>Not as much of an &lsquo;event&rsquo; but you can expect group projects that will (hopefully) be active throughout.</p>
-<h3 id="i-have-some-other-questions-where-can-i-ask">I have some other questions, where can I ask?</h3>
-<p>You&rsquo;re more than welcome on the mailing list, or in the discord server 😁</p>
+<h2 id="i-have-some-other-questions-where-can-i-ask">I have some other questions, where can I ask?</h2>
+<p>You&rsquo;re more than welcome on the mailing list, or in the discord server.</p>
 ]]></content:encoded>
     </item>
     

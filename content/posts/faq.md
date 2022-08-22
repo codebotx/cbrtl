@@ -7,7 +7,7 @@ tags: ["faq", "community"]
 ShowBreadCrumbs: true 
 ---
 
-### What does 'cbrtl' mean?
+## Why is it called 'cbrtl'?
 
 ~~Because every other GitHub org name was taken~~.
 
@@ -18,7 +18,7 @@ There is a some trivia to the oddly text-to-speechified name.
 In older versions of ANSI C, only the first 6 characters of an identifier were considered when compiling source code.
 So most standard library functions in C have odd names like `strstr`, `strtod`, `alloca` and so on...
 
-### Why at all?
+## Why at all?
 
 Some of my acquaintances from other colleges have clubs, groups and spaces dedicated to open source and software
 development. Couple of days ago, I came across IIT Roorkee's [SDSLabs ](https://sdslabs.co/) and PES Uni's [PES Open Source](https://pesos.github.io/).  After looking into it
@@ -28,7 +28,7 @@ We thought it would be fun to have a similar group of like minded developers fro
 
 Is it too ambitious? We won't know until we don't try.
 
-### What is it that cbrtl aims to do exactly?
+## What is it that cbrtl aims to do exactly?
 
 Good question.
 We don't have a concrete answer.
@@ -39,12 +39,12 @@ That said, I'll throw in most of what we've gathered from our goal so far, and y
 - Showcasing projects from individuals and teams.
 - Code reviews and educational blogs (hopefully ones that haven't been done to death before...).
 
-### What platforms are you present on?
+## What platforms are you present on?
 
 For now, our presence is limited to [Discord]() and the [GitHub organization](https://github.com/cbrtl).
 Mostly because these are very solid platforms and we are tight on the number of people moderating.
 
-### What skills do I need?
+## What skills do I need?
 
 Not much. 
 
@@ -54,12 +54,12 @@ Not much.
 
 Even 1 and 3 are optional.
 
-### Where do I join?
+## Where do I join?
 
 As mentioned earlier,  you can join the [Discord]() and the [GitHub organization](https://github.com/cbrtl).
 More info on [Getting started with cbrtl and Open Source](/).
 
-### Is there anything I can do to help?
+## Is there anything I can do to help?
 
 You can volunteer to help us keep the community thriving.
 We are looking for volunteers who can help with:
@@ -70,29 +70,29 @@ We are looking for volunteers who can help with:
 - **Technical Writers**: To aid in writing blog posts.
 - **Editors**: A second pair of eyes helps catch common mistakes in writing :)
 
-### Is this an official college club?
+## Is this an official college club?
 
 No.
 This is an entirely independent student initiative that is looking for active participation.
 A decentralized group of like-minded programmers. 
 
-### Will there be exciting cash prizes?
+## Will there be events with cash prizes?
 
-No. And we want to be upfront about it.
-Those of us who end up forming hackathon teams may earn some on their own,
-but we want to keep this community closeted to people who code because they like making fun stuff. Of course,
-that is not to say we discredit any other motivation you may have.
+No.
+And we want to be upfront about it.
+We want to keep this community closed to people who code because they like creating.
+Of course, that is not to say we discredit any other motivation you may have.
 
 As such, we won't conduct any competitions with cash prizes for the foreseeable future.
-Other clubs (which are official) in our college do a great job at that regardless.
+Other clubs (which are official) in our college do a great (~~citation needed*~~) job at that regardless.
 
-### What kinds of events can I expect?
+## What kinds of events can I expect?
 
 Other than project showcases and on-demand code review sessions, we are open to other ideas.
 
 Not as much of an 'event' but you can expect group projects that will (hopefully) be active throughout.
 
-### I have some other questions, where can I ask?
+## I have some other questions, where can I ask?
 
-You're more than welcome on the mailing list, or in the discord server :grin:
+You're more than welcome on the mailing list, or in the discord server.
 
