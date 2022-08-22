@@ -12,9 +12,10 @@
       <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://cbrtl.github.io/posts/getting-started/</guid>
-      <description>Grinding your gears</description>
+      <description>Grinding gears</description>
       <content:encoded><![CDATA[<p>So you read up on open source, read up on <a href="https://cbrtl.github.io/posts/what-and-why/">cbrtl</a> and want to start hacking.
-There are some preliminaries that you should take care of first. I will list them in order:</p>
+There are some preliminaries that you should take care of first.
+These are listed in order:</p>
 <ol>
 <li>Create a GitHub account.</li>
 <li>Set up git on your local computer.
@@ -24,7 +25,7 @@ There are some preliminaries that you should take care of first. I will list the
 </ul>
 </li>
 <li>Join the <a href="https://github.com/cbrtl">GitHub organization</a> by adding yourself to the members list (More on that below).</li>
-<li>Join the <a href="https://discord.gg/3qry3u569v">Discord server</a>.</li>
+<li>Join the <a href="">Discord server</a>.</li>
 </ol>
 <p>Alright, you&rsquo;re set to start out.
 At this point, I would recommend getting familiar with GitHub, reading up some articles and blogs.
