@@ -2,20 +2,21 @@
 author: "srijan_"
 title: "Getting started with cbrtl and FOSS"
 date: "2021-04-27"
-description: "Grinding your gears"
+description: "Grinding gears"
 tags: ["guide", "community"]
 ShowBreadCrumbs: true 
 ---
 
 So you read up on open source, read up on [cbrtl](https://cbrtl.github.io/posts/what-and-why/) and want to start hacking.
-There are some preliminaries that you should take care of first. I will list them in order:
+There are some preliminaries that you should take care of first.
+These are listed in order:
 
 1. Create a GitHub account.
 2. Set up git on your local computer.
     - If you're on windows, download [GitBash](https://git-scm.com/downloads) and follow the install instructions.
     - Get a personal test repo set up and try out commands like `push`, `commit`, `pull` etc.
 3. Join the [GitHub organization](https://github.com/cbrtl) by adding yourself to the members list (More on that below).
-4. Join the [Discord server](https://discord.gg/3qry3u569v).
+4. Join the [Discord server]().
 
 Alright, you're set to start out.
 At this point, I would recommend getting familiar with GitHub, reading up some articles and blogs.
