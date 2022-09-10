@@ -130,14 +130,13 @@ This is a table:
 This is a link: [zuzu](https://anubhavp.me/blog/zuzu.html)
 </code></pre>
 <h3 id="2-run-the-generator-and-find-your-blog">2. Run the generator and find your blog</h3>
-<p>Run <code>npm run generate</code> in the console.
+<p>Run <code>npm run generate</code> in the console. Zuzu is also available as a CLI tool. You can install it using <code>npm install -g zuzu</code>. Then run <code>npx zuzussg</code> in the console. This will generate the html files in the <code>public</code> folder. You can then deploy the <code>public</code> folder to any hosting platform.
 You&rsquo;ll now see the blog in the public folder! Run the index.html file in your browser to see your blog. You may now deploy your site
-to a server.</p>
+to a server. Zuzu also supports CI/CD. You can use Github Actions to automatically deploy your site to Github Pages.</p>
 <h3 id="you-can-find-the-working-in-the-repo-herehttpsgithubcomcodebotxzuzu">You can find the working in the repo <a href="https://github.com/codebotx/zuzu/">here</a></h3>
 <h4 id="to-do">To-do</h4>
 <ul>
-<li>Add a proper template file in the initial folder with index.html and respective assets.</li>
-<li>Create an executable for zuzu.</li>
+<li>Add another template file in the initial folder with index.html and respective assets.</li>
 </ul>
 ]]></content:encoded>
     </item>

@@ -40,12 +40,11 @@ Zuzu parses the markdown file using *javascript* and renders it as *html documen
 
 ### 2. Run the generator and find your blog
 
-Run `npm run generate` in the console.
+Run `npm run generate` in the console. Zuzu is also available as a CLI tool. You can install it using `npm install -g zuzu`. Then run `npx zuzussg` in the console. This will generate the html files in the `public` folder. You can then deploy the `public` folder to any hosting platform.
 You'll now see the blog in the public folder! Run the index.html file in your browser to see your blog. You may now deploy your site
-to a server.
+to a server. Zuzu also supports CI/CD. You can use Github Actions to automatically deploy your site to Github Pages.
 
 ### You can find the working in the repo [here](https://github.com/codebotx/zuzu/)
 
 #### To-do
-* Add a proper template file in the initial folder with index.html and respective assets.
-* Create an executable for zuzu.
+* Add another template file in the initial folder with index.html and respective assets.
