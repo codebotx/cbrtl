@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>guide on cbrtl</title>
-    <link>https://anubhavp.dev/cbrtl//tags/guide/</link>
+    <link>https://anubhavp.dev/cbrtl/tags/guide/</link>
     <description>Recent content in guide on cbrtl</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 27 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/cbrtl//tags/guide/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/cbrtl/tags/guide/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting started with cbrtl and FOSS</title>
-      <link>https://anubhavp.dev/cbrtl//posts/getting-started/</link>
+      <link>https://anubhavp.dev/cbrtl/posts/getting-started/</link>
       <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/cbrtl//posts/getting-started/</guid>
+      <guid>https://anubhavp.dev/cbrtl/posts/getting-started/</guid>
       <description>Grinding gears</description>
       <content:encoded><![CDATA[<p>So you read up on open source, read up on <a href="https://anubhavp.dev/cbrtl//posts/what-and-why/">cbrtl</a> and want to start hacking.
 There are some preliminaries that you should take care of first.
