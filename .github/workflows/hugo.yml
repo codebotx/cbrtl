@@ -48,13 +48,18 @@ jobs:
         run: |
           git submodule init
           git submodule update
-          git config --global user.name codebotx
-          git config --global user.email anubhabr50@gmail.com
           hugo
           rm -rf docs
           mv public docs
-          git remote set-url origin https://codebotx:${{ secrets.PATN }}@github.com/codebotx/cbrtl
-          git add .
-          git commit -m "Deploying latest commit"
-          git push origin main
+      - run : git config --global user.name codebotx
+      - run : git config --global user.email anubhabr50@gmail.com
+      - run : git remote set-url origin https://codebotx:${{ secrets.PATN }}@github.com/codebotx/cbrtl
+      - run : git add .
+      - run : git commit -m "Deploying latest commit"
+      - run : git push origin main
+
+          
+          
+          
+          
 
