@@ -88,5 +88,5 @@ But you can expect the above group projects to come to life as the community gro
 
 ## Showcasing your project
 
-[This](https://cbrtl.github.io/posts/project-showcase/) post has more on that.
+[This](https://anubhavp.dev/cbrtl/posts/project-showcase/) post has more on that.
 If you want to showcase your project on our github org, then reach out to us on discord or the mailing list.

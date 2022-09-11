@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>faq on cbrtl</title>
-    <link>https://cbrtl.github.io/tags/faq/</link>
+    <link>https://anubhavp.dev/cbrtl/tags/faq/</link>
     <description>Recent content in faq on cbrtl</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 28 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cbrtl.github.io/tags/faq/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/cbrtl/tags/faq/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FAQ</title>
-      <link>https://cbrtl.github.io/posts/faq/</link>
+      <link>https://anubhavp.dev/cbrtl/posts/faq/</link>
       <pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cbrtl.github.io/posts/faq/</guid>
+      <guid>https://anubhavp.dev/cbrtl/posts/faq/</guid>
       <description>Before you ask...</description>
       <content:encoded><![CDATA[<h2 id="why-is-it-called-cbrtl">Why is it called &lsquo;cbrtl&rsquo;?</h2>
 <p><del>Because every other GitHub org name was taken</del>.</p>
