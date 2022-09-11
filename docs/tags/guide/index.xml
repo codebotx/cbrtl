@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>guide on cbrtl</title>
-    <link>https://anubhavp.dev/cbrtl/tags/guide/</link>
+    <link>https://anubhavp.dev/cbrtl//tags/guide/</link>
     <description>Recent content in guide on cbrtl</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 27 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/cbrtl/tags/guide/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/cbrtl//tags/guide/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting started with cbrtl and FOSS</title>
-      <link>https://anubhavp.dev/cbrtl/posts/getting-started/</link>
+      <link>https://anubhavp.dev/cbrtl//posts/getting-started/</link>
       <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/cbrtl/posts/getting-started/</guid>
+      <guid>https://anubhavp.dev/cbrtl//posts/getting-started/</guid>
       <description>Grinding gears</description>
-      <content:encoded><![CDATA[<p>So you read up on open source, read up on <a href="https://anubhavp.dev/cbrtl/posts/what-and-why/">cbrtl</a> and want to start hacking.
+      <content:encoded><![CDATA[<p>So you read up on open source, read up on <a href="https://anubhavp.dev/cbrtl//posts/what-and-why/">cbrtl</a> and want to start hacking.
 There are some preliminaries that you should take care of first.
 These are listed in order:</p>
 <ol>
@@ -52,11 +52,11 @@ It can mean different things for different people, but the recurring ideas are t
 <li>Showcasing projects you have made on cbrtl blog and GitHub organization.</li>
 <li>Contributing to larger open source projects outside cbrtl.</li>
 <li>Asking questions, getting to know people better.</li>
-<li>Volunteering on development and content moderation. <a href="http://anubhavp.dev/cbrtl/posts/what-and-why/#volunteering-to-cbrtl">Details here</a></li>
+<li>Volunteering on development and content moderation. <a href="http://anubhavp.dev/cbrtl//posts/what-and-why/#volunteering-to-cbrtl">Details here</a></li>
 </ul>
 <h2 id="starting-your-own-project">Starting your own project.</h2>
 <p>It would be great to have more interesting projects available for people to work on.
-Look at the <a href="http://anubhavp.dev/cbrtl/posts/project-showcase/">project showcase post</a> for relevant information.</p>
+Look at the <a href="http://anubhavp.dev/cbrtl//posts/project-showcase/">project showcase post</a> for relevant information.</p>
 ]]></content:encoded>
     </item>
     

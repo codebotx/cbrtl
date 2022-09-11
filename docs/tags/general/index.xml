@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>general on cbrtl</title>
-    <link>https://anubhavp.dev/cbrtl/tags/general/</link>
+    <link>https://anubhavp.dev/cbrtl//tags/general/</link>
     <description>Recent content in general on cbrtl</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 27 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/cbrtl/tags/general/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/cbrtl//tags/general/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello world!</title>
-      <link>https://anubhavp.dev/cbrtl/posts/what-and-why/</link>
+      <link>https://anubhavp.dev/cbrtl//posts/what-and-why/</link>
       <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/cbrtl/posts/what-and-why/</guid>
+      <guid>https://anubhavp.dev/cbrtl//posts/what-and-why/</guid>
       <description>cbrtl - now live</description>
       <content:encoded><![CDATA[<h1 id="what-is-cbrtl">What is cbrtl?</h1>
 <p><strong>cbrtl</strong> is an attempt at creating a tight knit group of programmers to showcase and collaborate
@@ -89,7 +89,7 @@ While any creative project is welcome, here are some ideas that adhere to the sp
 We encourage all kinds of creative projects no matter how basic.
 But you can expect the above group projects to come to life as the community grows.</p>
 <h2 id="showcasing-your-project">Showcasing your project</h2>
-<p><a href="https://anubhavp.dev/cbrtl/posts/project-showcase/">This</a> post has more on that.
+<p><a href="https://anubhavp.dev/cbrtl//posts/project-showcase/">This</a> post has more on that.
 If you want to showcase your project on our github org, then reach out to us on discord or the mailing list.</p>
 ]]></content:encoded>
     </item>

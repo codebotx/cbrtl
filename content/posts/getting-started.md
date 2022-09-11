@@ -7,7 +7,7 @@ tags: ["guide", "community"]
 ShowBreadCrumbs: true 
 ---
 
-So you read up on open source, read up on [cbrtl](https://anubhavp.dev/cbrtl/posts/what-and-why/) and want to start hacking.
+So you read up on open source, read up on [cbrtl](https://anubhavp.dev/cbrtl//posts/what-and-why/) and want to start hacking.
 There are some preliminaries that you should take care of first.
 These are listed in order:
 
@@ -48,8 +48,8 @@ It can mean different things for different people, but the recurring ideas are t
 - Showcasing projects you have made on cbrtl blog and GitHub organization.
 - Contributing to larger open source projects outside cbrtl.
 - Asking questions, getting to know people better.
-- Volunteering on development and content moderation. [Details here](http://anubhavp.dev/cbrtl/posts/what-and-why/#volunteering-to-cbrtl)
+- Volunteering on development and content moderation. [Details here](http://anubhavp.dev/cbrtl//posts/what-and-why/#volunteering-to-cbrtl)
 
 ## Starting your own project.
 It would be great to have more interesting projects available for people to work on.
-Look at the [project showcase post](http://anubhavp.dev/cbrtl/posts/project-showcase/) for relevant information.
+Look at the [project showcase post](http://anubhavp.dev/cbrtl//posts/project-showcase/) for relevant information.

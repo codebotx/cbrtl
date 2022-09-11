@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>cbrtl</title>
-    <link>https://anubhavp.dev/cbrtl/</link>
+    <link>https://anubhavp.dev/cbrtl//</link>
     <description>Recent content on cbrtl</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 27 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/cbrtl/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/cbrtl//index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello world!</title>
-      <link>https://anubhavp.dev/cbrtl/posts/what-and-why/</link>
+      <link>https://anubhavp.dev/cbrtl//posts/what-and-why/</link>
       <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/cbrtl/posts/what-and-why/</guid>
+      <guid>https://anubhavp.dev/cbrtl//posts/what-and-why/</guid>
       <description>cbrtl - now live</description>
       <content:encoded><![CDATA[<h1 id="what-is-cbrtl">What is cbrtl?</h1>
 <p><strong>cbrtl</strong> is an attempt at creating a tight knit group of programmers to showcase and collaborate
@@ -89,17 +89,17 @@ While any creative project is welcome, here are some ideas that adhere to the sp
 We encourage all kinds of creative projects no matter how basic.
 But you can expect the above group projects to come to life as the community grows.</p>
 <h2 id="showcasing-your-project">Showcasing your project</h2>
-<p><a href="https://anubhavp.dev/cbrtl/posts/project-showcase/">This</a> post has more on that.
+<p><a href="https://anubhavp.dev/cbrtl//posts/project-showcase/">This</a> post has more on that.
 If you want to showcase your project on our github org, then reach out to us on discord or the mailing list.</p>
 ]]></content:encoded>
     </item>
     
     <item>
       <title>Project: Zuzu</title>
-      <link>https://anubhavp.dev/cbrtl/posts/zuzu/</link>
+      <link>https://anubhavp.dev/cbrtl//posts/zuzu/</link>
       <pubDate>Mon, 27 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/cbrtl/posts/zuzu/</guid>
+      <guid>https://anubhavp.dev/cbrtl//posts/zuzu/</guid>
       <description>Zuzu is a static site generator that converts all your markdown files into static htmls pages. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets.</description>
       <content:encoded><![CDATA[<h1 id="zuzu">Zuzu</h1>
 <blockquote>
@@ -143,10 +143,10 @@ to a server. Zuzu also supports CI/CD. You can use Github Actions to automatical
     
     <item>
       <title>Project: Vyse</title>
-      <link>https://anubhavp.dev/cbrtl/posts/vyse/</link>
+      <link>https://anubhavp.dev/cbrtl//posts/vyse/</link>
       <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/cbrtl/posts/vyse/</guid>
+      <guid>https://anubhavp.dev/cbrtl//posts/vyse/</guid>
       <description>A dynamically typed, interpreted and fast scriptling language inspired by Lua for rapid prototyping of applications like video games.</description>
       <content:encoded><![CDATA[<p>Sometime during my 2nd year in college, I&rsquo;d made a hobby programming language that turned out quite well.
 It&rsquo;s named &ldquo;Vyse&rdquo;, after <a href="https://dota2.fandom.com/wiki/Scythe_of_Vyse">Guinsoo&rsquo;s Scythe of Vyse</a> from DotA.</p>
@@ -198,10 +198,10 @@ There are some bugs that I&rsquo;ve yet to prune out before I can make a stable 
     
     <item>
       <title>FAQ</title>
-      <link>https://anubhavp.dev/cbrtl/posts/faq/</link>
+      <link>https://anubhavp.dev/cbrtl//posts/faq/</link>
       <pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/cbrtl/posts/faq/</guid>
+      <guid>https://anubhavp.dev/cbrtl//posts/faq/</guid>
       <description>Before you ask...</description>
       <content:encoded><![CDATA[<h2 id="why-is-it-called-cbrtl">Why is it called &lsquo;cbrtl&rsquo;?</h2>
 <p><del>Because every other GitHub org name was taken</del>.</p>
@@ -270,10 +270,10 @@ Other clubs (which are official) in our college do a great (<del>citation needed
     
     <item>
       <title>Showcasing your project on cbrtl</title>
-      <link>https://anubhavp.dev/cbrtl/posts/project-showcase/</link>
+      <link>https://anubhavp.dev/cbrtl//posts/project-showcase/</link>
       <pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/cbrtl/posts/project-showcase/</guid>
+      <guid>https://anubhavp.dev/cbrtl//posts/project-showcase/</guid>
       <description>Some things to keep in mind while adding your project</description>
       <content:encoded><![CDATA[<p>This page intends to establish some minor ordinances surrounding project ideas and showcases.
 cbrtl was created with the intent of promoting the spirit of Open Source.
@@ -348,12 +348,12 @@ You can choose to have the repo be on the org, or on your GitHub profile.</p>
     
     <item>
       <title>Getting started with cbrtl and FOSS</title>
-      <link>https://anubhavp.dev/cbrtl/posts/getting-started/</link>
+      <link>https://anubhavp.dev/cbrtl//posts/getting-started/</link>
       <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/cbrtl/posts/getting-started/</guid>
+      <guid>https://anubhavp.dev/cbrtl//posts/getting-started/</guid>
       <description>Grinding gears</description>
-      <content:encoded><![CDATA[<p>So you read up on open source, read up on <a href="https://anubhavp.dev/cbrtl/posts/what-and-why/">cbrtl</a> and want to start hacking.
+      <content:encoded><![CDATA[<p>So you read up on open source, read up on <a href="https://anubhavp.dev/cbrtl//posts/what-and-why/">cbrtl</a> and want to start hacking.
 There are some preliminaries that you should take care of first.
 These are listed in order:</p>
 <ol>
@@ -392,11 +392,11 @@ It can mean different things for different people, but the recurring ideas are t
 <li>Showcasing projects you have made on cbrtl blog and GitHub organization.</li>
 <li>Contributing to larger open source projects outside cbrtl.</li>
 <li>Asking questions, getting to know people better.</li>
-<li>Volunteering on development and content moderation. <a href="http://anubhavp.dev/cbrtl/posts/what-and-why/#volunteering-to-cbrtl">Details here</a></li>
+<li>Volunteering on development and content moderation. <a href="http://anubhavp.dev/cbrtl//posts/what-and-why/#volunteering-to-cbrtl">Details here</a></li>
 </ul>
 <h2 id="starting-your-own-project">Starting your own project.</h2>
 <p>It would be great to have more interesting projects available for people to work on.
-Look at the <a href="http://anubhavp.dev/cbrtl/posts/project-showcase/">project showcase post</a> for relevant information.</p>
+Look at the <a href="http://anubhavp.dev/cbrtl//posts/project-showcase/">project showcase post</a> for relevant information.</p>
 ]]></content:encoded>
     </item>
     
