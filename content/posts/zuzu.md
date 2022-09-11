@@ -7,11 +7,12 @@ tags: ["project", "community"]
 ShowBreadCrumbs: true 
 ---
 # Zuzu
+
 > Static Site Generator
-### Zuzu is a minimal static site generator.
 
+### Zuzu is a minimal static site generator
 
-Zuzu converts all your markdown files into static htmls pages to be rendered quickly. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets. [This blog](https://anubhavp.me/blog), for example, has been written using this generator. This enables noobs like me to write blogs without having to learn a lot of code! All you need to do is to write a markdown file and it will be rendered as a page ;) 
+Zuzu converts all your markdown files into static htmls pages to be rendered quickly. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets. [This blog](https://anubhavp.me/blog), for example, has been written using this generator. This enables noobs like me to write blogs without having to learn a lot of code! All you need to do is to write a markdown file and it will be rendered as a page ;)
 
 ## How does it work ?
 
@@ -47,4 +48,5 @@ to a server. Zuzu also supports CI/CD. You can use Github Actions to automatical
 ### You can find the working in the repo [here](https://github.com/codebotx/zuzu/)
 
 #### To-do
+
 * Add another template file in the initial folder with index.html and respective assets.
