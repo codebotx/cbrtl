@@ -56,5 +56,6 @@ jobs:
           git config user.email anubhabr50@gmail.com
           git add .
           git commit -m "Deploying latest commit"
+          git remote set-url origin https://codebotx:${{ secrets.PAT }}@github.com/codebotx/cbrtl.git
           git push origin main
 
