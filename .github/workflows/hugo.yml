@@ -54,7 +54,7 @@ jobs:
           mv public docs
           git config user.name codebotx
           git config user.email anubhabr50@gmail.com
-          git remote set-url origin https://codebotx:${{ secrets.PAT }}@github.com/codebotx/cbrtl.git
+          git remote set-url origin https://codebotx:${{ secrets.PATN }}@github.com/codebotx/cbrtl.git
           git add .
           git commit -m "Deploying latest commit"
           git push origin main
