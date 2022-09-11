@@ -17,7 +17,7 @@
 <blockquote>
 <p>Static Site Generator</p>
 </blockquote>
-<h3 id="zuzu-is-a-minimal-static-site-generator">Zuzu is a minimal static site generator.</h3>
+<h3 id="zuzu-is-a-minimal-static-site-generator">Zuzu is a minimal static site generator</h3>
 <p>Zuzu converts all your markdown files into static htmls pages to be rendered quickly. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets. <a href="https://anubhavp.me/blog">This blog</a>, for example, has been written using this generator. This enables noobs like me to write blogs without having to learn a lot of code! All you need to do is to write a markdown file and it will be rendered as a page ;)</p>
 <h2 id="how-does-it-work-">How does it work ?</h2>
 <p>Zuzu parses the markdown file using <em>javascript</em> and renders it as <em>html documents</em>. It then saves the html files in the <code>public</code> folder. The public folder, with <code>index.html</code> file, is the final output of the generator and this can be deployed and hosted in various platforms. This particular blog has been deployed on <a href="https://anubhavp.me/blog/">Github Pages</a>.</p>
