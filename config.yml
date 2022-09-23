@@ -1,4 +1,4 @@
-baseURL: https://anubhavp.dev/cbrtl/
+baseURL: https://anubhavp.dev/blog/
 
 title: anubhavp
 paginate: 7
@@ -55,7 +55,7 @@ params:
   ShowCodeCopyButtons: true
   ShowToc: true
   # comments: false
-  images: ["papermod-cover.png", "assets/icon.ico"]
+  images: ["papermod-cover.png", "assets/favicon.ico"]
 
   profileMode:
     enabled: false
@@ -100,9 +100,9 @@ params:
   #         SiteVerificationTag: "XYZabc"
 
   assets:
-    favicon: icon.ico
+    favicon: favicon.ico
   #     favicon16x16: "<link / abs url>"
-    favicon32x32: icon.ico 
+    favicon32x32: favicon.ico 
   #     apple_touch_icon: "<link / abs url>"
   #     safari_pinned_tab: "<link / abs url>"
 
