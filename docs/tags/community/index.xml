@@ -1,114 +1,351 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>community on cbrtl</title>
+    <title>community on anubhavp</title>
     <link>https://anubhavp.dev/cbrtl/tags/community/</link>
-    <description>Recent content in community on cbrtl</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 27 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/cbrtl/tags/community/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in community on anubhavp</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://anubhavp.dev/cbrtl/tags/community/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello world!</title>
-      <link>https://anubhavp.dev/cbrtl/posts/what-and-why/</link>
-      <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
+      <title>Decentralization in MetaMUI Wallet: A Case Study</title>
+      <link>https://anubhavp.dev/cbrtl/posts/pages/metamuiwallet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/cbrtl/posts/what-and-why/</guid>
-      <description>cbrtl - now live</description>
-      <content:encoded><![CDATA[<h1 id="what-is-cbrtl">What is cbrtl?</h1>
-<p><strong>cbrtl</strong> is an attempt at creating a tight knit group of programmers to showcase and collaborate
-on projects and</p>
-<h2 id="what-do-we-do-here">What do we do here?</h2>
+      <guid>https://anubhavp.dev/cbrtl/posts/pages/metamuiwallet/</guid>
+      <description>A case study on how MetaMUI wallet claims to be decentralized and how it actully works.</description>
+      <content:encoded><![CDATA[<p>I am working with <a href="https://squbix.com/">Squbix Digital</a> to build a decentralized, secure and scalable solution using blockchain technology for <a href="https://swnglobal.com/">Sovereign Wallet</a>. The solution is to build a platform to exchange digital assets such as cryptocurrencies and digital currencies across a country/ organization and a cross-border payments system. Here is the <a href="https://sovereignwallet-network.github.io/whitepaper/MetaMUI-Blockchain-White-Paper.pdf">metamui whitepaper</a> and here are some of the things that I couldn&rsquo;t digest well.</p>
 <ul>
-<li><strong>Create</strong> fun projects. Either in groups or in isolation.</li>
-<li>Organize community and online <strong>showcases</strong> for group and individual projects.</li>
-<li><strong>Contribute</strong> to Open Source projects both in cbrtl and in other communities.</li>
-<li>Conduct <strong>code reviews</strong> and <strong>JAM</strong>s.</li>
-<li>Share <strong>resources</strong> to learn.</li>
-<li>Create and maintain <strong>dev-journals and blogs</strong>.</li>
+<li><a href="#metablockchain-core">Metablockchain-core</a>
+<ul>
+<li><a href="#robust-decentralized-and-secure">Robust, decentralized and secure?</a></li>
+<li><a href="#issues-with-the-current-infrastructure">Issues with the current infrastructure</a></li>
+<li><a href="#ideological-challenges">Ideological challenges</a></li>
 </ul>
-<h2 id="what-is-the-end-goal">What is the end goal?</h2>
-<p>Merely to promote Open Source culture and proper software development within our college.</p>
-<h2 id="how-far-down-the-road-are-we">How far down the road are we?</h2>
-<p>Not that far, the egg has just been laid.
-As of the time of writing this post, we have just started out.
-For the effort to work out, we welcome interested folks over :)</p>
-<h2 id="what-can-i-do">What can I do?</h2>
-<p>Just what you&rsquo;ve been doing so far, but with more people!</p>
-<p>If you have any interesting projects that you have already been working on,
-let us know and we&rsquo;ll put them on the cbrtl page for more people to see.
-Note that there is some criteria that projects must qualify, some of these are intentionally vague.
-But as long as you&rsquo;re doing more than following a course or tutorial, it&rsquo;s likely to be accepted :)</p>
-<h1 id="volunteering-to-cbrtl">Volunteering to cbrtl</h1>
-<p>We are looking for volunteers for some roles.
-Note however, that there is no strict mandate for responsibilities.
-As long as you&rsquo;re capable of adding <em>something</em> of value, no matter how small, shoot us a message!
-We&rsquo;re looking for some help with:</p>
+</li>
+<li><a href="#a-better-direction">A better direction</a>
 <ul>
-<li>
-<p><strong>Code reviewers</strong>: If you have experience contributing to FOSS or writing code for user/developer
-facing products, perhaps you can volunteer and help us out here :)</p>
-</li>
-<li>
-<p><strong>Editors</strong>: We plan on writing frequent blog posts.
-But both the technical content and the english material can use a second pair of eyes to help catch mistakes or inconsistent writing.
-If you have done some technical writing before, you can volunteer for reviewing the content in blog posts!</p>
-</li>
-<li>
-<p><strong>Technical Writers</strong>: If you have experience writing code but are usually on a tight schedule, you
-may be able to join us and share your knowledge. We want to mandate a high quality in our posts, so any
-tutorial/how-to guide that has been done a million times before is generally discouraged. We want
-to avoid redundant topics like &ldquo;How to build a todo app with React&rdquo; and promote posts and dev-logs /
-journals that are fun to read and explore.</p>
-</li>
-<li>
-<p><strong>Frontend devs</strong>: Currently, the cbrtl website is bland and not-so-catchy.
-While minimalism is the core idea, we can definitely use some front-end developers to help keep the UI fresh, responsive and modern.</p>
-</li>
-<li>
-<p><strong>Moderators</strong>: To help keep the community together on discord and github.</p>
+<li><a href="#improving-the-current-infrastructure">Improving the current infrastructure</a></li>
+</ul>
 </li>
 </ul>
-<p><strong>NOTE</strong> We do not expect any amount of time commitment from volunteers, as long as you can make small
-contributions, we appreciate it.
-Volunteering is not druge work, and active frequent contributions are appreciated, but not required.</p>
-<h1 id="the-kind-of-software-we-want-to-write">The kind of software we want to write</h1>
-<p>We firmly believe in re-inventing the wheel.
-Writing software close to the metal helps us closely understand the behind-the-scenes of software that most take for granted.
-While any creative project is welcome, here are some ideas that adhere to the spirit:</p>
-<ul>
-<li>Compilers</li>
-<li>Virtual Machines and Interpreters</li>
-<li>Game Engines</li>
-<li>Operating Systems</li>
-<li>Search Engines</li>
-<li>Database engines</li>
-<li>Voxel renderers</li>
-<li>TCP/IP stack</li>
-<li>VCS</li>
-</ul>
-<p>All of these are but regular software that we tend to take for granted, that can be (and have been) written from scratch.
-We encourage all kinds of creative projects no matter how basic.
-But you can expect the above group projects to come to life as the community grows.</p>
-<h2 id="showcasing-your-project">Showcasing your project</h2>
-<p><a href="https://anubhavp.dev/cbrtl//posts/project-showcase/">This</a> post has more on that.
-If you want to showcase your project on our github org, then reach out to us on discord or the mailing list.</p>
+<h2 id="metablockchain-core">Metablockchain-core</h2>
+<p>Metablockchain: The blockchain that lets you regulate digital currencies and cryptocurrencies across the nation. The platform is built on Polkadot protocol that has significantly better runtime efficiency, is cost-effective, and supports parallel faster transactions when compared to other traditional blockchains. The Polkadot protocol is designed to allow unrelated blockchains to securely talk to each other, so that value or data can flow between, say, the Ethereum and Bitcoin blockchains without any intermediary. It’s also designed to be speedy and scalable, via the use of many parallel blockchains (or “parachains”) that take much of the processing demand off of the main blockchain. The Polkadot network can process more than 1,000 transactions per second, compared to about 7 for Bitcoin and 30 for Ethereum. As the network grows and more parachains are added, Polkadot should get even faster, with speeds that could hit a million transactions per second.</p>
+<h3 id="robust-decentralized-and-secure">Robust, decentralized, and secure?</h3>
+<p>The product is built in such a way that a country/ government/central banking authority can adopt this platform and make it run parallel with the currently existing infrastructure. Users can send and receive money across the country and it takes significantly less time to handle international transactions. It seems great, an easier way to handle transactions, without having to pay taxes to the government for making international exchanges! But the reality may not be as exciting.</p>
+<blockquote>
+<p>MetaMUI is claimed to solve the blockchain trilemma by having a hybrid architecture. For micropayment, we
+used centralized architecture to achieve high performance and high security. For higher volume payment, we
+used decentralized architecture to achieve high security and decentralization.</p>
+</blockquote>
+<p>The current infrastructure is easy to use but is not as secure as claimed. The primary goal of the infrastructure is to make it easier for users to send and receive (traditional banking) money across the country and, it is not secure because it is <strong>not decentralized</strong>, and <strong>well-developed</strong> . Introducing a blockchain as a means of a runtime to carry out transactions as opposed to a traditional banking system is to make sure that all the transactions are handled in a decentralized manner and anyone when wanted, can query and view the source, and all the states of the transactions but it is not the case here.</p>
+<h3 id="issues-with-the-current-infrastructure">Issues with the current infrastructure</h3>
+<ol>
+<li>
+<p><strong>The usage of a private blockchain</strong>.</p>
+<p>The banks are responsible for running validator nodes that run on the private blockchain and are responsible for validating the transactions and the states of the system. The claims as said were to improve security and transparency but this approach opposes the purpose of the claims. A private blockchain to carry out transactions makes it a kind of database and a runtime that is not public and not accessible to anyone. The banks are servers and the blockchains act as databases. The clients are the users. Seem familiar? This is a client-server architecture with a blockchain running as a database.</p>
+<blockquote>
+<p>Bank Node is a publisher of anonymous tokenized cash. Users can choose Bank Node service providers and
+have a token contract to issue digital cash. Based on the contract, it can be a debit card or credit card type.
+When the user pays the merchant with digital cash, the merchant can claim the digital currency to the issuing
+Bank Node. &ldquo;The performance of this payment process should be equal to or better than normal credit card
+payments.&rdquo;</p>
+</blockquote>
+<blockquote>
+<p>For high-volume money transfer, MetaMUI utilizes a normal blockchain consensus protocol. All Bank Nodes are
+involved in the consensus of multiple digital currencies. Since this a transfer between identities, it is a kind of
+digital cheque payment. Also since we are using blockchain consensus to do so instead of a centralized server
+for cheque clearance, this is a decentralized cheque system. This payment process is slower than the
+conventional credit card payment but it is much faster and costs less than an account-based international bank
+transfer.</p>
+</blockquote>
+<p>Building a platform for carrying out transactions is perfectly okay but introducing blockchains as a means of a just database doesn&rsquo;t make sense. It feels like a gimmick, a buzzword to secure seed &amp; money from investors. Also, there is nothing wrong with a client-server architecture but the speed of current infrastructure relies on implementing a blockchain as a runtime for transactions, which, as always, is <strong>slow</strong>. Blockchains are supposed to be secure and transparent but they are not efficient and fast. The transaction data when accessible publicly make the network secure, which it is not, here. Whereas a more traditional client-server architecture is equally secure and more efficient. Look at the current banking and payment gateway scenario in India. UPI payments, net banking, and debit card payments, are all carried out in a secure environment and are blazing fast.</p>
+<blockquote>
+<p>A blockchain-style data store is secure but it is not efficient in terms of computation, communication, and data point of view.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>The Consensus mechanism</strong></p>
+<blockquote>
+<p>Consesnus Protocol
+MetaMUI’s consensus protocol is a combination of PBFT(Practical Byzantine Fault Tolerance) and PoS(Proof of
+Stake). Only Bank Nodes participate in the consensus of built-in blockchains. Bank Node can be a block
+proposer and endorser of both built-in blockchains and all digital currency blockchains. The mobile node can
+participate in the consensus of newly created digital currencies as an endorser. In the case of digital currency
+consensus, <strong>only a Bank Node can be a leader or the block proposer</strong>.</p>
+</blockquote>
+<p>Bank nodes have the authority to govern, validate transactions and decide the fate of the entire system, which makes the bank a central authority here. This gives authority to the bank nodes to validate any transactions. The bank may decide to invalidate valid transactions or validate invalid transactions and no one would know cause it would be there &ldquo;on the blockchain&rdquo;. (Not saying that this would be done, because a banking sector obviously wouldn&rsquo;t carry out fraudulent transactions.) This does raise a question about the prorposed solution that claims to have solved the blockchain trilemma.</p>
+<blockquote>
+<p>The leader node also acts as a serializer to serialize transactions. The leader node receives block rewards and
+transaction fees. Endorser also receives the endorsing rewards when the node’s endorsement is included in the
+majority vote.</p>
+</blockquote>
+<p>The endorser and leader nodes receive rewards based on the node’s endorsement. The endorser node receives the
+endorsement rewards when the node’s endorsement is included in the majority vote. The leader node receives the
+block rewards when the node’s block is included in the majority vote. How does a network with an nPOS consensus protocol pay or reward nodes if there are no gas fees involved?</p>
+</li>
+<li>
+<p><strong>ACB (Algorithmic central bank)</strong></p>
+<p>The current platform runs a single and private blockchain without any overhead of the AI mechanism that will fuel the infrastructure.
+Implementing the Algorithmic Central Bank can be a key player in the industry. The current platform is inefficient when run using a single private blockchain and no centralized banking establishment to control inflation and deflation. The product can be improved when the existing mechanism as proposed in the whitepaper come to play. The current platform might not be a very good solution for the industry unless the stated propositions come to play.</p>
+<blockquote>
+<p>MetaMUI is just the starting point. We suggested fundamental solutions for Algorithmic Central Bank and a
+decentralized, but expandable ecosystem based on mobile nodes. But we believe the current development of
+artificial intelligence technologies such as deep learning and reinforcement learning will be the key game changers of the blockchain platform. MetaMUI was designed to take care of these technologies. In near future,
+we can see the powerful coordination of more flexibilities based on artificial intelligence and robustness/
+stability for transactions based on the blockchain platform.</p>
+</blockquote>
+<blockquote>
+<p>The digitalization of currency opens up new opportunities for digitalized monetary decision-making. Bank node
+is an early form of Algorithmic Central Bank that makes monetary decisions based on financial big data. It is
+possible to apply a federated learning algorithm at the central bank node and collect and learn a decentralized
+model on many mobile nodes.</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="ideological-challenges">Ideological challenges</h3>
+<p>MetaMUI wallet also lets you regulate digital currencies and crypto-currencies across the world and carry out transactions without having to pay conversion fees. This current implementation of the ideology may become an issue because of the following reasons:</p>
+<ol>
+<li>
+<p><strong>Governments of countries do not generally allow cryptocurrencies to be legal tender.</strong> There are two countries as of now that currently allow cryptocurrencies to be traded and accepted as legal tender and both of them are not the most developed or developing nations in the world. Targeting these countries to sell the platform might not be wise.</p>
+<p>Governments usually have a means of regulating easier banking methods and exchange methods. Let us take the example of India. India doesn&rsquo;t allow cryptocurrencies to be legal tender. Digital payments are very popular and online payments being carried out in India follow traditional banking and government norms and are very fast. I don&rsquo;t think anyone in the current generation nowadays goes to the bank to deposit or withdraw money. Let us take another example of the UID system followed in India, <strong>Adhaar</strong> system. The system is encrypted using military-grade encryption. The system is very secure and the government is very responsible for the security of the system. The current implementation of encryption used at MetaMUI Wallet is SHA-256 which although a very secure algorithm would seem like legacy software for the Indian government to integrate and work with. The task is tedious and unnecessary.</p>
+<p>There seems no solid revolutionary reason for a bank/government to introduce a new platform to run which regulates and carries out transactions and exchanges for free. Excellent existing platforms are already available and our infrastructure is not a new platform. <em>(Paytm, Gpay, Paypal, CoinDCX etc.)</em></p>
+</li>
+<li>
+<p><strong>Conversion fees are a means of generating tax for a government.</strong> International exchanges or cryptocurrency exchanges are a means of generating tax for a government. When you convert INR to USD or vice versa, you are generating tax for the government. Current conversion from ETH, BTC to INR is a very low fee but there does exist a fee.</p>
+<blockquote>
+<p>MetaMUI Network is an Internet-based cross-border payment network. In MetaMUI Network, each user’s DID is
+a universal accounting address that user can send or receive digital currencies. Utilizing collateral asset feature
+and meta-blockchain feature of MetaMUI Blockchain, it is possible to dynamically create meta-coin on the fly to
+facilitate cross-border payment between the currencies those are not on the MetaMUI Network. Similar to the
+stable coin issuance, central bank or commercial bank of each country can create stable meta-coin on the
+MetaMUI Network and perform international fund transfer</p>
+</blockquote>
+<p>The platform introduced doesn&rsquo;t have gas fees. Gas fees are the fees in a blockchain that you need to pay to make a transaction or carry out a smart contract. A miner validates your transaction by spending its computation power and in return is awarded the gas money. Gas fees are a means of generating revenue for a miner, but having no gas fees in a private blockchain implies that the bank and the infrastructure have to spend money on electricity and computing resources to validate transactions. It doesn&rsquo;t make sense to have a platform that makes you spend money on electricity and computing resources just to validate transactions.</p>
+<blockquote>
+<p>When users are trading digital stocks or assets in a peer-to-peer way, MetaMUI provides an atomic swap of
+digital stock and digital currency. Since digital stock is bind to the user’s identity, ownership transfer notification
+and tax payment can happen at the same time as the stock trade. This eliminates the need for separate
+shareholder registration, issuance of shareholder certificates, tax reports to the government, and tax payments.</p>
+</blockquote>
+<p>Let us again take the example of India. Cryptocurrencies when made legal in India would have a 30% conversion fee, you&rsquo;d have to pay a 30% tax to the government for converting the cryptocurrency. It wouldn&rsquo;t make sense for India to allow the platform to run without a conversion fee. Also, there are a lot of other, well-established platforms playing in the same field and pitching and hitting hard in these areas. <em>(CoinDCX, Coinbase, etc)</em></p>
+</li>
+<li>
+<p><strong>Present operating scenario in foreign exchange platforms.</strong></p>
+<blockquote>
+<p>Cheaper, faster, and efficient cross-border payments are the need of the hour in today’s digital world. The
+MetaMUI Network is designed to host multiple blockchains concurrently. Each of these blockchains can run
+independently of each other and communicate (transact) with each other. The currency exchange is made
+possible through atomic swaps and multi-currency transfer is possible with an exchange service provider
+(Master Node) making it excellent for direct sovereign currency to sovereign currency cross-border payments</p>
+</blockquote>
+<p>The existing exchange platforms are extremely secure, well-established, and highly efficient. The working and operation of these platforms are governed by international laws. The current implementation of MetaMUI Wallet doesn&rsquo;t include any gas fees for transactions. It&rsquo;d either have to tie up with an exchange platform or would have to come up with some other way to convince a country to let it handle all of its transactions. Either way, it would be both cost ineffective solutions. With private blockchains and 0 gas fees, MetaMUI Wallet will be having a hard time trying to carry out free transactions across the globe. The organization, at first, would have to pay for the mining and electricity and on top of that would have to pay the cross-border payment fees too.</p>
+</li>
+</ol>
+<h2 id="a-better-direction">A better direction</h2>
+<p>There might exist better, more efficient solutions to the above problems but two of them may have these similar approaches:</p>
+<ol>
+<li>
+<p><strong>Introduce a public blockchain</strong> This solves the problem of spending money on validating transactions. Miners can validate transactions and the government/ bank can verify the transactions. This would be a huge bump in security, transparency, and cost efficiency.</p>
+<p>It still doesn&rsquo;t solve the problem of introducing a new platform just to do this. The tax play still becomes an issue here. How does the platform plan on managing taxes? Why would a bank allow a platform to run which would not benefit it in any manner? The government levies taxes to exchange international currencies. Why would it stop doing that? Even if it is allowed, how would it compete with other platforms working towards a similar strategy?</p>
+</li>
+<li>
+<p><strong>Following traditional client-server architecture using a distributed database</strong> This would solve the problem of efficiency. Traditional architectures have been here for a very long time and a lot of research has been done on optimizing the existing infrastructure. Horizontal slicing, vertical slicing, and many other optimization techniques may be used to improve the efficiency of the platform. The platform would be faster, equally secure, and more efficient.</p>
+<p>The issue with this approach is the question that what problem is it really trying to solve. Don&rsquo;t there exist platforms that are already doing everything this infrastructure is trying to solve? How would it be able to compete with the existing giants? Isn&rsquo;t the solution building a redundant, regular, exchange banking platform that the world has no less of?  How would the platform differentiate itself? What is MVP, the USP of the platform? If it decides to work together with the government, what ensures that other existing strong infrastructures do not also decide to do this and do it better?</p>
+</li>
+</ol>
+<h3 id="improving-the-current-infrastructure">Improving the current infrastructure</h3>
+<p>The approaches may be justified once some of the important issues are addressed. Other than the mentioned problems, a lot of other factors need to pitch in to improve and make the platform more a feasible good product to be sold. The product being built is excellent, no doubt. The deep learning models in the ACB mechanism, the tech being used, the next generation Polkadot blockchains which are much, much faster (1000 transactions per second as compared to 7-10 transactions in traditional blockchain networks) and allow a huge on queries in a much faster time, the faster and more efficient transaction mechanisms, interoperability, the economic scalability, user-driven governance, the forkless upgrades, and the claimed security and transparency, are a step in the right direction, but there are grave issues those still need to be discussed before the product is introduced and launched.</p>
+<p><em>Ref: <a href="https://sovereignwallet-network.github.io/whitepaper/MetaMUI-Blockchain-White-Paper.pdf">Whitepaper</a></em></p>
 ]]></content:encoded>
     </item>
     
     <item>
-      <title>Project: Zuzu</title>
-      <link>https://anubhavp.dev/cbrtl/posts/zuzu/</link>
-      <pubDate>Mon, 27 Jun 2022 00:00:00 +0000</pubDate>
+      <title>Why is Web3 a sham?</title>
+      <link>https://anubhavp.dev/cbrtl/posts/pages/infeasibleweb3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/cbrtl/posts/zuzu/</guid>
-      <description>Zuzu is a static site generator that converts all your markdown files into static htmls pages. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets.</description>
-      <content:encoded><![CDATA[<h1 id="zuzu">Zuzu</h1>
+      <guid>https://anubhavp.dev/cbrtl/posts/pages/infeasibleweb3/</guid>
+      <description>A short rant on the state of Web3</description>
+      <content:encoded><![CDATA[<p>During my short stint as a blockchain developer, I&rsquo;ve learned a lot and have met amazing people.
+While I acknowledge the skill and reverence of some developers in this domain,
+I still remain uncharmed by the zeal of web3.</p>
+<p>If you&rsquo;re a blockchain enthusiast reading this, know that I understand where you stand.
+I&rsquo;ve been in your shoes,
+and I draw my opinions from personal encounters with the crypto ecosystem.
+What I ask of you as a peer then, is that you put your tech under a lens of scrutiny and sever any bonds that may develop into religious fanaticism.
+This is true of all engineering, of course.
+We cannot improve a technology if we&rsquo;re blind to it&rsquo;s limitations.
+And we can&rsquo;t perceive limitations unless we are open to critique.
+Critique such as this one.</p>
+<p>Most engineers who build blockchains and NFT based projects recognise the technical limitations of this technology.
+Yet they choose to write them off as &ldquo;tradeoffs&rdquo; for <em>web3</em>, or worse, turn a blind eye to them.
+And then there are the social problems -
+ones that are so nuanced that they can&rsquo;t be tackled by any number of token standards or consensus algorithms.
+This post is my attempt at shedding some light on the problems that I&rsquo;m aware of.</p>
+<ul>
+<li><a href="#social">Social</a>
+<ul>
+<li><a href="#the-majority-of-crypto-is-shady-even-for-artists">The majority of crypto is shady, even for artists.</a></li>
+<li><a href="#nft-marketplaces-are-centralised-and-controlled">NFT marketplaces are centralised and controlled.</a></li>
+<li><a href="#nfts-are-worthless">NFTs are&hellip; worthless?</a></li>
+<li><a href="#your-get-rich-quick-chances-are-miniscule">Your &lsquo;get-rich-quick&rsquo; chances are miniscule.</a></li>
+</ul>
+</li>
+<li><a href="#engineering">Engineering</a>
+<ul>
+<li><a href="#nfts-can-be-altered">NFTs CAN be altered.</a></li>
+<li><a href="#web3-is-not-technically-feasible">Web3 is not technically feasible.</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="social">Social</h2>
+<h3 id="the-majority-of-crypto-is-shady-even-for-artists">The majority of crypto is shady, even for artists</h3>
+<p>Cryptocurrency is always found in a massive web of controversy, frauds and scams.
+Show me one successful crypto project that has served a real purpose,
+and I&rsquo;ll show you 10 that were outed for being scams.</p>
+<p>NFTs claim to be a revolution for artists and creators.
+But what happens when someone makes an NFT out of stolen art?
+Owing to a blockchain&rsquo;s immutable nature,
+the thief now owns the art forever, even if they&rsquo;re found out.</p>
+<p>The solution that crypto evangelists propose is that artists should mint an NFT
+out of their art before someone else gets the chance.
+But this is far from a realistic solution.
+A creator should not be bothered with signing tokens on a myriad of different markets and blockchains just to avoid being wronged.
+Why should an artist <strong>pay</strong> to register an NFT on Flow, Ethereum, Solana, Monero, Tezos and countless other chains under the sun?</p>
+<h3 id="nft-marketplaces-are-centralised-and-controlled">NFT marketplaces are centralised and controlled</h3>
+<p>The willingness to be free from institutional regulation and government censorship is at the nexus of &ldquo;web3&rdquo;.
+The idea of a government powerless to stop a citizen from owning any digital asset appeals to many.
+However under this veil of liberation and freedom lies a truth that no crypto-bro will tell you -
+The very marketplace you view and trade your assets on are centralised and controlled.</p>
+<p>NFT assets <strong>can</strong> be removed from <a href="https://objkt.com/">objkt</a> and <a href="https://opensea.io/">opensea</a>, you <strong>can</strong> be banned from <a href="https://www.coinbase.com">coinbase</a>.
+<a href="https://support.opensea.io/hc/en-us/articles/1500010625362-Why-are-my-items-and-collections-delisted-">Opensea even admits it</a> themselves!
+If you violate any of the following vague &ldquo;rules&rdquo;,
+your NFT will be delisted from a supposedly &ldquo;decentralised&rdquo; and &ldquo;uncensorable&rdquo; marketplace.</p>
 <blockquote>
-<p>Static Site Generator</p>
+<ul>
+<li>infringe on protected intellectual property,</li>
+<li>promote suicide or self-harm,</li>
+<li>incite hate or violence against others,</li>
+<li>degrade or dox another individual,</li>
+<li>otherwise violate our <a href="https://opensea.io/tos">terms of service</a>.</li>
+</ul>
 </blockquote>
-<h3 id="zuzu-is-a-minimal-static-site-generator">Zuzu is a minimal static site generator</h3>
-<p>Zuzu converts all your markdown files into static htmls pages to be rendered quickly. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets. <a href="https://anubhavp.me/blog">This blog</a>, for example, has been written using this generator. This enables noobs like me to write blogs without having to learn a lot of code! All you need to do is to write a markdown file and it will be rendered as a page ;)</p>
-<h2 id="how-does-it-work-">How does it work ?</h2>
-<p>Zuzu parses the markdown file using <em>javascript</em> and renders it as <em>html documents</em>. It then saves the html files in the <code>public</code> folder. The public folder, with <code>index.html</code> file, is the final output of the generator and this can be deployed and hosted in various platforms. This particular blog has been deployed on <a href="https://anubhavp.me/blog/">Github Pages</a>.</p>
+<p>But what constitutes &ldquo;violence or hate against others&rdquo;?
+Will I get banned if I make fun of a political figure?
+Rather, <strong>Can</strong> I get banned if I make fun of a political figure?
+Clearly, the answer is yes.
+The people moderating this website do wield that power.
+&ldquo;Moderating a decentralised and censor-proof website&rdquo; is an oxymoron,
+and how the people trading on such platforms fail to realise this eludes me.</p>
+<h3 id="nfts-are-worthless">NFTs are&hellip; worthless?</h3>
+<p>In stark contrast with their price tags, the actual value represented by an NFT is surprisingly low.
+Say you spend all the money you saved for your child&rsquo;s education to buy this rock NFT:</p>
+<p></p>
+<p>Now you&rsquo;re pumped with adrenaline, because you <strong>own</strong> this piece of history.
+The image is yours, and you claim all rights to its usage and redistribution.
+This art piece is now valued as if it were a real and tangible rock, there is only one rock and only one owner - you.</p>
+<p>Right? <!-- raw HTML omitted -->
+Wrong. <!-- raw HTML omitted -->
+The artist still owns the image, and they&rsquo;re entitled to sell it to others,
+or even make yet another NFT out of it on a different blockchain and sell it there.</p>
+<p>So if you don&rsquo;t own this rock, what exactly do you possess?
+The ability to use this on the internet as you please?
+So do I. I used it just now, to show you what it looks like.</p>
+<p>Had the rock been real,
+the owner would&rsquo;ve been capable of sculpting it into a showpiece -
+the exact physical properties of which no one else can have.
+Or they could use it to assault kids on a street, something noone else could do with the same edge,
+for there exists only one.
+If I tried to assault children with a similar rock, I wouldn&rsquo;t be subject to the same acclaim as you.
+Because my rock and yours have real, physical differences down to the microscopic level.</p>
+<p>When an asset is digital, and an image at that, &ldquo;ownership&rdquo; comes with no priviledges.
+If you can use it as your twitter avatar, I can too.
+And unlike the real world, my avatar has the exact same pixel composition as yours.</p>
+<p>Whatever you can do it with it, I can.
+Except you now bear a financial loss in pursuit of this &ldquo;ownership&rdquo;
+because people told you it means something.</p>
+<h3 id="your-get-rich-quick-chances-are-miniscule">Your &lsquo;get-rich-quick&rsquo; chances are miniscule</h3>
+<p><strong>The value of an NFT is what you believe it to be.</strong></p>
+<p>Crypto evangelists would have you believe this too, except they&rsquo;d word it very differently.
+But you can&rsquo;t get the world to agree on this strange belief system
+where nearly identical 32x32 pixel people are supposed to encapsulate an &ldquo;idea&rdquo; worth
+thousands of dollars.</p>
+<p>To most, it just won&rsquo;t make sense.
+Why should this clump of pixels cost 1M$?</p>
+<!-- raw HTML omitted -->
+<p>Why should we collectively enforce this belief? <!-- raw HTML omitted -->What can we achieve with this new school of thought that we couldn&rsquo;t before?</p>
+<p>Some crypto evangelists answer this with &ldquo;<a href="https://cryptopotato.com/this-cryptopunk-nft-was-bought-for-15k-in-2018-now-sold-for-8-million/">It can make you rich!</a>&rdquo;.
+There is a nugget of truth to that,
+but it&rsquo;s a very twisted statement that conceals more than it shows.
+We&rsquo;ve to realize that this value doesn&rsquo;t come from nowhere.
+For you to have gained in this flaky landscape, several others had to lose.
+And if general probability theory is anything to go by, you&rsquo;re more likely to find yourself in the losing lot.</p>
+<p>MLM scams and pyramid schemes play a surprisingly similar game,
+but enough people have already drawn this analogy so that I don&rsquo;t have to.</p>
+<h2 id="engineering">Engineering</h2>
+<h3 id="nfts-can-be-altered">NFTs CAN be altered</h3>
+<p>Unknown to most regular consumers of crypto,
+the actual items represented by NFTs they own aren&rsquo;t actually stored on a blockchain.
+i.e - the million dollar ape JPEG someone spent their life savings on is physically located somewhere outside Ethereum.
+They&rsquo;re stored on a separate database which could be centralised (but generally isn&rsquo;t, like IPFS).
+The blockchain itself only stores a URI to the resource in question (say <code>ipfs://foo/bar/orangutan.jpg</code>).</p>
+<p>Look at Ethereum&rsquo;s <a href="https://eips.ethereum.org/EIPS/eip-721">EIP-721</a> token standard.
+Once you&rsquo;ve made your way through the document, you&rsquo;ll realise there is <strong>nothing</strong> stopping a server
+from serving different files at different times of the day for the same URI.
+Or serving different files based on where the client requesting the resource is located.
+There is even a word for this act, it starts with a <strong>c</strong>, ends with an <strong>r</strong> and rhymes with &ldquo;tensor&rdquo;.
+See <a href="https://moxie.org/2022/01/07/web3-first-impressions.html#making-an-nft">this NFT</a> by Moxie Marlinspike as an example.</p>
+<h3 id="web3-is-not-technically-feasible">Web3 is not technically feasible</h3>
+<p>Ever so often you&rsquo;ll cross web3 enthusiasts on twitter who claim the internet will be decentralized in the near future.
+That there will be no institutional control and a governments&rsquo; powers over social media will cease to exist.
+And they claim this will be by virtue of a blockchain driven internet, that runs on gas fees.</p>
+<p>It just isn&rsquo;t possible.
+An advertisement driven web, no matter how terrible, is still far superior to one that is gas fees driven.
+When texting, people will always prefer ads to paying out of their own pocket.</p>
+<p>However, lets leave the human factors aside for a moment.
+Let&rsquo;s imagine a world where humans willingly pay to post instagram selfies.
+Even in that universe, blockchain is incapable of supporting such an infrastructure.</p>
+<p>Blockchains are <strong>SLOW</strong>. <!-- raw HTML omitted -->
+They&rsquo;re simply inefficient when put up against traditional databases and the decades old client-server architechture.
+What&rsquo;s even worse is traditional scaling and optimization techniques do not apply to a blockchain.
+The optimizations that do exist (<a href="https://wiki.tezosagora.org/build/blockchain-indexers">indexers</a>) are centralized and beat the whole point of web3.</p>
+<p>A blockchain is a large append-only merkle tree that needs the computing power of a suburb to confirm a group of transactions, and even then it can take minutes depending on the implementation.
+For highly critical transactions,
+you&rsquo;ve to wait for 5-6 rounds of &ldquo;confirmation&rdquo; before gaining reasonable confidence in the operation you just performed.</p>
+<p>Anyone who has actually studied this subject in appropriate detail would tell you it is impossible for such inefficient technology to withhold traffic on sites like reddit, discord, twitter, facebook, 4chan, youtube etc.</p>
+<p>The more energy efficient consensus algorithms, like &ldquo;Proof of Stake&rdquo;, have a different kind of flaw.
+They favor miners (called <a href="https://wiki.tezosagora.org/learn/baking">bakers</a> on the Tezos chain) who own more coin.
+A classic &ldquo;rich get richer&rdquo; scheme.</p>
+<p>This is not to say blockchain is completely useless.
+It <strong>might</strong> be used for problems such as food contamination tracing, and verifying ownership of legal documents.
+However the world today is in a frenzy to use it in all the places where it doesn&rsquo;t belong.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>zuzu: A Static Site Generator (SSG)</title>
+      <link>https://anubhavp.dev/cbrtl/posts/pages/zuzu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://anubhavp.dev/cbrtl/posts/pages/zuzu/</guid>
+      <description>Zuzu is a static site generator that converts all your markdown files into static htmls pages. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets.</description>
+      <content:encoded><![CDATA[<p>Zuzu is a static site generator that takes in markdown files and render htmls pages. <a href="https://anubhavp.dev/blog">This blog</a>, for example, has been written using this generator. This enables noobs like me to write blogs without having to learn a lot of code! It is a very simple and easy to use generator. All you need to do is to write a markdown file and it will be rendered as a page ;) You can create a new page by creating a new markdown file.</p>
+<ul>
+<li><a href="#how-does-it-work">How Does it work</a>
+<ul>
+<li><a href="#1-create-a-markdown-file">Create a markdown file.</a></li>
+<li><a href="#2-run-the-generator-and-find-your-blog">Run the generator and find your blog.</a></li>
+</ul>
+</li>
+<li><a href="#the-static-site-generator">The Static Site Generator</a>
+<ul>
+<li><a href="#1-libraries-used">Libraries Used</a></li>
+<li><a href="#2-workflow">Workflow</a></li>
+<li><a href="#3-generator-code">Generator Code.</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="how-does-it-work">How does it work?</h2>
+<p>Zuzu parses the markdown file using <em>javascript</em> and renders it as <em>html documents</em>. It then saves the html files in the <code>public</code> folder. The public folder, with <code>index.html</code> file, is the final output of the generator and this can be deployed and hosted in various platforms. This particular blog has been deployed on <a href="https://anubhavp.dev/blog/">Github Pages</a>.</p>
 <h3 id="1-create-a-markdown-file">1. Create a markdown file</h3>
 <pre><code># This is a title
 This is a paragraph
@@ -127,277 +364,141 @@ This is a table:
 | 1        | 2        | 3        |
 | 4        | 5        | 6        |
 | 7        | 8        | 9        |
-This is a link: [zuzu](https://anubhavp.me/blog/zuzu.html)
+This is a link: [zuzu](https://anubhavp.dev/blog/zuzu.html)
 </code></pre>
 <h3 id="2-run-the-generator-and-find-your-blog">2. Run the generator and find your blog</h3>
-<p>Run <code>npm run generate</code> in the console. Zuzu is also available as a CLI tool. You can install it using <code>npm install -g zuzu</code>. Then run <code>npx zuzussg</code> in the console. This will generate the html files in the <code>public</code> folder. You can then deploy the <code>public</code> folder to any hosting platform.
+<p>Run <code>npm run generate</code> in the console.
 You&rsquo;ll now see the blog in the public folder! Run the index.html file in your browser to see your blog. You may now deploy your site
-to a server. Zuzu also supports CI/CD. You can use Github Actions to automatically deploy your site to Github Pages.</p>
-<h3 id="you-can-find-the-working-in-the-repo-herehttpsgithubcomcodebotxzuzu">You can find the working in the repo <a href="https://github.com/codebotx/zuzu/">here</a></h3>
-<h4 id="to-do">To-do</h4>
+to a server.</p>
+<h2 id="the-static-site-generator">The Static Site Generator</h2>
+<h3 id="1-libraries-used">1. Libraries used</h3>
 <ul>
-<li>Add another template file in the initial folder with index.html and respective assets.</li>
+<li><a href="https://www.npmjs.com/package/markdown-it">MarkdownIt</a> <em>Markdown parser done right.</em></li>
+<li><a href="https://www.npmjs.com/package/markdown-it-anchor">MarkdownItAnchor</a> <em>Header anchors for markdown-it.</em></li>
+<li><a href="https://www.npmjs.com/package/glob">Glob</a> <em>&ldquo;Globs&rdquo; are the patterns you type when you do stuff like ls .js on the command line, or put build/ in a .gitignore file.</em></li>
+<li><a href="https://www.npmjs.com/package/gray-matter">Gray-Matter</a> <em>Parse front-matter from a string or file.</em></li>
+<li><a href="https://npmjs.com/package/mkdirp">Mkdirp</a> <em>Create Dirs if they do not exist.</em></li>
 </ul>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Project: Vyse</title>
-      <link>https://anubhavp.dev/cbrtl/posts/vyse/</link>
-      <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://anubhavp.dev/cbrtl/posts/vyse/</guid>
-      <description>A dynamically typed, interpreted and fast scriptling language inspired by Lua for rapid prototyping of applications like video games.</description>
-      <content:encoded><![CDATA[<p>Sometime during my 2nd year in college, I&rsquo;d made a hobby programming language that turned out quite well.
-It&rsquo;s named &ldquo;Vyse&rdquo;, after <a href="https://dota2.fandom.com/wiki/Scythe_of_Vyse">Guinsoo&rsquo;s Scythe of Vyse</a> from DotA.</p>
-<p>Vyse is a dynamically typed, interpreted and fast scriptling language inspired by Lua for rapid prototyping of applications like video games.
-Programmers familiar with Lua/Javascript can pick up the language within an hour.
-Vyse also comes with a C++ API for frictionless embedding in projects.</p>
-<p>Features include:</p>
-<ul>
-<li>Modules, both native and user-level</li>
-<li>An embedding API</li>
-<li>Closures, higher order functions to facilitate FP.</li>
-<li>Prototypical inheritance, inspired from JS and Lua.</li>
-</ul>
-<p>Since the language already has detailed (but remarkably outdated) documentation on <a href="https://injuly.in/vyse">its website</a>,
-I won&rsquo;t bother rewriting any of that here.</p>
-<p>Instead, here is the simple number-guessing program:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rs" data-lang="rs"><span style="display:flex;"><span><span style="font-weight:bold">const</span> math = import(<span style="font-style:italic">&#34;math&#34;</span>)
+<h3 id="2-workflow">2. Workflow</h3>
+<p>This is the code for the generator.js.
+The code works in the following way:</p>
+<ol>
+<li><code>fs.readfile() from fs</code> reads all the files from the said directory and stores then in <code>filename</code> using <code>glob</code>. It is a <code>glob</code> that matches all the files in the directory. The <code>file system</code> module allows you to work with the file system on your computer.</li>
+<li><code>gray-matter</code> helps extracting front matter from the a string or file.
+Converts a string with front-matter, like this:</li>
+</ol>
+<pre tabindex="0"><code>    title: Hello
+    slug: home
+    ---
+    &lt;h1&gt;Hello world!&lt;/h1&gt;
+</code></pre><p>Into an object like this:</p>
+<pre><code>{
+content: '&lt;h1&gt;Hello world!&lt;/h1&gt;',
+data: { 
+    title: 'Hello', 
+    slug: 'home' 
+}
+}
+</code></pre>
+<p>It then extracts the front matter and stores it in <code>data</code>. It then stores the content in <code>content</code> and returns the <code>filename</code> to the <code>main()</code> function. It then repeats the process for all the files in the directory.</p>
+<ol start="3">
+<li>
+<p>The <code>main()</code> function then takes in one <code>filename</code> at a time and then parses it through <code>markdownit( ,{markdownitanchor})</code>. <code>markdownit</code> parses the file and converts the markdown content into HTML files. It then creates a <code>html</code> file and writes the parsed content into it. It then saves the <code>html</code> file in the <code>public</code> folder. This process repeats for all the files in the directory.</p>
+</li>
+<li>
+<p>The converted html files are stored in the specified directories then using <code>mkdirp</code>. The <code>index.html</code> file isalready present in the <code>public</code> folder. <code>mkdirp</code> creates the directories if they do not exist.</p>
+</li>
+</ol>
+<h3 id="3-generator-code">3. Generator Code</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> fs from <span style="font-style:italic">&#39;fs&#39;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> glob from <span style="font-style:italic">&#39;glob&#39;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> matter from <span style="font-style:italic">&#39;gray-matter&#39;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> mkdirp from <span style="font-style:italic">&#39;mkdirp&#39;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> path from <span style="font-style:italic">&#39;path&#39;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> hljs from <span style="font-style:italic">&#39;highlight.js&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> MarkdownIt from <span style="font-style:italic">&#39;markdown-it&#39;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> markdownItAnchor from <span style="font-style:italic">&#39;markdown-it-anchor&#39;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> string from <span style="font-style:italic">&#39;string&#39;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">fn</span> play() {
-</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> num = math.randint(0, 100)
-</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">let</span> guess = input(<span style="font-style:italic">&#34;guess: &#34;</span>):<span style="font-weight:bold">to_num</span>()
-</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">let</span> n_attempts = 1
-</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">while</span> guess != num {
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">if</span> guess &lt; num {
-</span></span><span style="display:flex;"><span>      print(<span style="font-style:italic">&#34;Too low! Try higher.&#34;</span>)
-</span></span><span style="display:flex;"><span>    } <span style="font-weight:bold">else</span> {
-</span></span><span style="display:flex;"><span>      print(<span style="font-style:italic">&#34;Too high! Try lower.&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> slugify = s =&gt; string(s).slugify().toString()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> md = MarkdownIt({
+</span></span><span style="display:flex;"><span>    html: <span style="font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>    linkify: <span style="font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>    typographer: <span style="font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>    highlight(str, language) {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">if</span> (language &amp;&amp; hljs.getLanguage(language)) {
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">try</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="font-weight:bold">return</span> hljs.highlight(str, { language: language }).value;
+</span></span><span style="display:flex;"><span>            } <span style="font-weight:bold">catch</span> (err) {
+</span></span><span style="display:flex;"><span>                console.log(err)
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">return</span> <span style="font-weight:bold">null</span>;
 </span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}).use(markdownItAnchor, { slugify });
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    n_attempts += 1
-</span></span><span style="display:flex;"><span>    guess = input(<span style="font-style:italic">&#34;guess: &#34;</span>):<span style="font-weight:bold">to_num</span>()
-</span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  print(<span style="font-style:italic">&#34;Well done! number of attempts: &#34;</span>, n_attempts)
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> readFile = (filename) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> rawFile = fs.readFileSync(filename, <span style="font-style:italic">&#39;utf8&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> parsed = matter(rawFile)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> html = md.render(parsed.content)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> {...parsed, html }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>play()
-</span></span></code></pre></div><p>Of course, it&rsquo;s possible to do more than just write simple terminal programs.
-For instance, I&rsquo;m currently working on a <a href="https://github.com/cpp-gamedev/wex">2D game engine</a>
-that will allow users to write games with the language.
-This project hasn&rsquo;t seen any major progress in the past year owing to my busy (read: poorly managed) schedule,
-however, I&rsquo;m looking to resume this project in the coming quarter.</p>
-<p>Currently, there are no official releases for Vyse.
-This is majorly due to me not being in possession of a windows (yuck) device ATM.
-There are some bugs that I&rsquo;ve yet to prune out before I can make a stable v0.1 release for all platforms.</p>
-<p>The one benefit of having no users, is a leisurely development pace.</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>FAQ</title>
-      <link>https://anubhavp.dev/cbrtl/posts/faq/</link>
-      <pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://anubhavp.dev/cbrtl/posts/faq/</guid>
-      <description>Before you ask...</description>
-      <content:encoded><![CDATA[<h2 id="why-is-it-called-cbrtl">Why is it called &lsquo;cbrtl&rsquo;?</h2>
-<p><del>Because every other GitHub org name was taken</del>.</p>
-<p>It comes from the C stdlib function <a href="https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/cbrt-cbrtf-cbrtl?view=msvc-160">cbrtl</a>.</p>
-<p>There is a some trivia to the oddly text-to-speechified name.</p>
-<p>In older versions of ANSI C, only the first 6 characters of an identifier were considered when compiling source code.
-So most standard library functions in C have odd names like <code>strstr</code>, <code>strtod</code>, <code>alloca</code> and so on&hellip;</p>
-<h2 id="why-at-all">Why at all?</h2>
-<p>Some of my acquaintances from other colleges have clubs, groups and spaces dedicated to open source and software
-development. Couple of days ago, I came across IIT Roorkee&rsquo;s <a href="https://sdslabs.co/">SDSLabs </a> and PES Uni&rsquo;s <a href="https://pesos.github.io/">PES Open Source</a>.  After looking into it
-a bit more, turns out most colleges these days have their own groups for related stuff.</p>
-<p>We thought it would be fun to have a similar group of like minded developers from our college.</p>
-<p>Is it too ambitious? We won&rsquo;t know until we don&rsquo;t try.</p>
-<h2 id="what-is-it-that-cbrtl-aims-to-do-exactly">What is it that cbrtl aims to do exactly?</h2>
-<p>Good question.
-We don&rsquo;t have a concrete answer.
-That said, I&rsquo;ll throw in most of what we&rsquo;ve gathered from our goal so far, and you decide if you like the sound of it.</p>
-<ul>
-<li>Contributing to Open Source.</li>
-<li>Talks and meetups.</li>
-<li>Showcasing projects from individuals and teams.</li>
-<li>Code reviews and educational blogs (hopefully ones that haven&rsquo;t been done to death before&hellip;).</li>
-</ul>
-<h2 id="what-platforms-are-you-present-on">What platforms are you present on?</h2>
-<p>For now, our presence is limited to <a href="">Discord</a> and the <a href="https://github.com/cbrtl">GitHub organization</a>.
-Mostly because these are very solid platforms and we are tight on the number of people moderating.</p>
-<h2 id="what-skills-do-i-need">What skills do I need?</h2>
-<p>Not much.</p>
-<ul>
-<li>The ability to code.</li>
-<li>The willingness to learn.</li>
-<li>Basic knowledge of Git and GitHub.</li>
-</ul>
-<p>Even 1 and 3 are optional.</p>
-<h2 id="where-do-i-join">Where do I join?</h2>
-<p>As mentioned earlier,  you can join the <a href="">Discord</a> and the <a href="https://github.com/cbrtl">GitHub organization</a>.
-More info on <a href="/">Getting started with cbrtl and Open Source</a>.</p>
-<h2 id="is-there-anything-i-can-do-to-help">Is there anything I can do to help?</h2>
-<p>You can volunteer to help us keep the community thriving.
-We are looking for volunteers who can help with:</p>
-<ul>
-<li><strong>Front end development</strong>: To touch up the current blog site.</li>
-<li><strong>Moderation</strong>: To manage the discord server and the GitHub org.</li>
-<li><strong>Code reviews</strong>: To mandate some code quality for those who demand it.</li>
-<li><strong>Technical Writers</strong>: To aid in writing blog posts.</li>
-<li><strong>Editors</strong>: A second pair of eyes helps catch common mistakes in writing :)</li>
-</ul>
-<h2 id="is-this-an-official-college-club">Is this an official college club?</h2>
-<p>No.
-This is an entirely independent student initiative that is looking for active participation.
-A decentralized group of like-minded programmers.</p>
-<h2 id="will-there-be-events-with-cash-prizes">Will there be events with cash prizes?</h2>
-<p>No.
-And we want to be upfront about it.
-We want to keep this community closed to people who code because they like creating.
-Of course, that is not to say we discredit any other motivation you may have.</p>
-<p>As such, we won&rsquo;t conduct any competitions with cash prizes for the foreseeable future.
-Other clubs (which are official) in our college do a great (<del>citation needed*</del>) job at that regardless.</p>
-<h2 id="what-kinds-of-events-can-i-expect">What kinds of events can I expect?</h2>
-<p>Other than project showcases and on-demand code review sessions, we are open to other ideas.</p>
-<p>Not as much of an &rsquo;event&rsquo; but you can expect group projects that will (hopefully) be active throughout.</p>
-<h2 id="i-have-some-other-questions-where-can-i-ask">I have some other questions, where can I ask?</h2>
-<p>You&rsquo;re more than welcome on the mailing list, or in the discord server.</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Showcasing your project on cbrtl</title>
-      <link>https://anubhavp.dev/cbrtl/posts/project-showcase/</link>
-      <pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://anubhavp.dev/cbrtl/posts/project-showcase/</guid>
-      <description>Some things to keep in mind while adding your project</description>
-      <content:encoded><![CDATA[<p>This page intends to establish some minor ordinances surrounding project ideas and showcases.
-cbrtl was created with the intent of promoting the spirit of Open Source.
-Often times, some of the most interesting Open Source projects live in lesser known corners of GitHub,
-collecting dust on a lonesome profile with 3-5 followers and an occasionally active commit graph.</p>
-<p>Cbrtl is an attempt at stringing together these unrelated projects into a web of resources and dev-logs
-that might be of use to on-lookers.</p>
-<p>To avoid noisy applications and tutorial cut-pastes, we enforce a standard and a few (lax) rules.</p>
-<h1 id="what-constitutes-showcase-worthy-software">What constitutes showcase-worthy software?</h1>
-<p>Anything that <strong>serves a clear purpose</strong>.
-A project can be showcased if it satisfies the following criteria:</p>
-<ul>
-<li>Has a proper github <code>README.md</code></li>
-<li>Is <strong>not</strong> a tutorial follow-through.
-So anything along these lines is generally discouraged:
-<ul>
-<li>&ldquo;todo app in react&rdquo;</li>
-<li>&ldquo;planner app in vue&rdquo;</li>
-<li>&ldquo;terminal tic-tac-toe with C&rdquo;</li>
-<li>and so on&hellip;</li>
-</ul>
-</li>
-<li>Is being actively worked on by it&rsquo;s developer(s).
-It is <strong>OK</strong> even if it&rsquo;s in infancy when the project is first showcased.</li>
-<li>Is open to contribution from people.</li>
-<li>Is not a lazy fork (Forks that are some-what different from the parent repos are absolutely okay).</li>
-</ul>
-<h2 id="examples">Examples</h2>
-<p>Here&rsquo;s a few examples to show what we mean by &ldquo;showcase-able projects&rdquo;.
-Note that not all of them are from the members of cbrtl, since we&rsquo;re just starting out.</p>
-<ul>
-<li><a href="https://github.com/karnkaul/LittleEngineVk">levk</a>: A 3D Game engine written in C++ and
-Vulkan. <strong>Author: <a href="https://github.com/karnkaul">karnage</a></strong></li>
-<li><a href="https://aitikgupta.github.io/sociomark/">SocioMark</a>: A social media platform with
-plagiarism and attack-proof authenticity checks for user uploaded content.
-<strong>Author: <a href="https://github.com/aitikgupta">Aitik Gupta</a></strong></li>
-<li><a href="https://github.com/srijan-paul/snap">Vyse</a>: A fast, dynamically typed and interpreted programming
-language. <strong>Author: <a href="https://github.com/srijan-paul">srijan_</a></strong> (<em>cough</em> self-plug)</li>
-<li><a href="https://github.com/karnkaul/locc">locc</a>: A C++ utility to count lines of code in a project.
-<strong>Author: <a href="https://github.com/karnkaul">karnage</a></strong></li>
-<li><a href="https://github.com/rxi/lume">Lume</a>: A Lua library for gamedev. <strong>Author: <a href="https://github.com/rxi">rxi</a></strong></li>
-</ul>
-<h1 id="getting-your-project-showcased">Getting your project showcased.</h1>
-<p>You have made something, or at least the skeleton of something that will go on to become a full fledged project.
-How do you put your code and product on cbrtl?</p>
-<ol>
-<li>Reach out to us either on the mailing list, or on the discord server.</li>
-<li>Have the following ready:
-<ul>
-<li>A GitHub repo with a well set-up <code>README</code></li>
-<li>A (short) write-up describing the scope, aim, tech-stack and architecture
-of your project.</li>
-</ul>
-</li>
-<li>Shoot any moderator with the aforementioned and we&rsquo;ll give you:
-<ul>
-<li>A GitHub repo symlink (<em>symlink?</em>) on the <a href="https://github.com/cbrtl">cbrtl org page</a>.</li>
-<li>A community showcase.</li>
-<li>A blog post referencing the content from your write-up, describing the project.</li>
-<li>Encourage other members to collaborate and contribute.</li>
-</ul>
-</li>
-</ol>
-<p>A good place to start getting involved can be our <a href="https://discord.gg/3qry3u569v">Discord server</a>.</p>
-<h1 id="have-an-idea-want-a-team">Have an idea? Want a team?</h1>
-<p>It is not so uncommon for programmers to get an idea but not have enough time commitment (or knowledge) to drive the idea to fruition.
-If that&rsquo;s how things end up for you, then we might be able to help with pointing you in the right direction.</p>
-<p>We may be able to help turn your solo idea into a collaborative work environment.
-You can choose to have the repo be on the org, or on your GitHub profile.</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Getting started with cbrtl and FOSS</title>
-      <link>https://anubhavp.dev/cbrtl/posts/getting-started/</link>
-      <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://anubhavp.dev/cbrtl/posts/getting-started/</guid>
-      <description>Grinding gears</description>
-      <content:encoded><![CDATA[<p>So you read up on open source, read up on <a href="https://anubhavp.dev/cbrtl//posts/what-and-why/">cbrtl</a> and want to start hacking.
-There are some preliminaries that you should take care of first.
-These are listed in order:</p>
-<ol>
-<li>Create a GitHub account.</li>
-<li>Set up git on your local computer.
-<ul>
-<li>If you&rsquo;re on windows, download <a href="https://git-scm.com/downloads">GitBash</a> and follow the install instructions.</li>
-<li>Get a personal test repo set up and try out commands like <code>push</code>, <code>commit</code>, <code>pull</code> etc.</li>
-</ul>
-</li>
-<li>Join the <a href="https://github.com/cbrtl">GitHub organization</a> by adding yourself to the members list (More on that below).</li>
-<li>Join the <a href="">Discord server</a>.</li>
-</ol>
-<p>Alright, you&rsquo;re set to start out.
-At this point, I would recommend getting familiar with GitHub, reading up some articles and blogs.
-I highly recommend <a href="https://www.atlassian.com/git/tutorials">Atlassian&rsquo;s git tutorials</a> and documentation.</p>
-<h1 id="making-your-first-pull-request">Making your first Pull Request</h1>
-<p>(<strong>NOTE:</strong> If you have experience using git and don&rsquo;t want to waste time, just ping the <code>@cbrtl moderator</code> role on discord and we&rsquo;ll add you).</p>
-<p>If you had to follow through the above, then it&rsquo;s likely that you&rsquo;ve never made a PR before.
-To get your feet wet, make your first PR on our <a href="https://github.com/cbrtl/members-list">member&rsquo;s list repo</a>.
-Once you do that, you&rsquo;ll be recognized as a member of cbrtl on GitHub.
-You will find a step by step guide on how to do that on the repository&rsquo;s <code>README</code>.</p>
-<p>Done? Great! 🎉</p>
-<p>Now you&rsquo;re going to have to wait for a moderator to merge your PR.
-That should be done by the time you&rsquo;re done reading this article ;)</p>
-<h1 id="getting-the-most-out-of-it">Getting the most out of it</h1>
-<p>The way you grow and shape your journey into Open Source is dictated by your level of engagement with people, and participation
-in projects, discussions and the like.
-Now then, how do you define &ldquo;engagement&rdquo; and &ldquo;participation&rdquo;?
-It can mean different things for different people, but the recurring ideas are the same.</p>
-<h2 id="ways-to-participate">Ways to participate</h2>
-<ul>
-<li>Contributing to the <a href="https://github.com/cbrtl/cbrtl-site">blog</a>.</li>
-<li>Part-taking in open source projects being built in the community.</li>
-<li>Coming up with your own project ideas, and getting people to contribute.</li>
-<li>Showcasing projects you have made on cbrtl blog and GitHub organization.</li>
-<li>Contributing to larger open source projects outside cbrtl.</li>
-<li>Asking questions, getting to know people better.</li>
-<li>Volunteering on development and content moderation. <a href="http://anubhavp.dev/cbrtl//posts/what-and-why/#volunteering-to-cbrtl">Details here</a></li>
-</ul>
-<h2 id="starting-your-own-project">Starting your own project.</h2>
-<p>It would be great to have more interesting projects available for people to work on.
-Look at the <a href="http://anubhavp.dev/cbrtl//posts/project-showcase/">project showcase post</a> for relevant information.</p>
-]]></content:encoded>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> templatize = (template, { date, title, content, author }) =&gt;
+</span></span><span style="display:flex;"><span>    template
+</span></span><span style="display:flex;"><span>    .replace(<span style="font-style:italic">/&lt;!-- PUBLISH_DATE --&gt;/g</span>, date)
+</span></span><span style="display:flex;"><span>    .replace(<span style="font-style:italic">/&lt;!-- TITLE --&gt;/g</span>, title)
+</span></span><span style="display:flex;"><span>    .replace(<span style="font-style:italic">/&lt;!-- CONTENT --&gt;/g</span>, content)
+</span></span><span style="display:flex;"><span>    .replace(<span style="font-style:italic">/&lt;!-- AUTHOR --&gt;/g</span>, author)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> saveFile = (filename, contents) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> dir = path.dirname(filename)
+</span></span><span style="display:flex;"><span>    mkdirp.sync(dir)
+</span></span><span style="display:flex;"><span>    fs.writeFileSync(filename, contents)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> getOutputFilename = (filename, outPath) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> basename = path.basename(filename)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> newfilename = basename.substring(0, basename.length - 3) + <span style="font-style:italic">&#39;.html&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> outfile = path.join(outPath, newfilename)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> outfile
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> processFile = (filename, template, outPath) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> file = readFile(filename)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> outfilename = getOutputFilename(filename, outPath)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> templatized = templatize(template, {
+</span></span><span style="display:flex;"><span>        date: file.data.date,
+</span></span><span style="display:flex;"><span>        title: file.data.title,
+</span></span><span style="display:flex;"><span>        content: file.html,
+</span></span><span style="display:flex;"><span>        author: file.data.author,
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    saveFile(outfilename, templatized)
+</span></span><span style="display:flex;"><span>    console.log(<span style="font-style:italic">`📝 </span><span style="font-weight:bold;font-style:italic">${</span>outfilename<span style="font-weight:bold;font-style:italic">}</span><span style="font-style:italic">`</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> main = () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> srcPath = path.resolve(<span style="font-style:italic">&#39;content&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> outPath = path.resolve(<span style="font-style:italic">&#39;public&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> template = fs.readFileSync(<span style="font-style:italic">&#39;./templates/initial/template.html&#39;</span>, <span style="font-style:italic">&#39;utf8&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> filenames = glob.sync(srcPath + <span style="font-style:italic">&#39;/**/*.md&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    filenames.forEach((filename) =&gt; {
+</span></span><span style="display:flex;"><span>        processFile(filename, template, outPath)
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>main()
+</span></span></code></pre></div>]]></content:encoded>
     </item>
     
   </channel>

@@ -2,57 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://anubhavp.dev/cbrtl/posts/what-and-why/</loc>
-    <lastmod>2021-04-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://anubhavp.dev/cbrtl/</loc>
-    <lastmod>2022-06-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://anubhavp.dev/cbrtl/tags/community/</loc>
-    <lastmod>2022-06-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://anubhavp.dev/cbrtl/posts/</loc>
-    <lastmod>2022-06-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://anubhavp.dev/cbrtl/tags/project/</loc>
-    <lastmod>2022-06-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://anubhavp.dev/cbrtl/posts/zuzu/</loc>
-    <lastmod>2022-06-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://anubhavp.dev/cbrtl/tags/</loc>
-    <lastmod>2022-06-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://anubhavp.dev/cbrtl/posts/vyse/</loc>
-    <lastmod>2022-06-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://anubhavp.dev/cbrtl/tags/faq/</loc>
-    <lastmod>2021-04-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://anubhavp.dev/cbrtl/posts/faq/</loc>
-    <lastmod>2021-04-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://anubhavp.dev/cbrtl/tags/guidelines/</loc>
-    <lastmod>2021-04-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://anubhavp.dev/cbrtl/posts/project-showcase/</loc>
-    <lastmod>2021-04-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://anubhavp.dev/cbrtl/tags/general/</loc>
-    <lastmod>2021-04-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://anubhavp.dev/cbrtl/posts/getting-started/</loc>
-    <lastmod>2021-04-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://anubhavp.dev/cbrtl/tags/guide/</loc>
-    <lastmod>2021-04-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://anubhavp.dev/cbrtl/archives/</loc>
   </url><url>
     <loc>https://anubhavp.dev/cbrtl/categories/</loc>
   </url><url>
+    <loc>https://anubhavp.dev/cbrtl/tags/community/</loc>
+  </url><url>
+    <loc>https://anubhavp.dev/cbrtl/posts/pages/metamuiwallet/</loc>
+  </url><url>
+    <loc>https://anubhavp.dev/cbrtl/posts/</loc>
+  </url><url>
+    <loc>https://anubhavp.dev/cbrtl/tags/project/</loc>
+  </url><url>
     <loc>https://anubhavp.dev/cbrtl/search/</loc>
   </url><url>
     <loc>https://anubhavp.dev/cbrtl/series/</loc>
+  </url><url>
+    <loc>https://anubhavp.dev/cbrtl/tags/</loc>
+  </url><url>
+    <loc>https://anubhavp.dev/cbrtl/posts/pages/infeasibleweb3/</loc>
+  </url><url>
+    <loc>https://anubhavp.dev/cbrtl/posts/pages/zuzu/</loc>
   </url>
 </urlset>
