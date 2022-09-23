@@ -8,14 +8,6 @@ ShowBreadCrumbs: true
 ---
 Zuzu is a static site generator that takes in markdown files and render htmls pages. [This blog](https://anubhavp.dev/blog), for example, has been written using this generator. This enables noobs like me to write blogs without having to learn a lot of code! It is a very simple and easy to use generator. All you need to do is to write a markdown file and it will be rendered as a page ;) You can create a new page by creating a new markdown file.  
 
-- [How Does it work](#how-does-it-work)
-  - [Create a markdown file.](#1-create-a-markdown-file)
-  - [Run the generator and find your blog.](#2-run-the-generator-and-find-your-blog)
-- [The Static Site Generator](#the-static-site-generator)
-  - [Libraries Used](#1-libraries-used)
-  - [Workflow](#2-workflow)
-  - [Generator Code.](#3-generator-code)
-
 ## How does it work?
 
 Zuzu parses the markdown file using *javascript* and renders it as *html documents*. It then saves the html files in the `public` folder. The public folder, with `index.html` file, is the final output of the generator and this can be deployed and hosted in various platforms. This particular blog has been deployed on [Github Pages](https://anubhavp.dev/blog/).
