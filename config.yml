@@ -1,6 +1,6 @@
 baseURL: https://anubhavp.dev/cbrtl/
 
-title: cbrtl
+title: anubhavp
 paginate: 7
 theme: papermodx
 
@@ -41,7 +41,7 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "A foundry for programmers who like making stufff :)"
+  description: "Random shitpost on my daily drivers, chill outs & research thingys."
   author: Srijan Paul 
 
   defaultTheme: auto
@@ -59,10 +59,10 @@ params:
 
   profileMode:
     enabled: false
-    title: cbrtl
-    subtitle: A foundry for programmers
+    title: blog
+    subtitle: Random shitposts
     imageUrl: "https://avatars.githubusercontent.com/u/84934672?s=400&u=2dcad8144be1e67691c4bc7423ff87d1148d06cb&v=4"
-    imageTitle: cbrtl
+    imageTitle: blog
     # imageWidth: 120
     # imageHeight: 120
     buttons:
@@ -72,20 +72,18 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "cbrtl"
+    Title: "blog"
     Content: >
-      cbrtl is a small, tight knit group of programmers and open source sorcerers who like 
-      to craft fun projects together and build a community. We are a group of developers.  
-      
-      We are primarily a [GitHub Organization](https://github.com/cbrtl).
+      Here I random shitpost on my daily drivers, chill outs & research stuff. I work with software development and engineering. You can find most of my work on my github. I like tech, science and engineering and also fantasy, fiction and science fiction
+      Find me [here](https://github.com/codebotx).
 
   socialIcons:
     - name: github
-      url: "https://github.com/cbrtl"
-    - name: discord
-      url: "https://discord.gg/3qry3u569v"
-    - name: RsS
-      url: "index.xml"
+      url: "https://github.com/codebotx"
+    - name: instagram
+      url: "https://instagram.com/=anubhavclicks"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/anubhabpatnaik0530/"
 
   editPost:
     URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
