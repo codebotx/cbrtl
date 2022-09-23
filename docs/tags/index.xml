@@ -5,11 +5,11 @@
     <link>https://anubhavp.dev/blog/tags/</link>
     <description>Recent content in Tags on Shitpost.in</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 19 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>crypto</title>
       <link>https://anubhavp.dev/blog/tags/crypto/</link>
-      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://anubhavp.dev/blog/tags/crypto/</guid>
       <description></description>
@@ -17,9 +17,19 @@
     </item>
     
     <item>
+      <title>metamui</title>
+      <link>https://anubhavp.dev/blog/tags/metamui/</link>
+      <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://anubhavp.dev/blog/tags/metamui/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
       <title>project</title>
       <link>https://anubhavp.dev/blog/tags/project/</link>
-      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://anubhavp.dev/blog/tags/project/</guid>
       <description></description>
@@ -32,16 +42,6 @@
       <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://anubhavp.dev/blog/tags/web3/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>metamui</title>
-      <link>https://anubhavp.dev/blog/tags/metamui/</link>
-      <pubDate>Mon, 31 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://anubhavp.dev/blog/tags/metamui/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
