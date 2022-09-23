@@ -29,7 +29,7 @@ languages:
           url: search/
           weight: 10
         - name: Tags
-          url: tags/false
+          url: tags/
           weight: 10
 
 
@@ -74,8 +74,9 @@ params:
   homeInfoParams:
     Title: "blog"
     Content: >
-      Here I random shitpost on my daily drivers, chill outs & research stuff. I work with software development and engineering. You can find most of my work on my github. I like tech, science and engineering and also fantasy, fiction and science fiction
-      Find me [here](https://github.com/codebotx).
+      Here I random shitpost on my daily drivers, chill outs & research stuff. I work with software development and engineering. You can find most of my work on my github. I like tech, science and engineering and also fantasy, fiction and science fiction.      
+
+      Find me [here](https://anubhavp.dev).
 
   socialIcons:
     - name: github
