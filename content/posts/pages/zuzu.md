@@ -1,9 +1,9 @@
 ---
 author: Anubhab Patnaik
 title: 'zuzu: A Static Site Generator (SSG)'
-date: May 29, 2022
+date: "2020-05-29"
 description: "Zuzu is a static site generator that converts all your markdown files into static htmls pages. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets."
-tags: ["project", "community"]
+tags: ["project"]
 ShowBreadCrumbs: true 
 ---
 Zuzu is a static site generator that takes in markdown files and render htmls pages. [This blog](https://anubhavp.dev/blog), for example, has been written using this generator. This enables noobs like me to write blogs without having to learn a lot of code! It is a very simple and easy to use generator. All you need to do is to write a markdown file and it will be rendered as a page ;) You can create a new page by creating a new markdown file.  
