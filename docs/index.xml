@@ -13,20 +13,6 @@
       <guid>https://anubhavp.dev/cbrtl/posts/pages/metamuiwallet/</guid>
       <description>A case study on how MetaMUI wallet claims to be decentralized and how it actully works.</description>
       <content:encoded><![CDATA[<p>I am working with <a href="https://squbix.com/">Squbix Digital</a> to build a decentralized, secure and scalable solution using blockchain technology for <a href="https://swnglobal.com/">Sovereign Wallet</a>. The solution is to build a platform to exchange digital assets such as cryptocurrencies and digital currencies across a country/ organization and a cross-border payments system. Here is the <a href="https://sovereignwallet-network.github.io/whitepaper/MetaMUI-Blockchain-White-Paper.pdf">metamui whitepaper</a> and here are some of the things that I couldn&rsquo;t digest well.</p>
-<ul>
-<li><a href="#metablockchain-core">Metablockchain-core</a>
-<ul>
-<li><a href="#robust-decentralized-and-secure">Robust, decentralized and secure?</a></li>
-<li><a href="#issues-with-the-current-infrastructure">Issues with the current infrastructure</a></li>
-<li><a href="#ideological-challenges">Ideological challenges</a></li>
-</ul>
-</li>
-<li><a href="#a-better-direction">A better direction</a>
-<ul>
-<li><a href="#improving-the-current-infrastructure">Improving the current infrastructure</a></li>
-</ul>
-</li>
-</ul>
 <h2 id="metablockchain-core">Metablockchain-core</h2>
 <p>Metablockchain: The blockchain that lets you regulate digital currencies and cryptocurrencies across the nation. The platform is built on Polkadot protocol that has significantly better runtime efficiency, is cost-effective, and supports parallel faster transactions when compared to other traditional blockchains. The Polkadot protocol is designed to allow unrelated blockchains to securely talk to each other, so that value or data can flow between, say, the Ethereum and Bitcoin blockchains without any intermediary. It’s also designed to be speedy and scalable, via the use of many parallel blockchains (or “parachains”) that take much of the processing demand off of the main blockchain. The Polkadot network can process more than 1,000 transactions per second, compared to about 7 for Bitcoin and 30 for Ethereum. As the network grows and more parachains are added, Polkadot should get even faster, with speeds that could hit a million transactions per second.</p>
 <h3 id="robust-decentralized-and-secure">Robust, decentralized, and secure?</h3>
@@ -181,22 +167,6 @@ Yet they choose to write them off as &ldquo;tradeoffs&rdquo; for <em>web3</em>, 
 And then there are the social problems -
 ones that are so nuanced that they can&rsquo;t be tackled by any number of token standards or consensus algorithms.
 This post is my attempt at shedding some light on the problems that I&rsquo;m aware of.</p>
-<ul>
-<li><a href="#social">Social</a>
-<ul>
-<li><a href="#the-majority-of-crypto-is-shady-even-for-artists">The majority of crypto is shady, even for artists.</a></li>
-<li><a href="#nft-marketplaces-are-centralised-and-controlled">NFT marketplaces are centralised and controlled.</a></li>
-<li><a href="#nfts-are-worthless">NFTs are&hellip; worthless?</a></li>
-<li><a href="#your-get-rich-quick-chances-are-miniscule">Your &lsquo;get-rich-quick&rsquo; chances are miniscule.</a></li>
-</ul>
-</li>
-<li><a href="#engineering">Engineering</a>
-<ul>
-<li><a href="#nfts-can-be-altered">NFTs CAN be altered.</a></li>
-<li><a href="#web3-is-not-technically-feasible">Web3 is not technically feasible.</a></li>
-</ul>
-</li>
-</ul>
 <h2 id="social">Social</h2>
 <h3 id="the-majority-of-crypto-is-shady-even-for-artists">The majority of crypto is shady, even for artists</h3>
 <p>Cryptocurrency is always found in a massive web of controversy, frauds and scams.
@@ -329,21 +299,6 @@ However the world today is in a frenzy to use it in all the places where it does
       <guid>https://anubhavp.dev/cbrtl/posts/pages/zuzu/</guid>
       <description>Zuzu is a static site generator that converts all your markdown files into static htmls pages. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets.</description>
       <content:encoded><![CDATA[<p>Zuzu is a static site generator that takes in markdown files and render htmls pages. <a href="https://anubhavp.dev/blog">This blog</a>, for example, has been written using this generator. This enables noobs like me to write blogs without having to learn a lot of code! It is a very simple and easy to use generator. All you need to do is to write a markdown file and it will be rendered as a page ;) You can create a new page by creating a new markdown file.</p>
-<ul>
-<li><a href="#how-does-it-work">How Does it work</a>
-<ul>
-<li><a href="#1-create-a-markdown-file">Create a markdown file.</a></li>
-<li><a href="#2-run-the-generator-and-find-your-blog">Run the generator and find your blog.</a></li>
-</ul>
-</li>
-<li><a href="#the-static-site-generator">The Static Site Generator</a>
-<ul>
-<li><a href="#1-libraries-used">Libraries Used</a></li>
-<li><a href="#2-workflow">Workflow</a></li>
-<li><a href="#3-generator-code">Generator Code.</a></li>
-</ul>
-</li>
-</ul>
 <h2 id="how-does-it-work">How does it work?</h2>
 <p>Zuzu parses the markdown file using <em>javascript</em> and renders it as <em>html documents</em>. It then saves the html files in the <code>public</code> folder. The public folder, with <code>index.html</code> file, is the final output of the generator and this can be deployed and hosted in various platforms. This particular blog has been deployed on <a href="https://anubhavp.dev/blog/">Github Pages</a>.</p>
 <h3 id="1-create-a-markdown-file">1. Create a markdown file</h3>
