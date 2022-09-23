@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>project on anubhavp</title>
-    <link>https://anubhavp.dev/cbrtl/tags/project/</link>
+    <link>https://anubhavp.dev/blog/tags/project/</link>
     <description>Recent content in project on anubhavp</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://anubhavp.dev/cbrtl/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://anubhavp.dev/blog/tags/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Decentralization in MetaMUI Wallet: A Case Study</title>
-      <link>https://anubhavp.dev/cbrtl/posts/pages/metamuiwallet/</link>
+      <link>https://anubhavp.dev/blog/posts/pages/metamuiwallet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/cbrtl/posts/pages/metamuiwallet/</guid>
+      <guid>https://anubhavp.dev/blog/posts/pages/metamuiwallet/</guid>
       <description>A case study on how MetaMUI wallet claims to be decentralized and how it actully works.</description>
       <content:encoded><![CDATA[<p>I am working with <a href="https://squbix.com/">Squbix Digital</a> to build a decentralized, secure and scalable solution using blockchain technology for <a href="https://swnglobal.com/">Sovereign Wallet</a>. The solution is to build a platform to exchange digital assets such as cryptocurrencies and digital currencies across a country/ organization and a cross-border payments system. Here is the <a href="https://sovereignwallet-network.github.io/whitepaper/MetaMUI-Blockchain-White-Paper.pdf">metamui whitepaper</a> and here are some of the things that I couldn&rsquo;t digest well.</p>
 <h2 id="metablockchain-core">Metablockchain-core</h2>
@@ -146,10 +146,10 @@ possible through atomic swaps and multi-currency transfer is possible with an ex
     
     <item>
       <title>Why is Web3 a sham?</title>
-      <link>https://anubhavp.dev/cbrtl/posts/pages/infeasibleweb3/</link>
+      <link>https://anubhavp.dev/blog/posts/pages/infeasibleweb3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/cbrtl/posts/pages/infeasibleweb3/</guid>
+      <guid>https://anubhavp.dev/blog/posts/pages/infeasibleweb3/</guid>
       <description>A short rant on the state of Web3</description>
       <content:encoded><![CDATA[<p>During my short stint as a blockchain developer, I&rsquo;ve learned a lot and have met amazing people.
 While I acknowledge the skill and reverence of some developers in this domain,
@@ -293,10 +293,10 @@ However the world today is in a frenzy to use it in all the places where it does
     
     <item>
       <title>zuzu: A Static Site Generator (SSG)</title>
-      <link>https://anubhavp.dev/cbrtl/posts/pages/zuzu/</link>
+      <link>https://anubhavp.dev/blog/posts/pages/zuzu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/cbrtl/posts/pages/zuzu/</guid>
+      <guid>https://anubhavp.dev/blog/posts/pages/zuzu/</guid>
       <description>Zuzu is a static site generator that converts all your markdown files into static htmls pages. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets.</description>
       <content:encoded><![CDATA[<p>Zuzu is a static site generator that takes in markdown files and render htmls pages. <a href="https://anubhavp.dev/blog">This blog</a>, for example, has been written using this generator. This enables noobs like me to write blogs without having to learn a lot of code! It is a very simple and easy to use generator. All you need to do is to write a markdown file and it will be rendered as a page ;) You can create a new page by creating a new markdown file.</p>
 <h2 id="how-does-it-work">How does it work?</h2>
