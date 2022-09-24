@@ -55,7 +55,7 @@ params:
   ShowCodeCopyButtons: true
   ShowToc: true
   # comments: false
-  images: ["papermod-cover.png", "assets/favicon.ico"]
+  images: ["papermod-cover.png", "/favicon.ico"]
 
   profileMode:
     enabled: false
