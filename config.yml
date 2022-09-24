@@ -15,7 +15,8 @@ enableEmoji: true
 minify:
   disableXML: true
   minifyOutput: true
-
+staticDir:
+  - static
 languages:
   en:
     languageName: "English"
