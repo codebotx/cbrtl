@@ -2,7 +2,7 @@ baseURL: https://anubhavp.dev/blog/
 
 title: Shitpost.in
 paginate: 7
-theme: papermodxn
+theme: papermodx
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
