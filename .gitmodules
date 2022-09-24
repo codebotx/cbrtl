@@ -3,4 +3,4 @@
 	url = https://github.com/codebotx/papermodx.git
 [submodule "themes/papermodxn"]
 	path = themes/papermodxn
-	url = https://github.com/codebotx/papermodx.git
+	url = https://github.com/codebotx/papermodx
