@@ -79,7 +79,6 @@ Say you spend all the money you saved for your child's education to buy this roc
 
 ![rock-nft](https://pbs.twimg.com/profile_images/1423533825028616195/-iFC12qC_400x400.jpg)
 
-![rock-nft](assets/rock.jpeg)
 Now you're pumped with adrenaline, because you **own** this piece of history.
 The image is yours, and you claim all rights to its usage and redistribution.
 This art piece is now valued as if it were a real and tangible rock, there is only one rock and only one owner - you.
@@ -121,9 +120,8 @@ thousands of dollars.
 To most, it just won't make sense.
 Why should this clump of pixels cost 1M$?
 
-<img src="https://cryptopotato.com/wp-content/uploads/2021/03/cryptopunk.jpg" width="200" height="200"/>
+![cryptopunk](https://cryptopotato.com/wp-content/uploads/2021/03/cryptopunk.jpg)
 
-![cryptopunk](assets/cryptopunk.jpeg)
 Why should we collectively enforce this belief? <br/>What can we achieve with this new school of thought that we couldn't before?
 
 Some crypto evangelists answer this with "[It can make you rich!](https://cryptopotato.com/this-cryptopunk-nft-was-bought-for-15k-in-2018-now-sold-for-8-million/)".
