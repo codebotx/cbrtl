@@ -55,6 +55,7 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowToc: true
+  TocSide: 'left'
   # comments: false
   images: ["papermod-cover.png", "/favicon.ico"]
 
