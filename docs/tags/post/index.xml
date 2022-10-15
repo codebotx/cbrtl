@@ -1,20 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>post on cbrtl</title>
-    <link>https://cbrtl.github.io/tags/post/</link>
-    <description>Recent content in post on cbrtl</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 08 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cbrtl.github.io/tags/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Fourier Series</title>
-      <link>https://cbrtl.github.io/posts/fourier/</link>
-      <pubDate>Sat, 08 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://cbrtl.github.io/posts/fourier/</guid>
-      <description>An interactive guide to Fourier series</description>
-      <content:encoded><![CDATA[<p>Try drawing something on the first canvas, and watch two sets of mechanical alien arms retrace your sketch:</p>
-<!-- raw HTML omitted -->
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>post on cbrtl</title><link>https://cbrtl.github.io/tags/post/</link><description>Recent content in post on cbrtl</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sat, 08 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cbrtl.github.io/tags/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Fourier Series</title><link>https://cbrtl.github.io/posts/fourier/</link><pubDate>Sat, 08 Oct 2022 00:00:00 +0000</pubDate><guid>https://cbrtl.github.io/posts/fourier/</guid><description>An interactive guide to Fourier series</description><content:encoded><![CDATA[<blockquote>
+<p><strong>NOTE:</strong> This blog post is taken from <a href="https://injuly.in/blog/fourier-series">injuly&rsquo;s website</a></p>
+</blockquote>
+<p>Try drawing something on the first canvas, and watch two sets of mechanical alien arms retrace your sketch:</p>
+
+
+<div class="center fourier-canvas-pair">
+   <canvas id="draw-canvas"  width="350" height="350" style="border: 1px solid black;"></canvas>
+   <canvas id="redraw-canvas" width="350" height="350" style="border: 1px solid black;"></canvas>
+</div>
+
 <p>Once you&rsquo;re done with this introduction to Fourier analysis, you&rsquo;ll be capable of making this (and a lot more) yourself.</p>
 <p>The satisfying animation is made possible by the subject of this post - an infinite sum called <a href="https://en.wikipedia.org/wiki/Fourier_series">the Fourier series</a>.
 The formula is short, and with some effort, you can memorize it.
@@ -31,7 +25,12 @@ The addition of two functions \(f\) and \(g\) at input \(x\) is simply \(f(x) + 
 Assume <code>f</code> is \(2sin(x)\) and <code>g</code> is \(cos(2x)\).</p>
 <p>Their sum then, can be given by a function - \(h(x) = 2sin(x) + cos(2x)\).</p>
 <p>The graph below plots \(f\) and \(g\) in shades of gray, and their sum, \(h\), in red.</p>
-<!-- raw HTML omitted -->
+
+
+<div class="center">
+   <canvas id="fun-sum" width="350px" height="350px"></canvas>
+</div>
+
 <p>Note how in some places, the values of \(f\) and \(g\) are both positive, and their sum is therefore a larger positive number,
 while in other places, \(f\) and \(g\) have opposite signs and their values cancel out to a smaller number.</p>
 <p>Through the lens of physics, you could look at the functions as two electromagnetic waves, or just visible light rays oscillating in the domain of time.
@@ -59,7 +58,14 @@ and fitting equations to datasets.</p>
 <p>Imagine you had a machine that could scan any food item and display its recipe.
 Fourier series does exactly that, except for mathematical functions.</p>
 <p>The Fourier series of any periodic function \(f(x)\) with a frequency of \(\omega_0\) is described as:</p>
-<!-- raw HTML omitted -->
+
+
+<div class="tex">
+   $$
+   f(x) = a_0/2 + \sum_{n=1}^{\infty}b_n sin(n\omega_0x) + \sum_{n=1}^{\infty}a_n cos(n\omega_0x)
+   $$
+</div>
+
 <p>Meaning that for every periodic function \(f\),
 there exists a set of coefficients \(a\) and \(b\),
 such that \(f(x)\) can be expressed as an infinite sum of sine and cosine terms of increasing frequencies where the
@@ -85,11 +91,31 @@ Formally, it is described like so:</p>
 f(t) = 4 \lfloor{t}\rfloor - 2\lfloor2t\rfloor + 1
 $$</p>
 <p>Here&rsquo;s how it looks when graphed out:</p>
-<!-- raw HTML omitted -->
+
+
+<div class="center">
+   <canvas id="square-wave-graph" width="350" height="350"></canvas>
+</div>
+
 <p>If we use the first few terms from \(f\)&rsquo;s Fourier series, we can closely approximate the behavior of this function.
 In the following graph, the gray curve represents the the square wave and the red curve represents our approximation of it.
 You can play with the slider to alter the number of terms we take from the series and see how that changes our approximation.</p>
-<!-- raw HTML omitted -->
+
+
+<div class="center">
+   <canvas id="square-wave-fourier-graph" width="350" height="350"></canvas>
+      <div className="controls" style="display: 'flex'; gap: 2rem;">
+        <input
+          type="range"
+          min="1"
+          max="50"
+          value="4"
+          id="square-fs-slider"
+          style="width: 300px"
+        ></input>
+      </div>
+</div>
+
 <p>Clearly, our approximation improves as we take more terms from the series.
 The Fourier series can be proven to <a href="https://en.wikipedia.org/wiki/Convergent_series">converge</a>.
 This means that if we take an infinite number of terms from the series, we can get the <em>exact</em> value of \(f(x)\) for any \(x\).</p>
@@ -110,9 +136,19 @@ Once you start drawing, I can delineate the position of the pen&rsquo;s tip usin
 Both the x and y coordinates change as the pen moves on the sheet&rsquo;s surface.
 Meaning, the position of the x-coordinate of your pen&rsquo;s tip can be written as a function of time.
 Say you draw this figure:</p>
-<!-- raw HTML omitted -->
+
+
+<div class="center">
+   <canvas id="rabbit-canvas" width="350" height="350"> </canvas>
+</div>
+
 <p>If we plot the x and y-coordinates independently as functions of time, they&rsquo;ll form curves that look like this:</p>
-<!-- raw HTML omitted -->
+
+
+<div class="center">
+   <canvas id="rabbit-plot-canvas" width="350" height="350"> </canvas>
+</div>
+
 <p>The blue curve represents the values of x-coordinates of your sketch.
 The vertical axis represents the x-value, and the horizontal axis represents time.
 Similarly, the red curve plots the y-coordinates.</p>
@@ -141,7 +177,22 @@ Here is some pseudo-typescript code that mimics this logic:</p>
 }
 </code></pre></div><p>The approximation generated by this method is shown below.
 Just as before, you can play with the slider to adjust the number of terms used in approximation of the sketch.</p>
-<!-- raw HTML omitted -->
+
+
+<div class="center">
+   <canvas id="rabbit-recreate-canvas" width="300" height="300"> </canvas>
+     <div className="controls" style="display: 'flex'; gap: 2rem;">
+        <input
+          type="range"
+          min="1"
+          max="50"
+          value="12"
+          id="rabbit-slider"
+          style="width: 300px"
+        ></input>
+      </div>
+</div>
+
 <p>Keep in mind that <code>f_x</code> and <code>f_y</code> are really just sums of simpler sine/cosine functions, calculated using Fourier&rsquo;s formulae.</p>
 <p>You may be wondering - the functions \(x(t)\) and \(y(t)\) aren&rsquo;t periodic, how come we can still decompose them into sine/cosine sums?
 One trick is to set the period to infinity, and compute the series at this limit.</p>
@@ -159,13 +210,23 @@ To animate them, you need to understand <a href="https://en.wikipedia.org/wiki/P
 <p>You can read the wikipedia article, or <a href="https://www.mathsisfun.com/polar-cartesian-coordinates.html">this article</a> to build some intuition for conversion between cartesian and polar coordinates.</p>
 <p>In the polar coordinate system, a periodic function with period \(T\) is a vector that rotates around the origin, and completes one full rotation around itself every \(T\) time units.
 Look at the graph of \(sin(t)\) in Polar form, for example:</p>
-<!-- raw HTML omitted -->
+
+
+<div class="center">
+   <canvas id="polar-sine" width="350" height="350"></canvas>
+</div>
+
 <p>Note how the y-coordinates of the vector&rsquo;s tip traces out a regular sine wave.
 You can just as easily plot any periodic function in the polar coordinate system.
 To add two periodic functions together, take one rotating vector and center it on the tip of the another rotating vector.
 The end result is shown below.
 The following animation shows 3 rotating vectors added together, each representing a periodic function:</p>
-<!-- raw HTML omitted -->
+
+
+<div class="center">
+   <canvas id="two-rotating-vectors" width="350" height="350"></canvas>
+</div>
+
 <p>To convert a sketch to an epicycle animation then, all we need is to convert a term in the Fourier series from cartesian to polar coordinates.
 Once we have that, we can add up the terms like in the animation above, and figure out the x and y-coordinates using two sets of epicycles, each representing the Fourier approximation for \(x(t)\) or \(y(t)\).</p>
 <p>To do this conversion, we can use the <a href="https://en.wikipedia.org/wiki/Fourier_series#Amplitude-phase_form">polar form of the Fourier series</a>.
@@ -180,7 +241,12 @@ Now, you have the \(x(t)\) and \(y(t)\).</li>
 <li>Using a time step of <code>dt</code>, find the final x and y positions of our approximation, and <a href="https://github.com/srijan-paul/fourier-sketch/blob/eb2be0f646f3097c6725ab621461ba59bfba4b6b/src/components/RedrawCanvas.tsx#L21">draw them on a canvas</a>.</li>
 </ol>
 <p>If you do everything correctly, you should get something like this:</p>
-<!-- raw HTML omitted -->
+
+
+<div class="center">
+   <canvas id="rabbit-epicycle" width="350" height="350"></canvas>
+</div>
+
 <p>There is a more novel approach to retracing sketches that involves using only one set of epicycles.
 It uses <a href="https://en.wikipedia.org/wiki/Fourier_series#Complex-valued_functions">the complex Fourier Series</a>, and is also fewer lines of code.
 When you&rsquo;re new to this concept however, it may throw you off balance, especially if you&rsquo;re not familiar with imaginary numbers and the Argand plane.</p>
@@ -232,7 +298,14 @@ Nobody at the time believed this to be a general method, and his ideas were left
 In his search for a solution, he sought to ask a seemingly absurd question:</p>
 <p><em>Can we represent any periodic function as a sum of simple sine and cosine functions?</em></p>
 <p>Precisely, he sought to represent any periodic function \(f(x)\) with a frequency of \(\omega_0\) , in the following form:</p>
-<!-- raw HTML omitted -->
+
+
+<div class="tex">
+   $$
+   f(x) = (a_0 + a_1 cos(\omega_0 t) + a_2 cos(2\omega_0 t) + ... + a_n cos(n\omega_0t)) + (b_1 sin(\omega_0 t) + b_1 sin(2\omega_0 t) + ... + b_n sin(n\omega_0t)
+   $$
+</div>
+
 <p>Revered mathematicians of the time, including Langrange and Laplace, rejected this idea as informal and hand-wavy.
 The panel evaluating his findings said:</p>
 <p><em>&ldquo;The manner in which the author arrives at these equations is not exempt of difficulties and&hellip;his analysis to integrate them still leaves something to be desired on the score of generality and even rigour.&quot;</em>
@@ -259,20 +332,25 @@ It would be a shame to blunt the edge of theory by not applying it in practice.<
 <li>Jez Swanson - <a href="https://www.jezzamon.com/fourier/index.html">An interactive introduction to the fourier transform</a>.</li>
 <li>Tony Rosler - <a href="https://www.myfourierepicycles.com/">myFourierEpicycles</a></li>
 </ul>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-]]></content:encoded>
-    </item>
-    
-  </channel>
-</rss>
+
+
+<!-- mathjax -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+
+<!-- lodash -->
+<script type = "text/javascript" 
+   src = "https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js">
+</script>
+
+
+<!-- pts.js -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/williamngan/pts/dist/pts.js"></script>
+
+<!-- script for this post -->
+<script type="module" src="/js/fourier-series/index.js" ></script>
+
+]]></content:encoded></item></channel></rss>

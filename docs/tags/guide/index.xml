@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>guide on cbrtl</title>
-    <link>https://cbrtl.github.io/tags/guide/</link>
-    <description>Recent content in guide on cbrtl</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 27 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cbrtl.github.io/tags/guide/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Getting started with cbrtl and FOSS</title>
-      <link>https://cbrtl.github.io/posts/getting-started/</link>
-      <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://cbrtl.github.io/posts/getting-started/</guid>
-      <description>Grinding gears</description>
-      <content:encoded><![CDATA[<p>So you read up on open source, read up on <a href="https://cbrtl.github.io/posts/what-and-why/">cbrtl</a> and want to start hacking.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>guide on cbrtl</title><link>https://cbrtl.github.io/tags/guide/</link><description>Recent content in guide on cbrtl</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 27 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cbrtl.github.io/tags/guide/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting started with cbrtl and FOSS</title><link>https://cbrtl.github.io/posts/getting-started/</link><pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate><guid>https://cbrtl.github.io/posts/getting-started/</guid><description>Grinding gears</description><content:encoded><![CDATA[<p>So you read up on open source, read up on <a href="https://cbrtl.github.io/posts/what-and-why/">cbrtl</a> and want to start hacking.
 There are some preliminaries that you should take care of first.
 These are listed in order:</p>
 <ol>
@@ -57,8 +42,4 @@ It can mean different things for different people, but the recurring ideas are t
 <h2 id="starting-your-own-project">Starting your own project.</h2>
 <p>It would be great to have more interesting projects available for people to work on.
 Look at the <a href="http://cbrtl.github.io/posts/project-showcase/">project showcase post</a> for relevant information.</p>
-]]></content:encoded>
-    </item>
-    
-  </channel>
-</rss>
+]]></content:encoded></item></channel></rss>

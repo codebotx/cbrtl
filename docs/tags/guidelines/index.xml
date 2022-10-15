@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>guidelines on cbrtl</title>
-    <link>https://cbrtl.github.io/tags/guidelines/</link>
-    <description>Recent content in guidelines on cbrtl</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 28 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cbrtl.github.io/tags/guidelines/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Showcasing your project on cbrtl</title>
-      <link>https://cbrtl.github.io/posts/project-showcase/</link>
-      <pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://cbrtl.github.io/posts/project-showcase/</guid>
-      <description>Some things to keep in mind while adding your project</description>
-      <content:encoded><![CDATA[<p>This page intends to establish some minor ordinances surrounding project ideas and showcases.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>guidelines on cbrtl</title><link>https://cbrtl.github.io/tags/guidelines/</link><description>Recent content in guidelines on cbrtl</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 28 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cbrtl.github.io/tags/guidelines/index.xml" rel="self" type="application/rss+xml"/><item><title>Showcasing your project on cbrtl</title><link>https://cbrtl.github.io/posts/project-showcase/</link><pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate><guid>https://cbrtl.github.io/posts/project-showcase/</guid><description>Some things to keep in mind while adding your project</description><content:encoded><![CDATA[<p>This page intends to establish some minor ordinances surrounding project ideas and showcases.
 cbrtl was created with the intent of promoting the spirit of Open Source.
 Often times, some of the most interesting Open Source projects live in lesser known corners of GitHub,
 collecting dust on a lonesome profile with 3-5 followers and an occasionally active commit graph.</p>
@@ -81,8 +66,4 @@ of your project.</li>
 If that&rsquo;s how things end up for you, then we might be able to help with pointing you in the right direction.</p>
 <p>We may be able to help turn your solo idea into a collaborative work environment.
 You can choose to have the repo be on the org, or on your GitHub profile.</p>
-]]></content:encoded>
-    </item>
-    
-  </channel>
-</rss>
+]]></content:encoded></item></channel></rss>

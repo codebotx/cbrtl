@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>project on cbrtl</title>
-    <link>https://cbrtl.github.io/tags/project/</link>
-    <description>Recent content in project on cbrtl</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 27 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cbrtl.github.io/tags/project/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Project: Zuzu</title>
-      <link>https://cbrtl.github.io/posts/zuzu/</link>
-      <pubDate>Mon, 27 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://cbrtl.github.io/posts/zuzu/</guid>
-      <description>Zuzu is a static site generator that converts all your markdown files into static htmls pages. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets.</description>
-      <content:encoded><![CDATA[<h1 id="zuzu">Zuzu</h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>project on cbrtl</title><link>https://cbrtl.github.io/tags/project/</link><description>Recent content in project on cbrtl</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 27 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cbrtl.github.io/tags/project/index.xml" rel="self" type="application/rss+xml"/><item><title>Project: Zuzu</title><link>https://cbrtl.github.io/posts/zuzu/</link><pubDate>Mon, 27 Jun 2022 00:00:00 +0000</pubDate><guid>https://cbrtl.github.io/posts/zuzu/</guid><description>Zuzu is a static site generator that converts all your markdown files into static htmls pages. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets.</description><content:encoded><![CDATA[<h1 id="zuzu">Zuzu</h1>
 <blockquote>
 <p>Static Site Generator</p>
 </blockquote>
@@ -50,17 +35,7 @@ to a server. Zuzu also supports CI/CD. You can use Github Actions to automatical
 <ul>
 <li>Add another template file in the initial folder with index.html and respective assets.</li>
 </ul>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Project: Vyse</title>
-      <link>https://cbrtl.github.io/posts/vyse/</link>
-      <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://cbrtl.github.io/posts/vyse/</guid>
-      <description>A dynamically typed, interpreted and fast scriptling language inspired by Lua for rapid prototyping of applications like video games.</description>
-      <content:encoded><![CDATA[<p>Sometime during my 2nd year in college, I&rsquo;d made a hobby programming language that turned out quite well.
+]]></content:encoded></item><item><title>Project: Vyse</title><link>https://cbrtl.github.io/posts/vyse/</link><pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate><guid>https://cbrtl.github.io/posts/vyse/</guid><description>A dynamically typed, interpreted and fast scriptling language inspired by Lua for rapid prototyping of applications like video games.</description><content:encoded><![CDATA[<p>Sometime during my 2nd year in college, I&rsquo;d made a hobby programming language that turned out quite well.
 It&rsquo;s named &ldquo;Vyse&rdquo;, after <a href="https://dota2.fandom.com/wiki/Scythe_of_Vyse">Guinsoo&rsquo;s Scythe of Vyse</a> from DotA.</p>
 <p>Vyse is a dynamically typed, interpreted and fast scriptling language inspired by Lua for rapid prototyping of applications like video games.
 Programmers familiar with Lua/Javascript can pick up the language within an hour.
@@ -105,8 +80,4 @@ however, I&rsquo;m looking to resume this project in the coming quarter.</p>
 This is majorly due to me not being in possession of a windows (yuck) device ATM.
 There are some bugs that I&rsquo;ve yet to prune out before I can make a stable v0.1 release for all platforms.</p>
 <p>The one benefit of having no users, is a leisurely development pace.</p>
-]]></content:encoded>
-    </item>
-    
-  </channel>
-</rss>
+]]></content:encoded></item></channel></rss>
