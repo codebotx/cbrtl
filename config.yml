@@ -1,4 +1,4 @@
-baseURL: https://cbrtl.github.io
+baseURL: https://cbrtl.github.io/
 
 title: cbrtl
 paginate: 7
@@ -13,7 +13,6 @@ enableEmoji: true
 # googleAnalytics: UA-123-45
 
 minify:
-  disableXML: true
   minifyOutput: true
 
 languages:
@@ -40,9 +39,9 @@ outputs:
     - JSON
 
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  env: development # to enable google analytics, opengraph, twitter-cards and schema.
   description: "A foundry for programmers who like making stufff :)"
-  author: Srijan Paul 
+  author: Anubhab Patnaik
 
   defaultTheme: auto
   # disableThemeToggle: true
@@ -75,7 +74,7 @@ params:
     Title: "cbrtl"
     Content: >
       cbrtl is a small, tight knit group of programmers and open source sorcerers who like 
-      to craft fun projects together and build a community. We are a group of developers.  
+      to craft fun projects together and build a community.
       
       We are primarily a [GitHub Organization](https://github.com/cbrtl).
 
