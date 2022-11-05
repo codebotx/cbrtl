@@ -8,3 +8,6 @@
 	path = themes/papermod
 	url = https://github.com/adityatelange/hugo-PaperMod
 
+[submodule "themes/papermodx"]
+	path = themes/papermodx
+	url = https://github.com/codebotx/papermodx.git
