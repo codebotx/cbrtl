@@ -128,28 +128,28 @@ Vyse also comes with a C++ API for frictionless embedding in projects.</p>
 <p>Since the language already has detailed (but remarkably outdated) documentation on <a href="https://injuly.in/vyse">its website</a>,
 I won&rsquo;t bother rewriting any of that here.</p>
 <p>Instead, here is the simple number-guessing program:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rs" data-lang="rs"><span style="font-weight:bold">const</span> math = import(<span style="font-style:italic">&#34;math&#34;</span>)
-
-<span style="font-weight:bold">fn</span> play() {
-  <span style="font-weight:bold">const</span> num = math.randint(0, 100)
-  <span style="font-weight:bold">let</span> guess = input(<span style="font-style:italic">&#34;guess: &#34;</span>):<span style="font-weight:bold">to_num</span>()
-  <span style="font-weight:bold">let</span> n_attempts = 1
-  <span style="font-weight:bold">while</span> guess != num {
-    <span style="font-weight:bold">if</span> guess &lt; num {
-      print(<span style="font-style:italic">&#34;Too low! Try higher.&#34;</span>)
-    } <span style="font-weight:bold">else</span> {
-      print(<span style="font-style:italic">&#34;Too high! Try lower.&#34;</span>)
-    }
-
-    n_attempts += 1
-    guess = input(<span style="font-style:italic">&#34;guess: &#34;</span>):<span style="font-weight:bold">to_num</span>()
-  }
-
-  print(<span style="font-style:italic">&#34;Well done! number of attempts: &#34;</span>, n_attempts)
-}
-
-play()
-</code></pre></div><p>Of course, it&rsquo;s possible to do more than just write simple terminal programs.
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rs" data-lang="rs"><span style="display:flex;"><span><span style="font-weight:bold">const</span> math = import(<span style="font-style:italic">&#34;math&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">fn</span> play() {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> num = math.randint(0, 100)
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">let</span> guess = input(<span style="font-style:italic">&#34;guess: &#34;</span>):<span style="font-weight:bold">to_num</span>()
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">let</span> n_attempts = 1
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">while</span> guess != num {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">if</span> guess &lt; num {
+</span></span><span style="display:flex;"><span>      print(<span style="font-style:italic">&#34;Too low! Try higher.&#34;</span>)
+</span></span><span style="display:flex;"><span>    } <span style="font-weight:bold">else</span> {
+</span></span><span style="display:flex;"><span>      print(<span style="font-style:italic">&#34;Too high! Try lower.&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    n_attempts += 1
+</span></span><span style="display:flex;"><span>    guess = input(<span style="font-style:italic">&#34;guess: &#34;</span>):<span style="font-weight:bold">to_num</span>()
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  print(<span style="font-style:italic">&#34;Well done! number of attempts: &#34;</span>, n_attempts)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>play()
+</span></span></code></pre></div><p>Of course, it&rsquo;s possible to do more than just write simple terminal programs.
 For instance, I&rsquo;m currently working on a <a href="https://github.com/cpp-gamedev/wex">2D game engine</a>
 that will allow users to write games with the language.
 This project hasn&rsquo;t seen any major progress in the past year owing to my busy (read: poorly managed) schedule,
@@ -217,7 +217,7 @@ Of course, that is not to say we discredit any other motivation you may have.</p
 Other clubs (which are official) in our college do a great (<del>citation needed*</del>) job at that regardless.</p>
 <h2 id="what-kinds-of-events-can-i-expect">What kinds of events can I expect?</h2>
 <p>Other than project showcases and on-demand code review sessions, we are open to other ideas.</p>
-<p>Not as much of an &lsquo;event&rsquo; but you can expect group projects that will (hopefully) be active throughout.</p>
+<p>Not as much of an &rsquo;event&rsquo; but you can expect group projects that will (hopefully) be active throughout.</p>
 <h2 id="i-have-some-other-questions-where-can-i-ask">I have some other questions, where can I ask?</h2>
 <p>You&rsquo;re more than welcome on the mailing list, or in the discord server.</p>
 ]]></content:encoded></item><item><title>Showcasing your project on cbrtl</title><link>https://cbrtl.github.io/posts/project-showcase/</link><pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate><guid>https://cbrtl.github.io/posts/project-showcase/</guid><description>Some things to keep in mind while adding your project</description><content:encoded><![CDATA[<p>This page intends to establish some minor ordinances surrounding project ideas and showcases.
