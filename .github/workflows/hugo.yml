@@ -52,7 +52,7 @@ jobs:
           rm -rf docs
           mv public docs
           cd docs
-          find ./ -type f -exec sed -i '' -e 's/content="noindex"/content="index"/gI' {} \;
+          #find ./ -type f -exec sed -i '' -e 's/content="noindex"/content="index"/gI' {} \;
           cd ..
           git config --global user.name codebotx
           git config --global user.email anubhabr50@gmail.com
