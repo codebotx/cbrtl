@@ -39,7 +39,7 @@ outputs:
     - JSON
 
 params:
-  env: development # to enable google analytics, opengraph, twitter-cards and schema.
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
   description: "A foundry for programmers who like making stufff :)"
   author: Anubhab Patnaik
 
