@@ -12,17 +12,17 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://anubhavp.dev/blog/posts/pages/rust/</loc>
+    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://anubhavp.dev/blog/</loc>
     <lastmod>2022-10-14T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://anubhavp.dev/blog/tags/</loc>
-    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://anubhavp.dev/blog/posts/pages/rust/</loc>
     <lastmod>2022-10-14T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

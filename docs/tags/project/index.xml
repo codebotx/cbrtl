@@ -7,13 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 14 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/tags/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Why Rust</title>
+      <title>Rust: The next C&#43;&#43; ?</title>
       <link>https://anubhavp.dev/blog/posts/pages/rust/</link>
       <pubDate>Fri, 14 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://anubhavp.dev/blog/posts/pages/rust/</guid>
-      <description>Rust was created to ensure high performance similar to that offered by C and C&#43;&#43;,  but with emphasis on code safety, the lack of which is the Achilles heel of these two languages.</description>
-      <content:encoded><![CDATA[<p>Rust was created to ensure high performance similar to that offered by C and C++,  but with emphasis on code safety, the lack of which is the Achilles heel of these two languages. However, Rust has more than just memory safety on its side. High performance while processing large amounts of data, support for concurrent programming, and this together with an effective compiler are other reasons why well-known software heavyweights now use this programming language. Firefox, Dropbox, Cloudflare, and many other companies from startups to large corporations use Rust in production.</p>
+      <description>Rust is an ahead-of-time compiled language, which means that you can compile a program, give it to someone else, and they can run it even without Rust installed. It is a  designed to be fast, reliable, productive and memory safe.</description>
+      <content:encoded><![CDATA[<p>Rust is a multi-paradigm systems programming language created to ensure high performance similar to that offered by C and C++, but with emphasis on code safety, the lack of which is probably why C and C++ are painful to deal with. It accomplishes these goals of being memory safe without using garbage collection. It is also an ahead-of-time compiled language, which means that you can compile a rust program, give it to someone else, and they can run it even without Rust installed. However, Rust has more than just memory safety on its side. High performance while processing large amounts of data, support for concurrent programming, with an effective compiler are other reasons why well-known software heavyweights such as Firefox, Dropbox, Cloudflare, and many startups and large corporations use Rust in production.</p>
+<p>In simpler words, before I explain a whole lot about programming languages and their working, some questions that may come to your mind are:</p>
+<ol>
+<li>If Rust is created to achieve performance similar to that offered by C++, then why not use C++ instead?</li>
+<li>Ah! C++ is tough, I know Java/ Python is a simpler choice. Why not use that instead?</li>
+<li>Why is Rust so popular? What is so special about it?</li>
+</ol>
+<p>Now, to answer these questions, let us first try to go through how a computer works.</p>
+<h2 id="what-is-a-programming-language">What is a programming language?</h2>
+<p>A programming language is a set of instructions that can be used to interact with and control a computer.</p>
 ]]></content:encoded>
     </item>
     
