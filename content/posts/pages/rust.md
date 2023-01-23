@@ -1,7 +1,7 @@
 ---
 author: Anubhab Patnaik
 title: 'Why Rust'
-date: "2020-05-29"
+date: "2022-10-14"
 description: "Rust was created to ensure high performance similar to that offered by C and C++,  but with emphasis on code safety, the lack of which is the Achilles heel of these two languages."
 tags: ["project"]
 ShowBreadCrumbs: true 
