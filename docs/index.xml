@@ -5,11 +5,11 @@
     <link>https://anubhavp.dev/blog/</link>
     <description>Recent content on Shitpost.in</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 31 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Decentralization in MetaMUI Wallet: A Case Study</title>
       <link>https://anubhavp.dev/blog/posts/pages/metamuiwallet/</link>
-      <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 31 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>https://anubhavp.dev/blog/posts/pages/metamuiwallet/</guid>
       <description>A case study on how MetaMUI wallet claims to be decentralized and how it actully works.</description>
@@ -291,6 +291,17 @@ A classic &ldquo;rich get richer&rdquo; scheme.</p>
 <p>This is not to say blockchain is completely useless.
 It <strong>might</strong> be used for problems such as food contamination tracing, and verifying ownership of legal documents.
 However the world today is in a frenzy to use it in all the places where it doesn&rsquo;t belong.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Why Rust</title>
+      <link>https://anubhavp.dev/blog/posts/pages/rust/</link>
+      <pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://anubhavp.dev/blog/posts/pages/rust/</guid>
+      <description>Rust was created to ensure high performance similar to that offered by C and C&#43;&#43;,  but with emphasis on code safety, the lack of which is the Achilles heel of these two languages.</description>
+      <content:encoded><![CDATA[<p>Rust was created to ensure high performance similar to that offered by C and C++,  but with emphasis on code safety, the lack of which is the Achilles heel of these two languages. However, Rust has more than just memory safety on its side. High performance while processing large amounts of data, support for concurrent programming, and this together with an effective compiler are other reasons why well-known software heavyweights now use this programming language. Firefox, Dropbox, Cloudflare, and many other companies from startups to large corporations use Rust in production.</p>
 ]]></content:encoded>
     </item>
     
