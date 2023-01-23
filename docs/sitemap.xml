@@ -2,6 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://anubhavp.dev/blog/posts/</loc>
+    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://anubhavp.dev/blog/tags/project/</loc>
+    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://anubhavp.dev/blog/</loc>
+    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://anubhavp.dev/blog/tags/</loc>
+    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://anubhavp.dev/blog/posts/pages/rust/</loc>
+    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://anubhavp.dev/blog/tags/crypto/</loc>
     <lastmod>2022-08-31T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
@@ -17,23 +42,8 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://anubhavp.dev/blog/posts/</loc>
-    <lastmod>2022-08-31T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://anubhavp.dev/blog/tags/project/</loc>
-    <lastmod>2022-08-31T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://anubhavp.dev/blog/</loc>
-    <lastmod>2022-08-31T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://anubhavp.dev/blog/tags/</loc>
-    <lastmod>2022-08-31T00:00:00+00:00</lastmod>
+    <loc>https://anubhavp.dev/blog/posts/pages/zuzu/</loc>
+    <lastmod>2022-05-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -44,16 +54,6 @@
   </url><url>
     <loc>https://anubhavp.dev/blog/posts/pages/infeasibleweb3/</loc>
     <lastmod>2022-01-19T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://anubhavp.dev/blog/posts/pages/rust/</loc>
-    <lastmod>2020-05-29T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://anubhavp.dev/blog/posts/pages/zuzu/</loc>
-    <lastmod>2020-05-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>

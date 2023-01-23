@@ -5,7 +5,17 @@
     <link>https://anubhavp.dev/blog/tags/</link>
     <description>Recent content in Tags on Shitpost.in</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 31 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>project</title>
+      <link>https://anubhavp.dev/blog/tags/project/</link>
+      <pubDate>Fri, 14 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://anubhavp.dev/blog/tags/project/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>crypto</title>
       <link>https://anubhavp.dev/blog/tags/crypto/</link>
@@ -22,16 +32,6 @@
       <pubDate>Wed, 31 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>https://anubhavp.dev/blog/tags/metamui/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>project</title>
-      <link>https://anubhavp.dev/blog/tags/project/</link>
-      <pubDate>Wed, 31 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://anubhavp.dev/blog/tags/project/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
