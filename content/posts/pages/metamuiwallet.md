@@ -1,7 +1,7 @@
 ---
 author: Anubhab Patnaik
 title:  'Decentralization in MetaMUI Wallet: A Case Study'
-date:  "2022-05-31"
+date:  "2022-08-31"
 description: "A case study on how MetaMUI wallet claims to be decentralized and how it actully works."
 tags: ["project", "metamui", "crypto"]
 ShowBreadCrumbs: true 
