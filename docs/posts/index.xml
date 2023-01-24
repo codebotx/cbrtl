@@ -12,17 +12,38 @@
       <pubDate>Fri, 14 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://anubhavp.dev/blog/posts/pages/rust/</guid>
-      <description>Rust is an ahead-of-time compiled language, which means that you can compile a program, give it to someone else, and they can run it even without Rust installed. It is a  designed to be fast, reliable, productive and memory safe.</description>
+      <description>Rust is a multi-paradigm systems programming language created to ensure high performance similar to that offered by C and C&#43;&#43;, but with emphasis on code safety</description>
       <content:encoded><![CDATA[<p>Rust is a multi-paradigm systems programming language created to ensure high performance similar to that offered by C and C++, but with emphasis on code safety, the lack of which is probably why C and C++ are painful to deal with. It accomplishes these goals of being memory safe without using garbage collection. It is also an ahead-of-time compiled language, which means that you can compile a rust program, give it to someone else, and they can run it even without Rust installed. However, Rust has more than just memory safety on its side. High performance while processing large amounts of data, support for concurrent programming, with an effective compiler are other reasons why well-known software heavyweights such as Firefox, Dropbox, Cloudflare, and many startups and large corporations use Rust in production.</p>
 <p>In simpler words, before I explain a whole lot about programming languages and their working, some questions that may come to your mind are:</p>
 <ol>
 <li>If Rust is created to achieve performance similar to that offered by C++, then why not use C++ instead?</li>
-<li>Ah! C++ is tough, I know Java/ Python is a simpler choice. Why not use that instead?</li>
-<li>Why is Rust so popular? What is so special about it?</li>
+<li>I know Java, JavaScript and Python to be more popular choices amongst peers. Why not use those instead?</li>
+<li>What about new languages like Go, Kotlin, Swift, etc.?</li>
 </ol>
-<p>Now, to answer these questions, let us first try to go through how a computer works.</p>
-<h2 id="what-is-a-programming-language">What is a programming language?</h2>
-<p>A programming language is a set of instructions that can be used to interact with and control a computer.</p>
+<p>To answer these questions, let us first go through how a computer works.</p>
+<h2 id="what-is-a-programming-language-and-how-do-computers-understand-them">What is a programming language and how do computers understand them?</h2>
+<p>A programming language is a set of instructions that can be used to interact with and control a computer. These languages can be used for a multitude of purposes, such as creating a website, analyzing data, writing a program to solve a mathematical problem, creating a game, piloting a car, building a robot, making rockets take off, control spacecraft and the list goes on. A computer, eventhough can control a rover on the Mars, detect an incoming balistic missile and detonate it before it reaches you, cannot understand english, or anything except <strong>&lsquo;0&rsquo;</strong> &amp; <strong>&lsquo;1&rsquo;</strong>. Computers can be thought of to be made up of tiny switches, and can be either &lsquo;on&rsquo; (1) or &lsquo;off&rsquo; (0) called <strong>&lsquo;bits&rsquo;</strong>. Whatever instruction you want to execute on a computer, has to be converted into a series of &lsquo;0&rsquo; and &lsquo;1&rsquo; before it can be executed. Even a simple &ldquo;Hi&rdquo; is parsed as <strong>01001000 01101001</strong>. Yes, this is what Siri actually replies when you <em>Hey Siri</em>. Since the english language is vast and complicated, it is not possible to convert it into a series of &lsquo;0&rsquo; and &lsquo;1&rsquo; directly. A subset of english or any other language is created, which is called a <strong>programming language</strong>. To make things easier for us, there are tools that convert whatever we want the computer to do into a series of &lsquo;0&rsquo; and &lsquo;1&rsquo;. This series of &lsquo;0&rsquo; and &lsquo;1&rsquo; is then executed by the computer.</p>
+<h3 id="what-is-a-compiler-and-an-interpreter">What is a compiler and an interpreter?</h3>
+<p>A <strong>compiler</strong> or an <strong>interpreter</strong> is a tool that converts a program written in a programming language <em>(source code)</em> into a series of &lsquo;0&rsquo; and &lsquo;1&rsquo; that can be executed by a computer. What creates a differece between a compiler and an interpreter is the way they work. A compiler converts the entire program into a series of &lsquo;0&rsquo; and &lsquo;1&rsquo; <em>(machine code)</em> and then executes it. An interpreter, on the other hand, converts the program line by line and executes it.</p>
+<h3 id="how-do-compilers-and-interpreters-work">How do compilers and interpreters work?</h3>
+<p>Compilers vary in the methods they use for analyzing and converting source code to output code. Despite their differences, they typically carry out the following steps:</p>
+<ol>
+<li><strong>Lexical analysis</strong>
+The compiler splits the source code into lexemes, which are individual code fragments that represent specific patterns in the code. The lexemes are then tokenized in preparation for syntax and semantic analyses.</li>
+<li><strong>Syntax analysis</strong>
+The compiler verifies that the code&rsquo;s syntax is correct, based on the rules for the source language. This process is also referred to as parsing. During this step, the compiler typically creates abstract syntax trees that represent the logical structures of specific code elements.</li>
+<li><strong>Semantic analysis</strong>
+The compiler verifies the validity of the code&rsquo;s logic. This step goes beyond syntax analysis by validating the code&rsquo;s accuracy. For example, the semantic analysis might check whether variables have been assigned the right types or have been properly declared.</li>
+<li><strong>Intermediate code generation</strong>
+IR code generation. After the code passes through all three analysis phases, the compiler generates an intermediate representation (IR) of the source code. The IR code makes it easier to translate the source code into a different format. However, it must accurately represent the source code in every respect, without omitting any functionality.</li>
+<li><strong>Code Optimization</strong>
+The compiler optimizes the IR code in preparation for the final code generation. The type and extent of optimization depends on the compiler. Some compilers let users configure the degree of optimization.</li>
+<li><strong>Output code generation</strong>
+The compiler generates the final output code, using the optimized IR code.</li>
+</ol>
+<p>An interpreter works in a similar way as a compiler, but it does not generate machine code. Instead, it executes the program line by line. Compilers are designed to be CPU specific and run on a specific CPU architecture. This means that if you want to run a program on a different CPU architecture, you will have to compile it again. Compilers and Interpreters have their own advantages and disadvantages. For example, a compiler is faster than an interpreter, but an interpreter is easier to write than a compiler. Compilers are also more efficient than interpreters, but interpreters are more flexible than compilers. Usually <strong>compiled languages are faster</strong> since they directly convert code to machine code, however, <strong>interpreted languages are platform-independent</strong> and code written in them are executed on the fly bypassing the compilation stage. The choice of using a compiler or an interpreter depends on the type of program you are writing and the purpose of the program.</p>
+<p>Coming back to the questions that we asked earlier, let us now see how Rust fits in.</p>
+<h3 id="why-is-c-the-benchmark-for-other-programming-languages">Why is C++ the benchmark for other programming languages?</h3>
 ]]></content:encoded>
     </item>
     
