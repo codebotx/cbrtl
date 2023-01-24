@@ -42,8 +42,24 @@ Compilers vary in the methods they use for analyzing and converting source code 
 6. **Output code generation**
 	The compiler generates the final output code, using the optimized IR code.
 
-An interpreter works in a similar way as a compiler, but it does not generate machine code. Instead, it executes the program line by line. Compilers are designed to be CPU specific and run on a specific CPU architecture. This means that if you want to run a program on a different CPU architecture, you will have to compile it again. Compilers and Interpreters have their own advantages and disadvantages. For example, a compiler is faster than an interpreter, but an interpreter is easier to write than a compiler. Compilers are also more efficient than interpreters, but interpreters are more flexible than compilers. Usually **compiled languages are faster** since they directly convert code to machine code, however, **interpreted languages are platform-independent**, and code written in them is executed on the fly bypassing the compilation stage. The choice of using a compiler or an interpreter depends on the type of program you are writing and the purpose of the program.
+An interpreter works in a similar way as a compiler, but it does not generate machine code. Instead, it executes the program line by line.
+
+**Why did we need interpreters ?**
+
+Compiled languages need a “build” step – you need to be manually compiled first. You need to “rebuild” the program every time you want to make a change. Let's say you create an app and are writing a code to login using email id. If you decide to use phone number/ email ID instead of email id later, the entire code would need to be compiled again and resent to you.
+
+Interpreters run through a program line by line and execute each command. Here, if the author decides he wants to use a different kind of password or authentication mechanism, email or user ID method, he could scratch the old one out and add the new one. Your interpreter can then convey that change to you **as it happens**.
+
+Another most notable disadvantage of compilers is platform dependency of the generated binary code. Compilers are designed to be CPU specific and run on a specific CPU architecture. This means that if you want to run a program on a different CPU architecture, you will have to compile it again.
+
+**Why do we still make use of compilers ?**
+
+Compilers are designed to be CPU specific and as a result, they tend to be **faster and more efficient** to execute than interpreters. They also give the developer **more control** over hardware aspects, like memory management and CPU usage.
+
+Compilers and Interpreters have their own advantages and disadvantages. For example, a compiler is faster than an interpreter, but an interpreter is easier to write than a compiler. Compilers are also more efficient than interpreters, but interpreters are more flexible than compilers. Usually **compiled languages are faster** since they directly convert code to machine code, **interpreted languages are platform-independent**, and code written in them is executed on the fly bypassing the compilation stage.
+
+Interpreted languages were once significantly slower than compiled languages. But, with the development of [just-in-time compilation](https://guide.freecodecamp.org/computer-science/just-in-time-compilation), that gap is shrinking.
 
 Coming back to the questions that we asked earlier, let us now see how Rust fits in.
 
-### Why is C++ the benchmark for other programming languages?
+## Why is C++ the benchmark for performance?
