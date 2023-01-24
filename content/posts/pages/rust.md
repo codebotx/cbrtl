@@ -50,16 +50,27 @@ Compiled languages need a “build” step – you need to be manually compiled 
 
 Interpreters run through a program line by line and execute each command. Here, if the author decides he wants to use a different kind of password or authentication mechanism, email or user ID method, he could scratch the old one out and add the new one. Your interpreter can then convey that change to you **as it happens**.
 
-Another most notable disadvantage of compilers is platform dependency of the generated binary code. Compilers are designed to be CPU specific and run on a specific CPU architecture. This means that if you want to run a program on a different CPU architecture, you will have to compile it again.
+Another most notable disadvantage of compilers is **platform dependency** of the generated binary code. Compilers are designed to be CPU specific and run on a specific CPU architecture. This means that if you want to run a program on a different CPU architecture, you will have to compile it again.
 
 **Why do we still make use of compilers ?**
 
 Compilers are designed to be CPU specific and as a result, they tend to be **faster and more efficient** to execute than interpreters. They also give the developer **more control** over hardware aspects, like memory management and CPU usage.
 
-Compilers and Interpreters have their own advantages and disadvantages. For example, a compiler is faster than an interpreter, but an interpreter is easier to write than a compiler. Compilers are also more efficient than interpreters, but interpreters are more flexible than compilers. Usually **compiled languages are faster** since they directly convert code to machine code, **interpreted languages are platform-independent**, and code written in them is executed on the fly bypassing the compilation stage.
+Compilers and Interpreters have their own advantages and disadvantages. For example, a compiler is faster and more effecient than an interpreter, but an interpreter is easier to write than a compiler.
 
 Interpreted languages were once significantly slower than compiled languages. But, with the development of [just-in-time compilation](https://guide.freecodecamp.org/computer-science/just-in-time-compilation), that gap is shrinking.
 
 Coming back to the questions that we asked earlier, let us now see how Rust fits in.
 
+### Compiled languages Vs Interpreted languages
+
+
 ## Why is C++ the benchmark for performance?
+
+### Memory Management in C++
+
+## Rust
+
+### Memory Management in programming languages
+
+### Rust > C++ ?
