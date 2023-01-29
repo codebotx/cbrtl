@@ -95,31 +95,37 @@ Pointers are variables that store the <strong>address</strong> of another variab
 <blockquote>
 <p>Ownership and Borrowing</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span>    <span style="font-weight:bold">fn</span> main()  {  
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">let</span> <span style="font-weight:bold">mut</span> x = 5;  
-</span></span><span style="display:flex;"><span>        {  
-</span></span><span style="display:flex;"><span>                <span style="font-weight:bold">let</span> y = &amp;<span style="font-weight:bold">mut</span> x;  
-</span></span><span style="display:flex;"><span>                *y += 1;  
-</span></span><span style="display:flex;"><span>                <span style="font-style:italic">// x is borrowed here
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        }  
-</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">let</span> z = &amp;<span style="font-weight:bold">mut</span> x;
-</span></span><span style="display:flex;"><span>        <span style="font-style:italic">// z cannot borrow x as it is already borrowed
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>}  
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="">#[derive(Debug)]</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">struct</span> <span style="font-weight:bold">Employee</span> {
+</span></span><span style="display:flex;"><span>    id : <span style="">i32</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">fn</span> main() {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">let</span> a = Employee{id: 43} ;
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">let</span> b  = a ;
+</span></span><span style="display:flex;"><span>    <span style="font-style:italic">// println!(&#34;{:?}&#34;, a) ; // error: borrow of moved value: `a`
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>    <span style="font-weight:bold">let</span> c= a ;
+</span></span><span style="display:flex;"><span>    <span style="font-style:italic">// println!(&#34;{:?}&#34;, a) ; // error: borrow of moved value: `a`
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>} 
 </span></span></code></pre></div><blockquote>
 <p>RAII</p>
 </blockquote>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span>    <span style="font-weight:bold">fn</span> main() {
 </span></span><span style="display:flex;"><span>        <span style="font-weight:bold">let</span> foo = <span style="font-style:italic">&#34;value&#34;</span>; <span style="font-style:italic">// owner is foo and is valid within this method
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        <span style="font-style:italic">// bar is not valid here as it&#39;s not declared yet
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        <span style="font-style:italic">// bar is not valid here 
 </span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>
 </span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">let</span> bar = <span style="font-style:italic">&#34;bar value&#34;</span>; <span style="font-style:italic">// owner is bar and is valid within this block scope
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>            println!(<span style="font-style:italic">&#34;value of bar is {}&#34;</span>, bar); <span style="font-style:italic">// bar is valid here
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>            println!(<span style="font-style:italic">&#34;value of foo is {}&#34;</span>, foo); <span style="font-style:italic">// foo is valid here
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">let</span> bar = <span style="font-style:italic">&#34;bar value&#34;</span>; <span style="font-style:italic">// owner is bar and is valid 
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>            <span style="font-style:italic">//within this block scope
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>            println!(<span style="font-style:italic">&#34;value of bar is {}&#34;</span>, bar); <span style="font-style:italic">// bar is valid 
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>            <span style="font-style:italic">//here
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>            println!(<span style="font-style:italic">&#34;value of foo is {}&#34;</span>, foo); <span style="font-style:italic">// foo is valid 
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>            <span style="font-style:italic">//here
 </span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        println!(<span style="font-style:italic">&#34;value of foo is {}&#34;</span>, foo); <span style="font-style:italic">// foo is valid here
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        println!(<span style="font-style:italic">&#34;value of bar is {}&#34;</span>, bar); <span style="font-style:italic">// bar is not valid here as its out of scope
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        println!(<span style="font-style:italic">&#34;value of bar is {}&#34;</span>, bar); <span style="font-style:italic">// bar is not valid 
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        <span style="font-style:italic">//here as its out of scope
 </span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>    }
 </span></span></code></pre></div><h3 id="rust--c-">Rust &gt; C++ ?</h3>
 <p>C++ is a high-performance, general-purpose programming language that has been widely used for decades. It is known for its flexibility and ability to handle low-level tasks, making it a popular choice for systems programming and game development. C++ also has a large and active community, which means that there are many libraries and resources available for developers to use. Rust, on the other hand, is a relatively <strong>new programming language</strong> that was first released in 2010. It is designed to be a safe and concurrent language, with a strong focus on preventing common programming errors such as null pointer dereferences and buffer overflows.</p>
