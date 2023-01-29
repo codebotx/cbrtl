@@ -141,16 +141,18 @@ Rust builds on **RAII**( Resource Acquisition is Initialization) to provide auto
 >Ownership and Borrowing
 
 ```rust
-    fn main()  {  
-    let mut x = 5;  
-        {  
-                let y = &mut x;  
-                *y += 1;  
-                // x is borrowed here
-        }  
-        let z = &mut x;
-        // z cannot borrow x as it is already borrowed
-}  
+#[derive(Debug)]
+struct Employee {
+    id : i32
+}
+
+fn main() {
+    let a = Employee{id: 43} ;
+    let b  = a ;
+    // println!("{:?}", a) ; // error: borrow of moved value: `a`
+    let c= a ;
+    // println!("{:?}", a) ; // error: borrow of moved value: `a`
+} 
 ```
 
 >RAII
@@ -158,16 +160,20 @@ Rust builds on **RAII**( Resource Acquisition is Initialization) to provide auto
 ```rust
     fn main() {
         let foo = "value"; // owner is foo and is valid within this method
-        // bar is not valid here as it's not declared yet
+        // bar is not valid here 
 
         {
-            let bar = "bar value"; // owner is bar and is valid within this block scope
-            println!("value of bar is {}", bar); // bar is valid here
-            println!("value of foo is {}", foo); // foo is valid here
+            let bar = "bar value"; // owner is bar and is valid 
+            //within this block scope
+            println!("value of bar is {}", bar); // bar is valid 
+            //here
+            println!("value of foo is {}", foo); // foo is valid 
+            //here
         }
 
         println!("value of foo is {}", foo); // foo is valid here
-        println!("value of bar is {}", bar); // bar is not valid here as its out of scope
+        println!("value of bar is {}", bar); // bar is not valid 
+        //here as its out of scope
     }
 ```
 
