@@ -48,7 +48,7 @@ If you're wondering what language should you choose to build your next project w
 
 The speed advantage of the compiled language such as Golang (Go) in comparison to an interpreted language such as Java is one of the reasons why organizations write their microservices in Go. In complex computing environments such as cloud computing environments, where users get charged for every clock cycle, it makes sense to use the most efficient deployment artifact.
 
-## Why is C++ the benchmark for performance?
+## C++: performance benchmarks
 
 C++ is a low-level, statically typed object-oriented language that allows you to have a good grasp of your computer's resources and utilize them at your convenience. Since it is a compiled language, it surpasses the performance of most of the other interpreted languages. It is an extremely powerful language and is used in many applications such as operating systems, video games, the development of compilers and interpreters, etc. It has a huge community and is one of the most popular languages in the world.
 
@@ -74,7 +74,7 @@ To understand memory management in C++, you need to understand the concept of po
 
 Computer programs need to allocate memory to store variables, data values, and data structures and deallocate memory when done using them. Memory is also used to store the program itself and the run-time system needed to support it. Programming languages can be categorized as those which provide **automatic memory management** and those which ask the programmer to allocate and **free memory manually**. Requiring the programmer to manage memory manually leads to a simpler compiler and run-time but requires more work from the programmer and is more error-prone. While automatic memory management is more convenient for the programmer, it is also more complex and slower. This is achieved by the use of **garbage collection**.
 
-### Manual Memory Management in C++
+### C++
 
 C++ is a low-level language with manual memory management. C++ programs manually allocate and free memory using **pointers**.
 
