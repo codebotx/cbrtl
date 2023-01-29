@@ -64,8 +64,6 @@ The issue with C++ boils down to how it **manages memory**. C++ is prone to memo
 
 ## Memory Management in programming languages
 
-To understand memory management in C++, you need to understand the concept of pointers. Before we explore pointers, let us first understand what a variable is.
-
 **Variables** are named memory locations that store data. A variable is a container that holds a value. The value can be of any type, such as *integer*, *float*, *character*, etc. Example:
 
     int a = 10;
