@@ -153,7 +153,7 @@ The types of garbage encountered during the execution of a program are:</p>
 </span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>}
 </span></span></code></pre></div><h3 id="rust--c-">Rust &gt; C++ ?</h3>
 <p>C++ is a high-performance, general-purpose programming language that has been widely used for decades. It is known for its flexibility and ability to handle low-level tasks, making it a popular choice for systems programming and game development. C++ also has a large and active community, which means that there are many libraries and resources available for developers to use.</p>
-<p>Rust, on the other hand, is a relatively new programming language that was first released in 2010. It is designed to be a safe and concurrent language, with a strong focus on preventing common programming errors such as null pointer dereferences and buffer overflows. Rust also has a unique ownership model that allows for efficient memory management and thread safety. This makes it a great choice for systems programming, especially when security and performance are a concern.</p>
+<p>Rust, on the other hand, is a relatively new programming language that was first released in 2010. It is designed to be a safe and concurrent language, with a strong focus on preventing common programming errors such as null pointer dereferences and buffer overflows. Rust also has a unique ownership model that allows for efficient memory management and thread safety. This makes it a great choice for systems programming, especially when security and performance are a concern. Foo.</p>
 ]]></content:encoded>
     </item>
     
