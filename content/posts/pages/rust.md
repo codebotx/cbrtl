@@ -83,29 +83,30 @@ Pointers are variables that store the **address** of another variable and access
 
 With manual memory management, a few things can go wrong like memory leaks and dangling pointers. The dangling pointer problem arises when there is an attempt to use a pointer after it has been freed. Dangling pointer errors can arise whenever there is an error in the control flow logic of a program. The use of a pointer before allocation may be a fatal run-time error. Use after deallocation is not always fatal but neither of these is a good thing.
 
-    ```cpp
+```cpp
 
-    #include <stdio.h>  
-    int main()  
-    {  
-        int *ptr=(int *)malloc(sizeof(int));  
-        int a=560;  
-        ptr=&a;  
-        free(ptr);  
-        // dangling pointer
-        printf("%d",*ptr);
-        return 0;  
-    }  
+#include <stdio.h>
+  int main()  
+  {
+    int *ptr=(int *)malloc(sizeof(int));  
+    int a=560;  
+    ptr=&a;  
+    free(ptr);  
+    // dangling pointer
+    printf("%d",*ptr);
+    return 0;  
+}  
 
-    ```
+```
+
 The above code will produce a segmentation fault since the pointer is pointing to a memory location that has been freed. To avoid this, we can set the pointer to NULL after freeing it.
 
-    ```cpp
+```cpp
 
     free(ptr);
     ptr=NULL;
 
-    ```
+```
 
 Memory leaks and dangling pointer bugs are some reasons why C++ is not preferred for applications that require a lot of memory management. To avoid such issues, languages that provide automatic memory management are preferred over C++. Scripting languages manage memory using a **garbage collector**.
 
@@ -133,13 +134,13 @@ Here are a few types of Garbage collectors:
 
 ## Rust
 
-Rust is a general purpose systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety. It is a multi-paradigm language that supports imperative, functional, and object-oriented programming. Rust is not only used to create low-level systems software such as operating systems, device drivers, and embedded software,but also used to create high-level applications such as web servers, command-line tools, and graphical user interfaces. 
+Rust is a general purpose systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety. It is a multi-paradigm language that supports imperative, functional, and object-oriented programming. Rust is not only used to create low-level systems software such as operating systems, device drivers, and embedded software,but also used to create high-level applications such as web servers, command-line tools, and graphical user interfaces.
 
 Rust builds on **RAII**( Resource Acquisition is Initialization) to provide automatic memory management. RAII is a programming technique that uses the lifetime of an object to manage the lifetime of its resources. In Rust, the compiler ensures that the memory is freed as soon as the object goes out of scope. This is achieved by the use of **smart pointers**. Rust implements borrow checking and ownership rules to ensure that memory is freed as soon as the object goes out of scope. Additionally, Rust also provides a **garbage collector** that can be used to free memory when the object goes out of scope.
 
 >Ownership and Borrowing
 
-    ```rust
+```rust
 
     fn main()  {  
     let mut x = 5;  
@@ -152,11 +153,11 @@ Rust builds on **RAII**( Resource Acquisition is Initialization) to provide auto
         // z cannot borrow x as it is already borrowed
 }  
 
-    ```
+```
 
 >RAII
 
-    ```rust
+```rust
 
     fn main() {
         let foo = "value"; // owner is foo and is valid within this method
@@ -172,7 +173,7 @@ Rust builds on **RAII**( Resource Acquisition is Initialization) to provide auto
         println!("value of bar is {}", bar); // bar is not valid here as its out of scope
     }
 
-    ```
+```
 
 ### Rust > C++ ?
 
