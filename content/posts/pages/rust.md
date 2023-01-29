@@ -141,7 +141,6 @@ Rust builds on **RAII**( Resource Acquisition is Initialization) to provide auto
 >Ownership and Borrowing
 
 ```rust
-
     fn main()  {  
     let mut x = 5;  
         {  
@@ -152,13 +151,11 @@ Rust builds on **RAII**( Resource Acquisition is Initialization) to provide auto
         let z = &mut x;
         // z cannot borrow x as it is already borrowed
 }  
-
 ```
 
 >RAII
 
 ```rust
-
     fn main() {
         let foo = "value"; // owner is foo and is valid within this method
         // bar is not valid here as it's not declared yet
@@ -172,7 +169,6 @@ Rust builds on **RAII**( Resource Acquisition is Initialization) to provide auto
         println!("value of foo is {}", foo); // foo is valid here
         println!("value of bar is {}", bar); // bar is not valid here as its out of scope
     }
-
 ```
 
 ### Rust > C++ ?
