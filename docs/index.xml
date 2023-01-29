@@ -49,7 +49,6 @@
 </ol>
 <p>The issue with C++ boils down to how it <strong>manages memory</strong>. C++ is prone to memory leaks and dangling pointers, if not used properly.</p>
 <h2 id="memory-management-in-programming-languages">Memory Management in programming languages</h2>
-<p>To understand memory management in C++, you need to understand the concept of pointers. Before we explore pointers, let us first understand what a variable is.</p>
 <p><strong>Variables</strong> are named memory locations that store data. A variable is a container that holds a value. The value can be of any type, such as <em>integer</em>, <em>float</em>, <em>character</em>, etc. Example:</p>
 <pre><code>int a = 10;
 float b = 10.5;
