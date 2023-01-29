@@ -51,17 +51,11 @@ jobs:
           hugo
           rm -rf docs
           mv public docs
-          cd docs
-          #find ./ -type f -exec sed -i '' -e 's/content="noindex"/content="index"/gI' {} \;
-          cd ..
           git config --global user.name codebotx
           git config --global user.email anubhabr50@gmail.com
           git remote set-url origin https://codebotx:${{ secrets.PATN }}@github.com/codebotx/cbrtl
           git add .
           git commit -m "Deploying latest commit"
-          git remote -v
-          git config user.name
-          git config user.name
           git push origin main
 
           
