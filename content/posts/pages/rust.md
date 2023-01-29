@@ -8,13 +8,13 @@ ShowBreadCrumbs: true
 ---
 Rust is a multi-paradigm systems programming language created to ensure high performance similar to that offered by C and C++, but with emphasis on code safety, the lack of which is probably why C and C++ are painful to deal with. It accomplishes these goals of being memory safe without using garbage collection. It is also an ahead-of-time compiled language, which means that you can compile a rust program, give it to someone else, and they can run it even without Rust installed. However, Rust has more than just memory safety on its side. High performance while processing large amounts of data, support for concurrent programming, with an effective compiler are other reasons why well-known software heavyweights such as Firefox, Dropbox, Cloudflare, and many startups and large corporations use Rust in production.
 
-In simpler words, before I explain a whole lot about programming languages and their working, some questions that may come to your mind are:
+Before I explain a whole lot about programming languages and their working, some questions that may come to your mind are:
 
 1. If Rust is created to achieve performance similar to that offered by C++, then why not use C++ instead?
 2. I know Java, JavaScript, and Python to be more popular choices amongst peers. Why not use those instead?
 3. What about new languages like Go, Kotlin, Swift, etc.?
 
-To answer these questions, let us first go through how a computer works.
+To answer these questions, let us first go through how a programming language works.
 
 ## Programming Languages and their working
 
@@ -26,9 +26,7 @@ A **compiler** or an **interpreter** is a tool that converts a program written i
 
 **Why did we need interpreters?**
 
-Compiled languages need a “build” step. You need to compile your program before you can run it. To run your program on a different computer, you will have to compile it on that computer as well.
-
-Interpreters run through a program line by line and execute each command. You can run a program without having to compile it first. This makes it easier to run programs on different computers.
+Compiled languages need a “build” step. You need to compile your program before you can run it. To run your program on a different computer, you will have to compile it on that computer as well. Interpreters run through a program line by line and execute each command. You can run a program without having to compile it first. This makes it easier to run programs on different computers.
 
 Another notable disadvantage of compilers is **platform dependency** of the generated binary code. Compilers are designed to be CPU specific and run on a specific CPU architecture. This means that if you want to run a program on a different CPU architecture, you will have to compile it again.
 
@@ -48,7 +46,7 @@ If you're wondering what language should you choose to build your next project w
 
 The speed advantage of the compiled language such as Golang (Go) in comparison to an interpreted language such as Java is one of the reasons why organizations write their microservices in Go. In complex computing environments such as cloud computing environments, where users get charged for every clock cycle, it makes sense to use the most efficient deployment artifact.
 
-## C++: performance benchmarks
+## C++: The king of programming languages
 
 C++ is a low-level, statically typed object-oriented language that allows you to have a good grasp of your computer's resources and utilize them at your convenience. Since it is a compiled language, it surpasses the performance of most of the other interpreted languages. It is an extremely powerful language and is used in many applications such as operating systems, video games, the development of compilers and interpreters, etc. It has a huge community and is one of the most popular languages in the world.
 
