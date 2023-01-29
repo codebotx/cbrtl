@@ -61,31 +61,23 @@ char c = 'a';
 <p><strong>Pointers</strong>
 Pointers are variables that store the <strong>address</strong> of another variable and access the memory location of a variable. Pointers are used to pass large data structures to functions, to return multiple values from a function, to dynamically allocate memory, etc. Since there is no automatic memory management in C++, you need to be responsible for allocating and freeing memory. This process is achieved using the <strong>malloc</strong>, <strong>calloc</strong>, <strong>new</strong> and <strong>delete</strong> keywords.</p>
 <p>With manual memory management, a few things can go wrong like memory leaks and dangling pointers. The dangling pointer problem arises when there is an attempt to use a pointer after it has been freed. Dangling pointer errors can arise whenever there is an error in the control flow logic of a program. The use of a pointer before allocation may be a fatal run-time error. Use after deallocation is not always fatal but neither of these is a good thing.</p>
-<pre><code>```cpp
-
-#include &lt;stdio.h&gt;  
-int main()  
-{  
-    int *ptr=(int *)malloc(sizeof(int));  
-    int a=560;  
-    ptr=&amp;a;  
-    free(ptr);  
-    // dangling pointer
-    printf(&quot;%d&quot;,*ptr);
-    return 0;  
-}  
-
-```
-</code></pre>
-<p>The above code will produce a segmentation fault since the pointer is pointing to a memory location that has been freed. To avoid this, we can set the pointer to NULL after freeing it.</p>
-<pre><code>```cpp
-
-free(ptr);
-ptr=NULL;
-
-```
-</code></pre>
-<p>Memory leaks and dangling pointer bugs are some reasons why C++ is not preferred for applications that require a lot of memory management. To avoid such issues, languages that provide automatic memory management are preferred over C++. Scripting languages manage memory using a <strong>garbage collector</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="">#include</span> <span style="">&lt;stdio.h&gt;</span><span style="">
+</span></span></span><span style="display:flex;"><span><span style=""></span>  <span style="">int</span> main()  
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="">int</span> *ptr=(<span style="">int</span> *)malloc(<span style="font-weight:bold">sizeof</span>(<span style="">int</span>));  
+</span></span><span style="display:flex;"><span>    <span style="">int</span> a=560;  
+</span></span><span style="display:flex;"><span>    ptr=&amp;a;  
+</span></span><span style="display:flex;"><span>    free(ptr);  
+</span></span><span style="display:flex;"><span>    <span style="font-style:italic">// dangling pointer
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>    printf(<span style="font-style:italic">&#34;%d&#34;</span>,*ptr);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> 0;  
+</span></span><span style="display:flex;"><span>}  
+</span></span></code></pre></div><p>The above code will produce a segmentation fault since the pointer is pointing to a memory location that has been freed. To avoid this, we can set the pointer to NULL after freeing it.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    free(ptr);
+</span></span><span style="display:flex;"><span>    ptr=NULL;
+</span></span></code></pre></div><p>Memory leaks and dangling pointer bugs are some reasons why C++ is not preferred for applications that require a lot of memory management. To avoid such issues, languages that provide automatic memory management are preferred over C++. Scripting languages manage memory using a <strong>garbage collector</strong>.</p>
 <h3 id="garbage-collection">Garbage collection</h3>
 <p>Garbage is a memory that was once used by objects but will never be read or written by the program again. A garbage collector (GC) is a background process that provides automatic memory management for modern languages by taking care of the allocation and deallocation of a program’s computer memory resources. As a result, certain categories of bugs are eliminated or substantially reduced such as:-</p>
 <p><strong>Dangling pointer bugs</strong> - a piece of memory is freed, but the objects still have references – one of these references is used in the program.</p>
@@ -103,43 +95,35 @@ ptr=NULL;
 <blockquote>
 <p>Ownership and Borrowing</p>
 </blockquote>
-<pre><code>```rust
-
-fn main()  {  
-let mut x = 5;  
-    {  
-            let y = &amp;mut x;  
-            *y += 1;  
-            // x is borrowed here
-    }  
-    let z = &amp;mut x;
-    // z cannot borrow x as it is already borrowed
-</code></pre>
-<p>}</p>
-<pre><code>```
-</code></pre>
-<blockquote>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">fn</span> main()  {  
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">let</span> <span style="font-weight:bold">mut</span> x = 5;  
+</span></span><span style="display:flex;"><span>        {  
+</span></span><span style="display:flex;"><span>                <span style="font-weight:bold">let</span> y = &amp;<span style="font-weight:bold">mut</span> x;  
+</span></span><span style="display:flex;"><span>                *y += 1;  
+</span></span><span style="display:flex;"><span>                <span style="font-style:italic">// x is borrowed here
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        }  
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">let</span> z = &amp;<span style="font-weight:bold">mut</span> x;
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">// z cannot borrow x as it is already borrowed
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>}  
+</span></span></code></pre></div><blockquote>
 <p>RAII</p>
 </blockquote>
-<pre><code>```rust
-
-fn main() {
-    let foo = &quot;value&quot;; // owner is foo and is valid within this method
-    // bar is not valid here as it's not declared yet
-
-    {
-        let bar = &quot;bar value&quot;; // owner is bar and is valid within this block scope
-        println!(&quot;value of bar is {}&quot;, bar); // bar is valid here
-        println!(&quot;value of foo is {}&quot;, foo); // foo is valid here
-    }
-
-    println!(&quot;value of foo is {}&quot;, foo); // foo is valid here
-    println!(&quot;value of bar is {}&quot;, bar); // bar is not valid here as its out of scope
-}
-
-```
-</code></pre>
-<h3 id="rust--c-">Rust &gt; C++ ?</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">fn</span> main() {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">let</span> foo = <span style="font-style:italic">&#34;value&#34;</span>; <span style="font-style:italic">// owner is foo and is valid within this method
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        <span style="font-style:italic">// bar is not valid here as it&#39;s not declared yet
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">let</span> bar = <span style="font-style:italic">&#34;bar value&#34;</span>; <span style="font-style:italic">// owner is bar and is valid within this block scope
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>            println!(<span style="font-style:italic">&#34;value of bar is {}&#34;</span>, bar); <span style="font-style:italic">// bar is valid here
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>            println!(<span style="font-style:italic">&#34;value of foo is {}&#34;</span>, foo); <span style="font-style:italic">// foo is valid here
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        println!(<span style="font-style:italic">&#34;value of foo is {}&#34;</span>, foo); <span style="font-style:italic">// foo is valid here
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        println!(<span style="font-style:italic">&#34;value of bar is {}&#34;</span>, bar); <span style="font-style:italic">// bar is not valid here as its out of scope
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>    }
+</span></span></code></pre></div><h3 id="rust--c-">Rust &gt; C++ ?</h3>
 <p>C++ is a high-performance, general-purpose programming language that has been widely used for decades. It is known for its flexibility and ability to handle low-level tasks, making it a popular choice for systems programming and game development. C++ also has a large and active community, which means that there are many libraries and resources available for developers to use. Rust, on the other hand, is a relatively <strong>new programming language</strong> that was first released in 2010. It is designed to be a safe and concurrent language, with a strong focus on preventing common programming errors such as null pointer dereferences and buffer overflows.</p>
 <p>Will rust replace C++ anytime soon? <strong>No</strong>. Rust is a relatively new language and is still in its early stages of development. It is not yet widely used in production, and there are still many features that are missing. However, it is gaining popularity and is being used in many large projects, such as Firefox and Servo. C++ has been widely used for decades and has a vast amount of <em>legacy code</em>, making it difficult for Rust to replace it. Rust is still a relatively new language, and its adoption in the industry has not yet reached the level of C++, which is widely used across many industries. C++ has a much larger community and ecosystem, with a wealth of libraries, tools, and resources, making it easier for developers to find help and resources. C++ has a mature set of development tools, such as compilers, debuggers, and integrated development environments, which are widely used and well-established. Rust&rsquo;s tooling is still evolving and may not be as mature or widely used as C++.</p>
 ]]></content:encoded>
