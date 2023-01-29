@@ -145,11 +145,68 @@ The types of garbage encountered during the execution of a program are:
 Garbage collection frees the programmer from manually performing memory allocation and deallocation in the program code. As a result, certain categories of bugs are eliminated or substantially reduced such as:-
 
 **Dangling pointer bugs** - a piece of memory is freed, but the objects still have references – one of these references is used in the program.
+
 **Double-free bugs** – the program attempts to free a piece of memory that has already been freed.
+
 **Memory leaks** – if a program does not free memory that is no longer referenced by any object, it can lead to memory exhaustion over time.
 
 Garbage collection seemed like a really good solution to the memory leak issues occurring in low-level languages such as C/C++. While it seemed like the best solution, it had a few CPU usage issues. CPU usage increases when a significant amount of CPU time is spent in a garbage collection or when the garbage collection lasts too long. *Heap* is the memory that is used to allocate memory dynamically as opposed to the *stack* memory which is used to store the local variables. Local memory is quite automatic and local variables are allocated automatically. An increased allocation rate of objects on the managed heap causes garbage collection to occur more frequently.
 
+Types of Garbage Collection:
+
+**Mark & Sweep GC**: Also known as Tracing GC. Its generally a two-phase algorithm that first marks objects that are still being referenced as “alive” and in the next phase frees the memory of objects that are not alive. JVM, C#, Ruby, JavaScript, and Golang employ this approach for example. In JVM there are different GC algorithms to choose from while JavaScript engines like V8 use a Mark & Sweep GC along with Reference counting GC to complement it. This kind of GC is also available for C & C++ as an external library.
+
+**Reference counting GC**: In this approach, every object gets a reference count which is incremented or decremented as references to it change and garbage collection is done when the count becomes zero. It’s not very preferred as it cannot handle cyclic references. PHP, Perl, and Python, for example, uses this type of GC with workarounds to overcome cyclic references. This type of GC can be enabled for C++ as well.
+
+**Resource Acquisition is Initialization (RAII)**: In this type of memory management, an object’s memory allocation is tied to its lifetime, which is from construction until destruction. It was introduced in C++ and is also used by Ada and Rust.
+
+**Automatic Reference Counting(ARC)**: It’s similar to Reference counting GC but instead of running a runtime process at a specific interval the retain and release instructions are inserted to the compiled code at compile-time and when an object reference becomes zero its cleared automatically as part of execution without any program pause. It also cannot handle cyclic references and relies on the developer to handle that by using certain keywords. Its a feature of the Clang compiler and provides ARC for Objective C & Swift.
+
 ## Rust
 
+Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety. It is a general purpose language that can be used to create any kind of application. Rust is a statically typed language that is compiled to native code. It is a multi-paradigm language that supports imperative, functional, and object-oriented programming. Rust is a low-level language that provides **automatic memory management**. Rust is used to create low-level systems software such as operating systems, device drivers, and embedded software. It is a language that is used to create high-level applications such as web servers, command-line tools, and graphical user interfaces.
+
+Rust builds on RAII( Resource Acquisition is Initialization) to provide automatic memory management. RAII is a programming technique that uses the lifetime of an object to manage the lifetime of its resources. In Rust, the compiler ensures that the memory is freed as soon as the object goes out of scope. This is achieved by the use of **smart pointers**. Rust implements borrow checking and ownership rules to ensure that memory is freed as soon as the object goes out of scope. Additionally, Rust also provides a **garbage collector** that can be used to free memory when the object goes out of scope.
+
+>Ownership and Borrowing
+
+```rust
+
+fn main()  {  
+   let mut x = 5;  
+	 {  
+			let y = &mut x;  
+			*y += 1;  
+			// x is borrowed here
+	 }  
+	 let z = &mut x;
+	 // z cannot borrow x as it is already borrowed
+}  
+
+```
+
+>RAII
+
+```rust
+
+fn main() {
+    let foo = "value"; // owner is foo and is valid within this method
+    // bar is not valid here as it's not declared yet
+
+    {
+        let bar = "bar value"; // owner is bar and is valid within this block scope
+        println!("value of bar is {}", bar); // bar is valid here
+        println!("value of foo is {}", foo); // foo is valid here
+    }
+
+    println!("value of foo is {}", foo); // foo is valid here
+    println!("value of bar is {}", bar); // bar is not valid here as its out of scope
+}
+
+```
+
 ### Rust > C++ ?
+
+C++ is a high-performance, general-purpose programming language that has been widely used for decades. It is known for its flexibility and ability to handle low-level tasks, making it a popular choice for systems programming and game development. C++ also has a large and active community, which means that there are many libraries and resources available for developers to use.
+
+Rust, on the other hand, is a relatively new programming language that was first released in 2010. It is designed to be a safe and concurrent language, with a strong focus on preventing common programming errors such as null pointer dereferences and buffer overflows. Rust also has a unique ownership model that allows for efficient memory management and thread safety. This makes it a great choice for systems programming, especially when security and performance are a concern.
