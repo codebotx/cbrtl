@@ -21,41 +21,22 @@
 <li>What about new languages like Go, Kotlin, Swift, etc.?</li>
 </ol>
 <p>To answer these questions, let us first go through how a computer works.</p>
-<h2 id="what-is-a-programming-language-and-how-do-computers-understand-them">What is a programming language and how do computers understand them?</h2>
-<p>A programming language is a set of instructions that can be used to interact with and control a computer. These languages can be used for a multitude of purposes, such as creating a website, analyzing data, writing a program to solve a mathematical problem, creating a game, piloting a car, building a robot, making rockets take off, controlling spacecraft and the list goes on. A computer, even though can control a rover on Mars, detect an incoming ballistic missile, and detonate it before it reaches you, cannot understand English, or anything except <strong>&lsquo;0&rsquo;</strong> &amp; <strong>&lsquo;1&rsquo;</strong>. Computers can be thought of to be made up of tiny switches, and can be either &lsquo;on&rsquo; (1) or &lsquo;off&rsquo; (0) called <strong>&lsquo;bits&rsquo;</strong>. Whatever instruction you want to execute on a computer, has to be converted into a series of &lsquo;0&rsquo; and &lsquo;1&rsquo; before it can be executed. Even a simple &ldquo;Hi&rdquo; is parsed as <strong>01001000 01101001</strong>. Yes, this is what Siri replies when you <em>Hey Siri</em>. Since the English language is vast and complicated, it is not possible to convert it into a series of &lsquo;0&rsquo; and &lsquo;1&rsquo; directly. A subset of English or any other language is created, which is called a <strong>programming language</strong>. High-Level Programming Languages are designed to be easy to read and write, and Low-Level Programming Languages are designed to be easy for the computer to understand. To make things easier for us, there are tools that convert whatever we want the computer to do into a series of &lsquo;0&rsquo; and &lsquo;1&rsquo;. This series of &lsquo;0&rsquo; and &lsquo;1&rsquo; is then executed by the computer.</p>
-<h3 id="what-are-compilers-and-interpreters">What are compilers and interpreters?</h3>
+<h2 id="programming-languages-and-their-working">Programming Languages and their working</h2>
+<p>A programming language is a set of instructions that can be used to interact with and control a computer. These languages can be used for a multitude of purposes, such as creating a website, analyzing data, writing a program to solve a mathematical problem, creating a game, piloting a car, building a robot, making rockets take off, controlling spacecraft and the list goes on. A computer, even though can control a rover on Mars, detect an incoming ballistic missile, and detonate it before it reaches you, cannot understand English, or anything else except <strong>&lsquo;0&rsquo;</strong> &amp; <strong>&lsquo;1&rsquo;</strong>. Computers can be thought of to be made up of tiny switches, and can be either &lsquo;on&rsquo; (1) or &lsquo;off&rsquo; (0) called <strong>&lsquo;bits&rsquo;</strong>. Whatever instruction you want to execute on a computer, has to be converted into a series of &lsquo;0&rsquo; and &lsquo;1&rsquo; before it can be executed. Even a simple &ldquo;Hi&rdquo; is parsed as <strong>01001000 01101001</strong>. Yes, this is what Siri replies when you <em>Hey Siri</em>. Since the English language is vast and complicated, it is not possible to convert it into a series of &lsquo;0&rsquo; and &lsquo;1&rsquo; directly. A subset of English or any other language is created, which is called a <strong>programming language</strong>. High-Level Programming Languages have english like syntax and are designed to be easy to read and write, whereas low-Level Programming Languages are designed to be easy for the computer to understand. To make things easier for us, there are tools that convert whatever we want the computer to do into a series of &lsquo;0&rsquo; and &lsquo;1&rsquo;. This series of &lsquo;0&rsquo; and &lsquo;1&rsquo; is then executed by the computer.</p>
+<h3 id="compilers-and-interpreters">Compilers and interpreters</h3>
 <p>A <strong>compiler</strong> or an <strong>interpreter</strong> is a tool that converts a program written in a programming language <em>(source code)</em> into a series of &lsquo;0&rsquo; and &lsquo;1&rsquo; that can be executed by a computer. What creates a difference between a compiler and an interpreter is the way they work. A compiler converts the entire program into a series of &lsquo;0&rsquo; and &lsquo;1&rsquo; <em>(machine code)</em> and then executes it. An interpreter, on the other hand, converts the program line by line and executes it.</p>
-<h3 id="how-do-compilers-and-interpreters-work">How do compilers and interpreters work?</h3>
-<p>Compilers vary in the methods they use for analyzing and converting source code to output code. Despite their differences, they typically carry out the following steps:</p>
-<ol>
-<li><strong>Lexical analysis</strong>
-The compiler splits the source code into lexemes, which are individual code fragments that represent specific patterns in the code. The lexemes are then tokenized in preparation for syntax and semantic analyses.</li>
-<li><strong>Syntax analysis</strong>
-The compiler verifies that the code&rsquo;s syntax is correct, based on the rules for the source language. This process is also referred to as parsing. During this step, the compiler typically creates abstract syntax trees that represent the logical structures of specific code elements.</li>
-<li><strong>Semantic analysis</strong>
-The compiler verifies the validity of the code&rsquo;s logic. This step goes beyond syntax analysis by validating the code&rsquo;s accuracy. For example, the semantic analysis might check whether variables have been assigned the right types or have been properly declared.</li>
-<li><strong>Intermediate code generation</strong>
-IR code generation. After the code passes through all three analysis phases, the compiler generates an intermediate representation (IR) of the source code. The IR code makes it easier to translate the source code into a different format. However, it must accurately represent the source code in every respect, without omitting any functionality.</li>
-<li><strong>Code Optimization</strong>
-The compiler optimizes the IR code in preparation for the final code generation. The type and extent of optimization depend on the compiler. Some compilers let users configure the degree of optimization.</li>
-<li><strong>Output code generation</strong>
-The compiler generates the final output code, using the optimized IR code.</li>
-</ol>
-<p>An interpreter similarly to a compiler, but it does not generate machine code. Instead, it executes the program line by line.</p>
-<p><strong>Why did we need interpreters ?</strong></p>
+<p><strong>Why did we need interpreters?</strong></p>
 <p>Compiled languages need a “build” step. You need to compile your program before you can run it. To run your program on a different computer, you will have to compile it on that computer as well.</p>
 <p>Interpreters run through a program line by line and execute each command. You can run a program without having to compile it first. This makes it easier to run programs on different computers.</p>
 <p>Another notable disadvantage of compilers is <strong>platform dependency</strong> of the generated binary code. Compilers are designed to be CPU specific and run on a specific CPU architecture. This means that if you want to run a program on a different CPU architecture, you will have to compile it again.</p>
 <p><strong>Why do we still make use of compilers ?</strong></p>
-<p>Compilers are designed to be CPU specific and as a result, they tend to be <strong>faster and more efficient</strong> than interpreters. They also give the developer <strong>more control</strong> over hardware aspects, like memory management and CPU usage.</p>
-<p>Compilers and Interpreters have their advantages and disadvantages. For example, a compiler is faster and more efficient than an interpreter, but an interpreter is easier to write than a compiler.</p>
-<h3 id="compiled-languages-vs-interpreted-languages">Compiled languages Vs Interpreted languages</h3>
+<p>Compilers are designed to be CPU specific, and as a result, they tend to be a lot <strong>faster and more efficient</strong> than interpreters. They also give the developer <strong>more control</strong> over hardware aspects, like memory management and CPU usage.</p>
+<p>A compiler is faster and more efficient than an interpreter, but an interpreter is easier to write than a compiler.</p>
+<h3 id="compiled-vs-interpreted-languages">Compiled Vs Interpreted languages</h3>
 <p>Interpreted languages were once significantly slower than compiled languages. But, with the development of <a href="https://guide.freecodecamp.org/computer-science/just-in-time-compilation">just-in-time compilation</a>, that gap is shrinking. Modern scripting languages like Python and JavaScript are compiled to machine code at runtime using both compilers and interpreters, which makes them as fast as compiled languages. They are first compiled to an intermediate representation called <strong>bytecode</strong>, and then interpreted by a virtual machine which converts it to machine code.</p>
-<p>Coming back to the questions that we asked earlier, let us now see how Rust fits in.</p>
 <p>If you&rsquo;re wondering what language should you choose to build your next project with, ask yourself this: what kind of platform do I want to run the application in? If you want to run your application on a web browser, you should use JavaScript or TypeScript. If you want to run your application on a server, you may want to use Python or Go. In a mobile device, Swift or Kotlin might be the way to go. C++ is used for building complex applications and systems software, such as operating systems, browsers, and video games which require a heavy performance overhead.</p>
-<p><em>Rust</em>, <em>Go</em> and <em>C++</em> are popular compiled languages.</p>
-<p>The speed advantage of the compiled language such as Golang (Go) in comparison to an interpreted language such as Java is one of the reasons why organizations write their microservices in Go. In complex computing environments such as cloud computing environments, where users get charged for every clock cycle, it makes sense to use the most efficient deployment artifact. Unsurprisingly, the <a href="https://www.docker.com/">Docker</a> container is written in the compiled language Go.</p>
-<p>The benefit of applications built with an interpreted language is that they can run on any environment (&ldquo;write once, run anywhere,&rdquo;). The drawback to an interpreted language is that the interpretation step consumes additional clock cycles, especially in comparison to applications packaged and deployed as machine code.</p>
+<p><em>Rust</em>, <em>Go</em> and <em>C++</em> are popular compiled languages that are used for building high-performance applications. <em>Python</em> and <em>JavaScript</em> are popular interpreted languages that are used for building web applications.</p>
+<p>The speed advantage of the compiled language such as Golang (Go) in comparison to an interpreted language such as Java is one of the reasons why organizations write their microservices in Go. In complex computing environments such as cloud computing environments, where users get charged for every clock cycle, it makes sense to use the most efficient deployment artifact.</p>
 <h2 id="why-is-c-the-benchmark-for-performance">Why is C++ the benchmark for performance?</h2>
 <p>C++ is a low-level, statically typed object-oriented language that allows you to have a good grasp of your computer&rsquo;s resources and utilize them at your convenience. Since it is a compiled language, it surpasses the performance of most of the other interpreted languages. It is an extremely powerful language and is used in many applications such as operating systems, video games, the development of compilers and interpreters, etc. It has a huge community and is one of the most popular languages in the world.</p>
 <p>Reasons why C++&rsquo;s performance is unparalleled:</p>
@@ -66,94 +47,101 @@ The compiler generates the final output code, using the optimized IR code.</li>
 <li>Object-oriented programming. It allows you to create reusable code.</li>
 <li>A general purpose language. It can be used to create any kind of application.</li>
 </ol>
-<p>The issue with C++ boils down to how it <strong>manages memory</strong>. C++ is prone to memory leaks and dangling pointers, if not used properly.
-It is also very difficult to write multithreaded code in C++.</p>
-<p>To understand memory management in C++, you need to understand the concept of pointers. Before we explore pointers, let us first understand what a variable is.</p>
+<p>The issue with C++ boils down to how it <strong>manages memory</strong>. C++ is prone to memory leaks and dangling pointers, if not used properly.</p>
 <h2 id="memory-management-in-programming-languages">Memory Management in programming languages</h2>
-<p><strong>Variables</strong> are named memory locations that store data. A variable is a container that holds a value. The value can be of any type, such as <em>integer</em>, <em>float</em>, <em>character</em>, etc.
-Computer programs need to allocate memory to store variables, data values, and data structures and deallocate memory when done using them. Memory is also used to store the program itself and the run-time system needed to support it. Programming languages can be categorized as those which provide <strong>automatic memory management</strong> and those which ask the programmer to allocate and <strong>free memory manually</strong>. Requiring the programmer to manage memory manually leads to a <em>simpler compiler</em> and <em>run-time</em> but requires more work from the programmer and is more <em>error-prone</em>. While automatic memory management is more convenient for the programmer, it is also more complex and slower. This is achieved by the use of <strong>garbage collection</strong>.</p>
+<p>To understand memory management in C++, you need to understand the concept of pointers. Before we explore pointers, let us first understand what a variable is.</p>
+<p><strong>Variables</strong> are named memory locations that store data. A variable is a container that holds a value. The value can be of any type, such as <em>integer</em>, <em>float</em>, <em>character</em>, etc. Example:</p>
+<pre><code>int a = 10;
+float b = 10.5;
+char c = 'a';
+</code></pre>
+<p>Computer programs need to allocate memory to store variables, data values, and data structures and deallocate memory when done using them. Memory is also used to store the program itself and the run-time system needed to support it. Programming languages can be categorized as those which provide <strong>automatic memory management</strong> and those which ask the programmer to allocate and <strong>free memory manually</strong>. Requiring the programmer to manage memory manually leads to a simpler compiler and run-time but requires more work from the programmer and is more error-prone. While automatic memory management is more convenient for the programmer, it is also more complex and slower. This is achieved by the use of <strong>garbage collection</strong>.</p>
 <h3 id="manual-memory-management-in-c">Manual Memory Management in C++</h3>
 <p>C++ is a low-level language with manual memory management. C++ programs manually allocate and free memory using <strong>pointers</strong>.</p>
 <p><strong>Pointers</strong>
-Pointers are variables that store the <strong>address</strong> of another variable and access the memory location of a variable. Pointers are used to pass large data structures to functions, to return multiple values from a function, to dynamically allocate memory, etc.
-C++ has two types of pointers:</p>
-<ol>
-<li><strong>Raw pointers</strong> - These are the most basic type of pointers. They are not bound to any particular object and can point to any memory location. They are not checked for null values and can cause <em>memory leaks</em> and <em>dangling pointers</em>.</li>
-<li><strong>Smart pointers</strong> - These are the advanced type of pointers. They are bound to a particular object and can only point to the memory location of that object. They are checked for null values and can prevent memory leaks and dangling pointers.</li>
-</ol>
-<p>Since there is no automatic memory management in C++, you need to be responsible for allocating and freeing memory. This process is achieved using the <strong>new</strong> and <strong>delete</strong> keywords.</p>
-<p>The dangling pointer problem arises when there is an attempt to use a pointer after it has been freed. Dangling pointer errors can arise whenever there is an error in the control flow logic of a program. The use of a pointer before allocation may be a fatal run-time error. Use after deallocation is not always fatal but neither of these is a good thing.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="">#include</span> <span style="">&lt;stdio.h&gt;  </span><span style="">
-</span></span></span><span style="display:flex;"><span><span style=""></span><span style="">int</span> main()  
-</span></span><span style="display:flex;"><span>{  
-</span></span><span style="display:flex;"><span>   <span style="">int</span> *ptr=(<span style="">int</span> *)malloc(<span style="font-weight:bold">sizeof</span>(<span style="">int</span>));  
-</span></span><span style="display:flex;"><span>   <span style="">int</span> a=560;  
-</span></span><span style="display:flex;"><span>   ptr=&amp;a;  
-</span></span><span style="display:flex;"><span>   free(ptr);  
-</span></span><span style="display:flex;"><span>	<span style="font-style:italic">// dangling pointer
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>	 printf(<span style="font-style:italic">&#34;%d&#34;</span>,*ptr);
-</span></span><span style="display:flex;"><span>   <span style="font-weight:bold">return</span> 0;  
-</span></span><span style="display:flex;"><span>}  
-</span></span></code></pre></div><p>The above code will produce a segmentation fault since the pointer is pointing to a memory location that has been freed. To avoid this, we can set the pointer to NULL after freeing it.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>free(ptr);
-</span></span><span style="display:flex;"><span>ptr=NULL;
-</span></span></code></pre></div><p>These memory leaks are reasons why C++ is not preferred for applications that require a lot of memory management. To avoid such issues, languages that provide automatic memory management are preferred over C++. Scripting languages manage memory using a <strong>garbage collector</strong>.</p>
+Pointers are variables that store the <strong>address</strong> of another variable and access the memory location of a variable. Pointers are used to pass large data structures to functions, to return multiple values from a function, to dynamically allocate memory, etc. Since there is no automatic memory management in C++, you need to be responsible for allocating and freeing memory. This process is achieved using the <strong>malloc</strong>, <strong>calloc</strong>, <strong>new</strong> and <strong>delete</strong> keywords.</p>
+<p>With manual memory management, a few things can go wrong like memory leaks and dangling pointers. The dangling pointer problem arises when there is an attempt to use a pointer after it has been freed. Dangling pointer errors can arise whenever there is an error in the control flow logic of a program. The use of a pointer before allocation may be a fatal run-time error. Use after deallocation is not always fatal but neither of these is a good thing.</p>
+<pre><code>```cpp
+
+#include &lt;stdio.h&gt;  
+int main()  
+{  
+    int *ptr=(int *)malloc(sizeof(int));  
+    int a=560;  
+    ptr=&amp;a;  
+    free(ptr);  
+    // dangling pointer
+    printf(&quot;%d&quot;,*ptr);
+    return 0;  
+}  
+
+```
+</code></pre>
+<p>The above code will produce a segmentation fault since the pointer is pointing to a memory location that has been freed. To avoid this, we can set the pointer to NULL after freeing it.</p>
+<pre><code>```cpp
+
+free(ptr);
+ptr=NULL;
+
+```
+</code></pre>
+<p>Memory leaks and dangling pointer bugs are some reasons why C++ is not preferred for applications that require a lot of memory management. To avoid such issues, languages that provide automatic memory management are preferred over C++. Scripting languages manage memory using a <strong>garbage collector</strong>.</p>
 <h3 id="garbage-collection">Garbage collection</h3>
-<p>Garbage is a memory that was once used by objects but will never be read or written by the program again. A garbage collector (GC) is a background process that provides automatic memory management for modern languages by taking care of the deallocation of a program’s computer memory resources.
-The types of garbage encountered during the execution of a program are:</p>
-<ol>
-<li><strong>Syntactic Garbage</strong> - it is clear from the code itself that an object leads to garbage.</li>
-<li><strong>Semantic Garbage</strong> - whether or not the memory used by an object is a garbage can only be determined at runtime.</li>
-</ol>
-<p>Garbage collection frees the programmer from manually performing memory allocation and deallocation in the program code. As a result, certain categories of bugs are eliminated or substantially reduced such as:-</p>
+<p>Garbage is a memory that was once used by objects but will never be read or written by the program again. A garbage collector (GC) is a background process that provides automatic memory management for modern languages by taking care of the allocation and deallocation of a program’s computer memory resources. As a result, certain categories of bugs are eliminated or substantially reduced such as:-</p>
 <p><strong>Dangling pointer bugs</strong> - a piece of memory is freed, but the objects still have references – one of these references is used in the program.</p>
 <p><strong>Double-free bugs</strong> – the program attempts to free a piece of memory that has already been freed.</p>
 <p><strong>Memory leaks</strong> – if a program does not free memory that is no longer referenced by any object, it can lead to memory exhaustion over time.</p>
-<p>Garbage collection seemed like a really good solution to the memory leak issues occurring in low-level languages such as C/C++. While it seemed like the best solution, it had a few CPU usage issues. CPU usage increases when a significant amount of CPU time is spent in a garbage collection or when the garbage collection lasts too long. <em>Heap</em> is the memory that is used to allocate memory dynamically as opposed to the <em>stack</em> memory which is used to store the local variables. Local memory is quite automatic and local variables are allocated automatically. An increased allocation rate of objects on the managed heap causes garbage collection to occur more frequently.</p>
-<p>Types of Garbage Collection:</p>
-<p><strong>Mark &amp; Sweep GC</strong>: Also known as Tracing GC. Its generally a two-phase algorithm that first marks objects that are still being referenced as “alive” and in the next phase frees the memory of objects that are not alive. JVM, C#, Ruby, JavaScript, and Golang employ this approach for example. In JVM there are different GC algorithms to choose from while JavaScript engines like V8 use a Mark &amp; Sweep GC along with Reference counting GC to complement it. This kind of GC is also available for C &amp; C++ as an external library.</p>
-<p><strong>Reference counting GC</strong>: In this approach, every object gets a reference count which is incremented or decremented as references to it change and garbage collection is done when the count becomes zero. It’s not very preferred as it cannot handle cyclic references. PHP, Perl, and Python, for example, uses this type of GC with workarounds to overcome cyclic references. This type of GC can be enabled for C++ as well.</p>
-<p><strong>Resource Acquisition is Initialization (RAII)</strong>: In this type of memory management, an object’s memory allocation is tied to its lifetime, which is from construction until destruction. It was introduced in C++ and is also used by Ada and Rust.</p>
-<p><strong>Automatic Reference Counting(ARC)</strong>: It’s similar to Reference counting GC but instead of running a runtime process at a specific interval the retain and release instructions are inserted to the compiled code at compile-time and when an object reference becomes zero its cleared automatically as part of execution without any program pause. It also cannot handle cyclic references and relies on the developer to handle that by using certain keywords. Its a feature of the Clang compiler and provides ARC for Objective C &amp; Swift.</p>
+<p>Garbage collection seemed like a really good solution to the memory leak issues occurring in low-level languages such as C/C++ but, it had a few CPU issues. CPU usage increases when a significant amount of CPU time is spent in a garbage collection. <em>Heap</em> is the memory that is used to allocate memory dynamically as opposed to the <em>stack</em> memory which is used to store the local variables. Local memory is quite automatic and local variables are allocated automatically. An increased allocation rate of objects on the managed heap causes garbage collection to occur more frequently.</p>
+<p>Here are a few types of Garbage collectors:</p>
+<p><strong>Mark &amp; Sweep GC</strong>(Tracing GC): Its a two-phase algorithm that first marks objects that are being referenced as “alive” and in the next phase frees the memory of objects that are not alive. JVM, C#, Ruby, JavaScript, and Golang employ this approach. JavaScript engines like V8 use a Mark &amp; Sweep GC along with Reference counting GC to complement it. This kind of GC is also available for C &amp; C++ as an external library.</p>
+<p><strong>Reference counting GC</strong>: Every object gets a reference count which is incremented or decremented as references to it change. Garbage is collected when the count becomes zero. This is not preferred as it cannot handle cyclic references. PHP, Perl, and Python use this kind of GC with workarounds to overcome cyclic references. This type of GC can be enabled for C++ as well.</p>
+<p><strong>Automatic Reference Counting(ARC)</strong>: Similar to Reference counting GC but instead of running a runtime process at a specific interval the retain and release instructions are inserted to the compiled code at compile-time and when an object&rsquo;s reference becomes zero, it is cleared automatically as a part of the code execution. It also cannot handle cyclic references and relies on the developer. Its a feature of the Clang compiler and provides ARC for Objective C &amp; Swift.</p>
+<p><strong>Resource Acquisition is Initialization (RAII)</strong>: Objects and varibales are <em>scoped</em>, an object’s memory allocation is tied to its lifetime, which is from construction until destruction. It was introduced in C++ and is also used by Ada and Rust.</p>
 <h2 id="rust">Rust</h2>
-<p>Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety. It is a general purpose language that can be used to create any kind of application. Rust is a statically typed language that is compiled to native code. It is a multi-paradigm language that supports imperative, functional, and object-oriented programming. Rust is a low-level language that provides <strong>automatic memory management</strong>. Rust is used to create low-level systems software such as operating systems, device drivers, and embedded software. It is a language that is used to create high-level applications such as web servers, command-line tools, and graphical user interfaces.</p>
-<p>Rust builds on RAII( Resource Acquisition is Initialization) to provide automatic memory management. RAII is a programming technique that uses the lifetime of an object to manage the lifetime of its resources. In Rust, the compiler ensures that the memory is freed as soon as the object goes out of scope. This is achieved by the use of <strong>smart pointers</strong>. Rust implements borrow checking and ownership rules to ensure that memory is freed as soon as the object goes out of scope. Additionally, Rust also provides a <strong>garbage collector</strong> that can be used to free memory when the object goes out of scope.</p>
+<p>Rust is a general purpose systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety. It is a multi-paradigm language that supports imperative, functional, and object-oriented programming. Rust is not only used to create low-level systems software such as operating systems, device drivers, and embedded software,but also used to create high-level applications such as web servers, command-line tools, and graphical user interfaces.</p>
+<p>Rust builds on <strong>RAII</strong>( Resource Acquisition is Initialization) to provide automatic memory management. RAII is a programming technique that uses the lifetime of an object to manage the lifetime of its resources. In Rust, the compiler ensures that the memory is freed as soon as the object goes out of scope. This is achieved by the use of <strong>smart pointers</strong>. Rust implements borrow checking and ownership rules to ensure that memory is freed as soon as the object goes out of scope. Additionally, Rust also provides a <strong>garbage collector</strong> that can be used to free memory when the object goes out of scope.</p>
 <blockquote>
 <p>Ownership and Borrowing</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">fn</span> main()  {  
-</span></span><span style="display:flex;"><span>   <span style="font-weight:bold">let</span> <span style="font-weight:bold">mut</span> x = 5;  
-</span></span><span style="display:flex;"><span>	 {  
-</span></span><span style="display:flex;"><span>			<span style="font-weight:bold">let</span> y = &amp;<span style="font-weight:bold">mut</span> x;  
-</span></span><span style="display:flex;"><span>			*y += 1;  
-</span></span><span style="display:flex;"><span>			<span style="font-style:italic">// x is borrowed here
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>	 }  
-</span></span><span style="display:flex;"><span>	 <span style="font-weight:bold">let</span> z = &amp;<span style="font-weight:bold">mut</span> x;
-</span></span><span style="display:flex;"><span>	 <span style="font-style:italic">// z cannot borrow x as it is already borrowed
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>}  
-</span></span></code></pre></div><blockquote>
+<pre><code>```rust
+
+fn main()  {  
+let mut x = 5;  
+    {  
+            let y = &amp;mut x;  
+            *y += 1;  
+            // x is borrowed here
+    }  
+    let z = &amp;mut x;
+    // z cannot borrow x as it is already borrowed
+</code></pre>
+<p>}</p>
+<pre><code>```
+</code></pre>
+<blockquote>
 <p>RAII</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">fn</span> main() {
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">let</span> foo = <span style="font-style:italic">&#34;value&#34;</span>; <span style="font-style:italic">// owner is foo and is valid within this method
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>    <span style="font-style:italic">// bar is not valid here as it&#39;s not declared yet
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">let</span> bar = <span style="font-style:italic">&#34;bar value&#34;</span>; <span style="font-style:italic">// owner is bar and is valid within this block scope
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        println!(<span style="font-style:italic">&#34;value of bar is {}&#34;</span>, bar); <span style="font-style:italic">// bar is valid here
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        println!(<span style="font-style:italic">&#34;value of foo is {}&#34;</span>, foo); <span style="font-style:italic">// foo is valid here
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    println!(<span style="font-style:italic">&#34;value of foo is {}&#34;</span>, foo); <span style="font-style:italic">// foo is valid here
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>    println!(<span style="font-style:italic">&#34;value of bar is {}&#34;</span>, bar); <span style="font-style:italic">// bar is not valid here as its out of scope
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>}
-</span></span></code></pre></div><h3 id="rust--c-">Rust &gt; C++ ?</h3>
-<p>C++ is a high-performance, general-purpose programming language that has been widely used for decades. It is known for its flexibility and ability to handle low-level tasks, making it a popular choice for systems programming and game development. C++ also has a large and active community, which means that there are many libraries and resources available for developers to use.</p>
-<p>Rust, on the other hand, is a relatively new programming language that was first released in 2010. It is designed to be a safe and concurrent language, with a strong focus on preventing common programming errors such as null pointer dereferences and buffer overflows. Rust also has a unique ownership model that allows for efficient memory management and thread safety. This makes it a great choice for systems programming, especially when security and performance are a concern. Foo.</p>
+<pre><code>```rust
+
+fn main() {
+    let foo = &quot;value&quot;; // owner is foo and is valid within this method
+    // bar is not valid here as it's not declared yet
+
+    {
+        let bar = &quot;bar value&quot;; // owner is bar and is valid within this block scope
+        println!(&quot;value of bar is {}&quot;, bar); // bar is valid here
+        println!(&quot;value of foo is {}&quot;, foo); // foo is valid here
+    }
+
+    println!(&quot;value of foo is {}&quot;, foo); // foo is valid here
+    println!(&quot;value of bar is {}&quot;, bar); // bar is not valid here as its out of scope
+}
+
+```
+</code></pre>
+<h3 id="rust--c-">Rust &gt; C++ ?</h3>
+<p>C++ is a high-performance, general-purpose programming language that has been widely used for decades. It is known for its flexibility and ability to handle low-level tasks, making it a popular choice for systems programming and game development. C++ also has a large and active community, which means that there are many libraries and resources available for developers to use. Rust, on the other hand, is a relatively <strong>new programming language</strong> that was first released in 2010. It is designed to be a safe and concurrent language, with a strong focus on preventing common programming errors such as null pointer dereferences and buffer overflows.</p>
+<p>Will rust replace C++ anytime soon? <strong>No</strong>. Rust is a relatively new language and is still in its early stages of development. It is not yet widely used in production, and there are still many features that are missing. However, it is gaining popularity and is being used in many large projects, such as Firefox and Servo. C++ has been widely used for decades and has a vast amount of <em>legacy code</em>, making it difficult for Rust to replace it. Rust is still a relatively new language, and its adoption in the industry has not yet reached the level of C++, which is widely used across many industries. C++ has a much larger community and ecosystem, with a wealth of libraries, tools, and resources, making it easier for developers to find help and resources. C++ has a mature set of development tools, such as compilers, debuggers, and integrated development environments, which are widely used and well-established. Rust&rsquo;s tooling is still evolving and may not be as mature or widely used as C++.</p>
 ]]></content:encoded>
     </item>
     
