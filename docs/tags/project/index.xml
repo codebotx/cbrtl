@@ -14,7 +14,7 @@
       <guid>https://anubhavp.dev/blog/posts/pages/rust/</guid>
       <description>Rust is a multi-paradigm systems programming language created to ensure high performance similar to that offered by C and C&#43;&#43; but with emphasis on code safety</description>
       <content:encoded><![CDATA[<p>Rust is a multi-paradigm systems programming language created to ensure high performance similar to that offered by C and C++, but with emphasis on code safety, the lack of which is probably why C and C++ are painful to deal with. It accomplishes these goals of being memory safe without using garbage collection. It is also an ahead-of-time compiled language, which means that you can compile a rust program, give it to someone else, and they can run it even without Rust installed. However, Rust has more than just memory safety on its side. High performance while processing large amounts of data, support for concurrent programming, with an effective compiler are other reasons why well-known software heavyweights such as Firefox, Dropbox, Cloudflare, and many startups and large corporations use Rust in production.</p>
-<p>Before I explain a whole lot about programming languages and their working, some questions that may come to your mind are:</p>
+<p>Some questions that may come to your mind are:</p>
 <ol>
 <li>If Rust is created to achieve performance similar to that offered by C++, then why not use C++ instead?</li>
 <li>I know Java, JavaScript, and Python to be more popular choices amongst peers. Why not use those instead?</li>
