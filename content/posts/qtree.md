@@ -7,18 +7,16 @@ tags: ["project"]
 ShowBreadCrumbs: true 
 ---
 
-
-
 {{< rawhtml >}}
-	<div class="container" style="text-align: center;">
-		<hr />
-		<canvas id="canvas-2"></canvas>
-		<br>
-		<canvas id="canvas-1"> </canvas>
-		<br>
-		<input type="range" id="slider" min="0" max="100" value="0">
-		<br>
-	</div>
+<div class="container" style="text-align: center;">
+	<hr />
+	<canvas id="canvas-2"  style="border: 1px solid black;"	></canvas>
+	<br>
+	<canvas id="canvas-1" style="border: 1px solid black;"> </canvas>
+	<br>
+	<input type="range" id="slider" min="0" max="100" value="0">
+	<br>
+</div>
 {{< /rawhtml >}}
 
 
