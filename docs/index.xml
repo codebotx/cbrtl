@@ -14,29 +14,29 @@
       <guid>https://anubhavp.dev/blog/posts/qtree/</guid>
       <description>Inspired by KoalasToTheMax, QTree is a short live demonstration of image compression and decompression using Quadtrees, that partitions a two-dimensional image by recursively subdividing it into four quadrants.</description>
       <content:encoded><![CDATA[<p>I was going through a blogpost on some of the most exciting webpages built for fun and came across  <a href="https://koalastothemax.com/">KoalasToTheMax</a>, and I was fascinated by it. <a href="https://injuly.in/">Srijan</a> explained me how it works, and then we were inspired to build something similar.</p>
-<p>Before we get into the details of how it works, let&rsquo;s have a brief look at the basic data structures used in this project.</p>
+<p>Before we get into the demonstration and the details of how it works, let&rsquo;s have a brief look at the basic data structures used in this project.</p>
 <h2 id="quadtree">Quadtree</h2>
-<p>A quadtree is a tree-based data structure where each node as exactly four leaf nodes. All forms of quadtrees share some common features:</p>
+<p>A quadtree is a tree-based data structure where each node as exactly four child nodes. All forms of quadtrees share some common features:</p>
 <ul>
 <li>They decompose space into adaptable cells</li>
 <li>Each cell (or bucket) has a maximum capacity. When maximum capacity is reached, the bucket splits</li>
 <li>The tree directory follows the spatial decomposition of the quadtree.</li>
 </ul>
-<p>The region quadtree represents a partition of space in two dimensions by decomposing the region into four equal quadrants, subquadrants, and so on with each leaf node containing data corresponding to a specific subregion. Each node in the tree either has exactly four children, or has no children (a leaf node). The height of quadtrees that follow this decomposition strategy (i.e. subdividing subquadrants as long as there is interesting data in the subquadrant for which more refinement is desired) is sensitive to and dependent on the spatial distribution of interesting areas in the space being decomposed.</p>
+<p>The region quadtree represents a partition of space in two dimensions by decomposing the region into four equal quadrants, subquadrants, and so on with each child node containing data corresponding to a specific subregion. Each node in the tree either has exactly four children, or has no children (a leaf node). The height of quadtrees that follow this decomposition strategy (i.e. subdividing subquadrants as long as there is interesting data in the subquadrant for which more refinement is desired) is sensitive to and dependent on the spatial distribution of interesting areas in the space being decomposed.</p>
 <p>
   <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Quad_tree_bitmap.svg" alt="quadtree"  /></p>
-<h3 id="bounding-box-aabb-box">Bounding Box (aabb box)</h3>
+<h3 id="bounding-box-aabbox">Bounding Box (aabbox)</h3>
 <p>Each node has a bounding box associated with it, which subdivides the root&rsquo;s bounding box into four quadrants. The root node has the entire image as its bounding box. The leaf nodes are the pixels of the image. The tree is built by recursively subdividing the parent&rsquo;s bounding box into four quadrants. The tree is traversed in a depth-first manner, and the pixels are colored according to the leaf node&rsquo;s bounding box.</p>
 <h3 id="image-compression">Image Compression</h3>
-<p>The root node is the entire image, and each leaf node is a single pixel. The tree is recursively subdivided until each leaf node is a single pixel. The tree is then traversed to compress the image. The tree is traversed again to decompress the image.</p>
-<p>Try to hover over a node to divide it into four quadrants.</p>
+<p>The root node is the entire image, and each leaf node is the average value of all its childrens&rsquo; pixel values. The tree is recursively subdivided until each leaf node is a single pixel. The tree is then traversed to compress the image. The tree is traversed again to decompress the image.</p>
+<h2 id="demonstration">Demonstration</h2>
 
 
 <div class="container" style="text-align: center;">
 	<canvas id="canvas-2"  style="border: 1px solid black;"	></canvas>
 </div>
 
-<p>The slider controls the depth of the tree. The slider is set to 0 by default, which means the entire image is compressed into a single pixel. The slider is set to 100 by default, which means the image is decompressed to its original size.</p>
+<p>Try to hover over a node to reccursiveley divide it into four quadrants.</p>
 
 
 <div class="container" style="text-align: center;">
@@ -46,6 +46,7 @@
 	<br>
 </div>
 
+<p>The slider controls the depth of the tree. The slider is set to 0 by default, which means the entire image is compressed into a single pixel. The slider when set to 100 means the image is not compressed at all. The slider can be set to any value between 0 and 100.</p>
 
 
 <script type="module" src="/blog/js/qtree/index.js" ></script>
