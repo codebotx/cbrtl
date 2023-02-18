@@ -3,7 +3,7 @@ author: Anubhab Patnaik
 title: 'QTree'
 date: "2023-02-14"
 description: "Inspired by KoalasToTheMax, QTree is a short live demonstration of image compression and decompression using Quadtrees that partition a two-dimensional image by recursively subdividing it into four quadrants."
-tags: ["project"]
+tags: ["project, tree, quadtree, image, compression, decompression, javascript, canvas, web"]
 ShowBreadCrumbs: true 
 ---
 I was going through a blog post on some of the most exciting web pages built for fun and came across  [KoalasToTheMax](https://koalastothemax.com/), and I was fascinated by it. [Srijan](https://injuly.in/) explained to me how it works, and then we were inspired to build something similar.
@@ -31,8 +31,8 @@ Our quadtree has the following member functions:
 ### Node
 
 The QTNODE class represents a node in the quadtree. It has the following properties:
-- **x** : x-coordinate of the top-left corner of the bounding box.
-- **y** : y-coordinate of the top-left corner of the bounding box.
+- **x** : x-coordinate 
+- **y** : y-coordinate 
 - **w** : width of the bounding box.
 - **h** : height of the bounding box.
 - **children** : array of four children.
@@ -80,7 +80,7 @@ The slider controls the depth of the tree.
 
 ## Working 
 
-The image is loaded into a canvas. We have two canvases, one for you to hover over and the other for you to control the depth of the tree using a slider and render the nodes evenly. Initially, we had multiple ways to taking an image as the input form the user, such as uploading an image, using query parameters, etc., but for the purpose of this demonstration, we decided to keep it simple and use a static image.
+The image is loaded into a canvas. We have two canvases, one for you to hover over and the other for you to control the depth of the tree using a slider and render the nodes evenly. Initially, we had multiple ways of taking an image as the input form, such as uploading an image, using query parameters, etc., but for this demonstration, we decided to keep it simple and use a static image.
 
 
 ```js
@@ -218,6 +218,10 @@ function initMouseCanvas(img){
     });
 }
 ```
+
+## Conclusion
+
+This was a short introduction to quadtree and how we can use it to compress and decompress images on an event that is triggered by hovering over the mouse on a particular area of the canvas. You can go ahead and explore the slider and its working and the entire source code on [github](http://github.com/cbrtl/qd-compression). If you have any questions or suggestions, please feel free to reach out to us on [Github](http://github.com/cbrtl).
 
 
 *Ref: [Wikipedia](https://en.wikipedia.org/wiki/Quadtree)*
