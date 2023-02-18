@@ -27,8 +27,8 @@
 
 
 
-<script type="module" src="/js/qtree/index.js" ></script>
-<script type="module" src="/js/qtree/qdtree.js" ></script>
+<script type="module" src="/blog/js/qtree/index.js" ></script>
+<script type="module" src="/blog/js/qtree/qdtree.js" ></script>
 
 ]]></content:encoded>
     </item>
