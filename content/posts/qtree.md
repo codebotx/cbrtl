@@ -25,21 +25,24 @@ The region quadtree represents a partition of space in two dimensions by decompo
 
 ### Bounding Box (aabbox)
 
-Each node has a bounding box associated with it, which subdivides the root's bounding box into four quadrants. The root node has the entire image as its bounding box. The leaf nodes are the pixels of the image. The tree is built by recursively subdividing the parent's bounding box into four quadrants. The tree is traversed in a depth-first manner, and the pixels are colored according to the leaf node's bounding box.
+Each node has a bounding box associated with it, which subdivides into four quadrants. The root node has the entire image as its bounding box. The leaf nodes are the pixels of the image. The tree is built by recursively subdividing the parent's bounding box into four quadrants. The tree is traversed in a depth-first manner, and the pixels are colored according to the leaf node's bounding box.
 
 ### Image Compression
 
-The root node is the entire image, and each leaf node is the average value of all its childrens' pixel values. The tree is recursively subdivided until each leaf node is a single pixel. The tree is then traversed to compress the image. The tree is traversed again to decompress the image.
+The root node is the image. Each node is the average value of all its children's pixel values. The tree is recursively subdivided until each leaf node is a single pixel. The tree is then traversed to compress the image. The tree is traversed again to decompress the image.
 
 ## Demonstration
 
 {{< rawhtml >}}
 <div class="container" style="text-align: center;">
-	<canvas id="canvas-2"  style="border: 1px solid black;"	></canvas>
+	<canvas id="canvas-2"  style="border: 1px solid black;"	>
+	</canvas>
+	<br>
+	
+Hover over any part of the canvas to reccursiveley divide it into four quadrants.
 </div>
 {{< /rawhtml >}}
 
-Try to hover over a node to reccursiveley divide it into four quadrants. 
 
 {{< rawhtml >}}
 <div class="container" style="text-align: center;">
@@ -47,10 +50,11 @@ Try to hover over a node to reccursiveley divide it into four quadrants.
 	<br>
 	<input type="range" id="slider" min="0" max="100" value="0">
 	<br>
-</div>
-{{< /rawhtml >}}
 
-The slider controls the depth of the tree. The slider is set to 0 by default, which means the entire image is compressed into a single pixel. The slider when set to 100 means the image is not compressed at all. The slider can be set to any value between 0 and 100.
+The slider controls the depth of the tree.
+</div>
+ The slider is set to 0 by default, which means the entire image is compressed into a single pixel. The slider when set to 100 means the image is not compressed at all. The slider can be set to any value between 0 and 100.
+{{< /rawhtml >}}
 
 
 {{< rawhtml >}}
