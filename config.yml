@@ -1,6 +1,6 @@
 baseURL: https://anubhavp.dev/blog/
 
-title: Shitpost.in
+title: chillpost.in
 paginate: 7
 theme: papermodx
 
@@ -42,7 +42,7 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Anubhab patnaik- Random shitposts on my daily drivers, chill outs & research thingys."
+  description: "Anubhab patnaik- Random chillposts on my daily drivers, chill outs & research thingys."
   author: Anubhab Patnaik
 
   defaultTheme: auto
@@ -62,7 +62,7 @@ params:
   profileMode:
     enabled: false
     title: blog
-    subtitle: Random shitposts
+    subtitle: Random chillposts
     imageUrl: "https://avatars.githubusercontent.com/u/84934672?s=400&u=2dcad8144be1e67691c4bc7423ff87d1148d06cb&v=4"
     imageTitle: blog
     # imageWidth: 120
@@ -74,9 +74,9 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "Anubhav's blog"
+    Title: "Anubhab's blog"
     Content: >
-      Hi, I am Anubhab Patnaik. Here I random shitpost on my daily drivers, chill outs & research stuff. I work with software development and engineering. You can find most of my work on my [Github](https://github.com/codebotx). I like tech, science, math, and engineering.       
+      Hi, I am Anubhab Patnaik. Here I random chillpost on my daily drivers, chill outs & research stuff. I work with software development and engineering. You can find most of my work on my [Github](https://github.com/codebotx). I like tech, science, math, and engineering.       
       Find me [here](https://anubhavp.dev).
 
   socialIcons:
