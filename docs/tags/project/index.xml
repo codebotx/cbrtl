@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>project on chillpost.in</title>
+    <title>project on Chillpost.in</title>
     <link>https://anubhavp.dev/blog/tags/project/</link>
-    <description>Recent content in project on chillpost.in</description>
+    <description>Recent content in project on Chillpost.in</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 14 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Image Compression using Quadtree</title>
+      <link>https://anubhavp.dev/blog/posts/pages/qtree/</link>
+      <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://anubhavp.dev/blog/posts/pages/qtree/</guid>
+      <description>Inspired by KoalasToTheMax, QTree is a short live demonstration of image compression and decompression using Quadtrees, that partitions a two-dimensional image by recursively subdividing it into four quadrants.</description>
+      <content:encoded><![CDATA[<p>Inspired by <a href="https://www.youtube.com/watch?v=OJxEcs0w_kE">KoalasToTheMax</a>, QTree is a short live demonstration of image compression and decompression using Quadtrees, that partitions a two-dimensional image by recursively subdividing it into four quadrants.</p>
+
+
+	<div class="container" style="text-align: center;">
+		<hr />
+		<canvas id="canvas-2"></canvas>
+		<br>
+		<canvas id="canvas-1"> </canvas>
+		<br>
+		<input type="range" id="slider" min="0" max="100" value="0">
+		<br>
+	</div>
+
+
+
+<script type="module" src="/js/qtree/index.js" ></script>
+<script type="module" src="/js/qtree/qdtree.js" ></script>
+
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Rust: The next C&#43;&#43; ?</title>
       <link>https://anubhavp.dev/blog/posts/pages/rust/</link>
