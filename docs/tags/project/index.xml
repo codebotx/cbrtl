@@ -8,10 +8,10 @@
     <lastBuildDate>Tue, 14 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/tags/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Image Compression using Quadtree</title>
-      <link>https://anubhavp.dev/blog/posts/pages/qtree/</link>
+      <link>https://anubhavp.dev/blog/posts/qtree/</link>
       <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/blog/posts/pages/qtree/</guid>
+      <guid>https://anubhavp.dev/blog/posts/qtree/</guid>
       <description>Inspired by KoalasToTheMax, QTree is a short live demonstration of image compression and decompression using Quadtrees, that partitions a two-dimensional image by recursively subdividing it into four quadrants.</description>
       <content:encoded><![CDATA[<p>Inspired by <a href="https://www.youtube.com/watch?v=OJxEcs0w_kE">KoalasToTheMax</a>, QTree is a short live demonstration of image compression and decompression using Quadtrees, that partitions a two-dimensional image by recursively subdividing it into four quadrants.</p>
 
@@ -36,10 +36,10 @@
     
     <item>
       <title>Rust: The next C&#43;&#43; ?</title>
-      <link>https://anubhavp.dev/blog/posts/pages/rust/</link>
+      <link>https://anubhavp.dev/blog/posts/rust/</link>
       <pubDate>Fri, 14 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/blog/posts/pages/rust/</guid>
+      <guid>https://anubhavp.dev/blog/posts/rust/</guid>
       <description>Rust is a multi-paradigm systems programming language created to ensure high performance similar to that offered by C and C&#43;&#43; but with emphasis on code safety</description>
       <content:encoded><![CDATA[<p>Rust is a multi-paradigm systems programming language created to ensure high performance similar to that offered by C and C++, but with emphasis on code safety, the lack of which is probably why C and C++ are painful to deal with. It accomplishes memory safety without using a dedicated garbage collector. Rust is also an ahead-of-time compiled language, which means that you can compile a rust program, give it to someone else, and they can run it even without having Rust installed. However, Rust has more than just memory safety on its side. High performance while processing large amounts of data, support for concurrent programming, and an effective compiler are other reasons why well-known software heavyweights such as Firefox, Dropbox, Cloudflare, and many web-3 startups and large corporations use Rust in production.</p>
 <p>Some questions that may come to your mind are:</p>
@@ -162,10 +162,10 @@ Pointers are variables that store the <strong>address</strong> of another variab
     
     <item>
       <title>Decentralization in MetaMUI Wallet: A Case Study</title>
-      <link>https://anubhavp.dev/blog/posts/pages/metamuiwallet/</link>
+      <link>https://anubhavp.dev/blog/posts/metamuiwallet/</link>
       <pubDate>Wed, 31 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/blog/posts/pages/metamuiwallet/</guid>
+      <guid>https://anubhavp.dev/blog/posts/metamuiwallet/</guid>
       <description>A case study on how MetaMUI wallet claims to be decentralized and how it actully works.</description>
       <content:encoded><![CDATA[<p>I am working with <a href="https://squbix.com/">Squbix Digital</a> to build a decentralized, secure and scalable solution using blockchain technology for <a href="https://swnglobal.com/">Sovereign Wallet</a>. The solution is to build a platform to exchange digital assets such as cryptocurrencies and digital currencies across a country/ organization and a cross-border payments system. Here is the <a href="https://sovereignwallet-network.github.io/whitepaper/MetaMUI-Blockchain-White-Paper.pdf">metamui whitepaper</a> and here are some of the things that I couldn&rsquo;t digest well.</p>
 <h2 id="metablockchain-core">Metablockchain-core</h2>
@@ -301,10 +301,10 @@ possible through atomic swaps and multi-currency transfer is possible with an ex
     
     <item>
       <title>zuzu: A Static Site Generator (SSG)</title>
-      <link>https://anubhavp.dev/blog/posts/pages/zuzu/</link>
+      <link>https://anubhavp.dev/blog/posts/zuzu/</link>
       <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/blog/posts/pages/zuzu/</guid>
+      <guid>https://anubhavp.dev/blog/posts/zuzu/</guid>
       <description>Zuzu is a static site generator that converts all your markdown files into static htmls pages. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets.</description>
       <content:encoded><![CDATA[<p>Zuzu is a static site generator that takes in markdown files and render htmls pages. <a href="https://anubhavp.dev/oldblog">This blog</a>, for example, has been written using this generator. This enables noobs like me to write blogs without having to learn a lot of code! It is a very simple and easy to use generator. All you need to do is to write a markdown file and it will be rendered as a page ;) You can create a new page by creating a new markdown file.</p>
 <h2 id="how-does-it-work">How does it work?</h2>
@@ -466,10 +466,10 @@ data: {
     
     <item>
       <title>Why is Web3 a sham?</title>
-      <link>https://anubhavp.dev/blog/posts/pages/infeasibleweb3/</link>
+      <link>https://anubhavp.dev/blog/posts/infeasibleweb3/</link>
       <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/blog/posts/pages/infeasibleweb3/</guid>
+      <guid>https://anubhavp.dev/blog/posts/infeasibleweb3/</guid>
       <description>A short rant on the state of Web3</description>
       <content:encoded><![CDATA[<p>During my short stint as a blockchain developer, I&rsquo;ve learned a lot and have met amazing people.
 While I acknowledge the skill and reverence of some developers in this domain,

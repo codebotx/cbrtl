@@ -7,7 +7,7 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://anubhavp.dev/blog/posts/pages/qtree/</loc>
+    <loc>https://anubhavp.dev/blog/posts/qtree/</loc>
     <lastmod>2023-02-14T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -27,23 +27,8 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://anubhavp.dev/blog/posts/pages/rust/</loc>
+    <loc>https://anubhavp.dev/blog/posts/rust/</loc>
     <lastmod>2022-10-14T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://anubhavp.dev/blog/posts/pages/fourier/</loc>
-    <lastmod>2022-10-08T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://anubhavp.dev/blog/tags/math/</loc>
-    <lastmod>2022-10-08T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://anubhavp.dev/blog/tags/post/</loc>
-    <lastmod>2022-10-08T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -52,7 +37,7 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://anubhavp.dev/blog/posts/pages/metamuiwallet/</loc>
+    <loc>https://anubhavp.dev/blog/posts/metamuiwallet/</loc>
     <lastmod>2022-08-31T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -62,7 +47,7 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://anubhavp.dev/blog/posts/pages/zuzu/</loc>
+    <loc>https://anubhavp.dev/blog/posts/zuzu/</loc>
     <lastmod>2022-05-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -72,7 +57,7 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://anubhavp.dev/blog/posts/pages/infeasibleweb3/</loc>
+    <loc>https://anubhavp.dev/blog/posts/infeasibleweb3/</loc>
     <lastmod>2022-01-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

@@ -8,10 +8,10 @@
     <lastBuildDate>Wed, 31 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/tags/metamui/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Decentralization in MetaMUI Wallet: A Case Study</title>
-      <link>https://anubhavp.dev/blog/posts/pages/metamuiwallet/</link>
+      <link>https://anubhavp.dev/blog/posts/metamuiwallet/</link>
       <pubDate>Wed, 31 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/blog/posts/pages/metamuiwallet/</guid>
+      <guid>https://anubhavp.dev/blog/posts/metamuiwallet/</guid>
       <description>A case study on how MetaMUI wallet claims to be decentralized and how it actully works.</description>
       <content:encoded><![CDATA[<p>I am working with <a href="https://squbix.com/">Squbix Digital</a> to build a decentralized, secure and scalable solution using blockchain technology for <a href="https://swnglobal.com/">Sovereign Wallet</a>. The solution is to build a platform to exchange digital assets such as cryptocurrencies and digital currencies across a country/ organization and a cross-border payments system. Here is the <a href="https://sovereignwallet-network.github.io/whitepaper/MetaMUI-Blockchain-White-Paper.pdf">metamui whitepaper</a> and here are some of the things that I couldn&rsquo;t digest well.</p>
 <h2 id="metablockchain-core">Metablockchain-core</h2>
