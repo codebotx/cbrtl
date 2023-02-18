@@ -7,17 +7,17 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://anubhavp.dev/blog/posts/qtree/</loc>
-    <lastmod>2023-02-14T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://anubhavp.dev/blog/posts/</loc>
     <lastmod>2023-02-14T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://anubhavp.dev/blog/tags/project/</loc>
+    <lastmod>2023-02-14T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://anubhavp.dev/blog/posts/qtree/</loc>
     <lastmod>2023-02-14T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
