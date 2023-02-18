@@ -12,7 +12,7 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://anubhavp.dev/blog/tags/project/</loc>
+    <loc>https://anubhavp.dev/blog/tags/project-tree-quadtree-image-compression-decompression-javascript-canvas-web/</loc>
     <lastmod>2023-02-14T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -24,6 +24,11 @@
   </url><url>
     <loc>https://anubhavp.dev/blog/tags/</loc>
     <lastmod>2023-02-14T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://anubhavp.dev/blog/tags/project/</loc>
+    <lastmod>2022-10-14T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
