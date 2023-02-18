@@ -26,17 +26,20 @@
 <p>
   <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Quad_tree_bitmap.svg" alt="quadtree"  /></p>
 <h3 id="bounding-box-aabbox">Bounding Box (aabbox)</h3>
-<p>Each node has a bounding box associated with it, which subdivides the root&rsquo;s bounding box into four quadrants. The root node has the entire image as its bounding box. The leaf nodes are the pixels of the image. The tree is built by recursively subdividing the parent&rsquo;s bounding box into four quadrants. The tree is traversed in a depth-first manner, and the pixels are colored according to the leaf node&rsquo;s bounding box.</p>
+<p>Each node has a bounding box associated with it, which subdivides into four quadrants. The root node has the entire image as its bounding box. The leaf nodes are the pixels of the image. The tree is built by recursively subdividing the parent&rsquo;s bounding box into four quadrants. The tree is traversed in a depth-first manner, and the pixels are colored according to the leaf node&rsquo;s bounding box.</p>
 <h3 id="image-compression">Image Compression</h3>
-<p>The root node is the entire image, and each leaf node is the average value of all its childrens&rsquo; pixel values. The tree is recursively subdivided until each leaf node is a single pixel. The tree is then traversed to compress the image. The tree is traversed again to decompress the image.</p>
+<p>The root node is the image. Each node is the average value of all its children&rsquo;s pixel values. The tree is recursively subdivided until each leaf node is a single pixel. The tree is then traversed to compress the image. The tree is traversed again to decompress the image.</p>
 <h2 id="demonstration">Demonstration</h2>
 
 
 <div class="container" style="text-align: center;">
-	<canvas id="canvas-2"  style="border: 1px solid black;"	></canvas>
+	<canvas id="canvas-2"  style="border: 1px solid black;"	>
+	</canvas>
+	<br>
+	
+Hover over any part of the canvas to reccursiveley divide it into four quadrants.
 </div>
 
-<p>Try to hover over a node to reccursiveley divide it into four quadrants.</p>
 
 
 <div class="container" style="text-align: center;">
@@ -44,9 +47,11 @@
 	<br>
 	<input type="range" id="slider" min="0" max="100" value="0">
 	<br>
-</div>
 
-<p>The slider controls the depth of the tree. The slider is set to 0 by default, which means the entire image is compressed into a single pixel. The slider when set to 100 means the image is not compressed at all. The slider can be set to any value between 0 and 100.</p>
+The slider controls the depth of the tree.
+</div>
+ The slider is set to 0 by default, which means the entire image is compressed into a single pixel. The slider when set to 100 means the image is not compressed at all. The slider can be set to any value between 0 and 100.
+
 
 
 <script type="module" src="/blog/js/qtree/index.js" ></script>

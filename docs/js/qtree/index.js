@@ -87,7 +87,7 @@ function generateImageFromSearchBar() {
 // const img = generateImageFromSearchBar();
 const img = new Image();
 img.crossOrigin = "";
-img.src = "/blog/assets/cryptopunk.jpeg";
+img.src = "/blog/assets/images/qtree/cryptopunk.jpeg";
 img.onload = () => {
     initSliderCanvas(img);
     initMouseCanvas(img);
