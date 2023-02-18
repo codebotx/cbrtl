@@ -92,7 +92,7 @@ img.onload = () => {
 };
 ```
 
-I'll go ahead and explain the working of the mouse hover canvas and you can explore the slider canvas. Source codes are available on [Github](https://github.com/cbrtl/qd-compression). 
+I'll go ahead and explain the working of the mouse hover canvas and you can explore the slider canvas. Source codes are available on [GitHub](https://github.com/cbrtl/qd-compression). 
 
 
 ```js
@@ -221,7 +221,7 @@ function initMouseCanvas(img){
 
 ## Conclusion
 
-This was a short introduction to quadtree and how we can use it to compress and decompress images on an event that is triggered by hovering over the mouse on a particular area of the canvas. You can go ahead and explore the slider and its working and the entire source code on [github](http://github.com/cbrtl/qd-compression). If you have any questions or suggestions, please feel free to reach out to us on [Github](http://github.com/cbrtl).
+This was a short introduction to quadtree and how we can use it to compress and decompress images on an event that is triggered by hovering over the mouse on a particular area of the canvas. You can go ahead and explore the slider and its working and the entire source code on [GitHub](http://github.com/cbrtl/qd-compression). If you have any questions or suggestions, please feel free to reach out to us on GitHub.
 
 
 *Ref: [Wikipedia](https://en.wikipedia.org/wiki/Quadtree)*
