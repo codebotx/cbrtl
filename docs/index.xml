@@ -7,14 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 14 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Image Compression using Quadtree</title>
+      <title>QTree</title>
       <link>https://anubhavp.dev/blog/posts/qtree/</link>
       <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://anubhavp.dev/blog/posts/qtree/</guid>
       <description>Inspired by KoalasToTheMax, QTree is a short live demonstration of image compression and decompression using Quadtrees, that partitions a two-dimensional image by recursively subdividing it into four quadrants.</description>
-      <content:encoded><![CDATA[<p>Inspired by <a href="https://www.youtube.com/watch?v=OJxEcs0w_kE">KoalasToTheMax</a>, QTree is a short live demonstration of image compression and decompression using Quadtrees, that partitions a two-dimensional image by recursively subdividing it into four quadrants.</p>
-
+      <content:encoded><![CDATA[
 
 	<div class="container" style="text-align: center;">
 		<hr />
