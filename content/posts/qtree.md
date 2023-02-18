@@ -18,6 +18,35 @@ A quadtree is a tree-based data structure where each node has exactly four child
 
 The root node is the image. Each node is the average value of all its children's pixel values. The tree is recursively subdivided until each leaf node is a single pixel. The tree is then traversed to compress the image. The tree is traversed again to decompress the image.
 
+
+### Member Functions
+
+Our quadtree has the following member functions:
+- **compressImageData** : compresses the image data. Takes the image data and the compression factor as the input and returns the quadtree.
+- **createQTreeOfHeight** : curates the quadtree. Takes the height of the tree and the bounding box as the input and returns the quadtree.
+- **populate** : populates the quadtree with the pixel values. Takes the quadtree and the image data as the input and returns the quadtree.
+- **getRGBValuesFromCoordinates** : returns the pixel value at the given coordinates. Takes the quadtree and the coordinates as the input and returns the pixel value.
+
+
+### Node
+
+The QTNODE class represents a node in the quadtree. It has the following properties:
+- **x** : x-coordinate of the top-left corner of the bounding box.
+- **y** : y-coordinate of the top-left corner of the bounding box.
+- **w** : width of the bounding box.
+- **h** : height of the bounding box.
+- **children** : array of four children.
+- **rgb** : pixel value of the node.
+
+Functions:
+
+- **draw** : draws the node. Takes the canvas context as the input and returns nothing.
+- **insert**: inserts a node into the quadtree. Takes the quadtree and the node as the input and returns the quadtree.
+- **drawAtHeight**: draws the nodes at a given height. Takes the canvas context, the height of the tree, and the current height as the input and returns nothing.
+- **draw**: draws the nodes. Takes the canvas context and the height of the tree as the input and returns nothing.
+- **reveal**: reveals the nodes. Takes the canvas context and the height of the tree as the input and returns nothing.
+- **computeAverageColor**: computes the average color of the node. Takes the quadtree and the image data as the input and returns the pixel value.
+
 ## Demonstration
 
 {{< rawhtml >}}
