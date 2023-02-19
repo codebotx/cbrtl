@@ -22,10 +22,10 @@ The root node is the image. Each node is the average value of its children's pix
 ### Member Functions
 
 Our quadtree has the following member functions:
-- **compressImageData** : compresses the image data. It takes the image data and the compression factor as the input and returns the quadtree.
-- **createQTreeOfHeight** : curates the quadtree. It takes the height of the tree and the bounding box as the input and returns the quadtree.
-- **populate** : populates the quadtree with the pixel values. It takes the quadtree and the image data as the input and returns the quadtree.
-- **getRGBValuesFromCoordinates** : returns the pixel value at the given coordinates. It takes the quadtree and the coordinates as the input and returns the pixel value.
+- **compressImageData** : It takes the image data and the compression factor as the input and returns the quadtree.
+- **createQTreeOfHeight** : It takes the height of the tree and the bounding box as the input and returns the quadtree.
+- **populate** : It populates the quadtree with the pixel values. 
+- **getRGBValuesFromCoordinates** : It takes the quadtree and the coordinates as the input and returns the pixel value at the given coordinates.
 
 
 ### Node
