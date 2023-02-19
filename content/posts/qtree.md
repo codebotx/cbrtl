@@ -3,29 +3,29 @@ author: Anubhab Patnaik
 title: 'QTree'
 date: "2023-02-14"
 description: "Inspired by KoalasToTheMax, QTree is a short live demonstration of image compression and decompression using Quadtrees that partition a two-dimensional image by recursively subdividing it into four quadrants."
-tags: ["project, tree, quadtree, image, compression, decompression, javascript, canvas, web"]
+tags: ["project", "tree", "quadtree", "image", "compression"," decompression", "javascript", "canvas", "web"]
 ShowBreadCrumbs: true 
 ---
-I was going through a blog post on some of the most exciting web pages built for fun and came across  [KoalasToTheMax](https://koalastothemax.com/), and I was fascinated by it. [Srijan](https://injuly.in/) explained to me how it works, and then we were inspired to build something similar.
+I stumbled upon [KoalasToTheMax](https://koalastothemax.com/) while reading a blog post about the most exciting web pages built for fun, and I was blown away. [Srijan](https://injuly.in/) explained how it works, and we were inspired to create something similar.
 
-Before we get into the demonstration and the details of how it works, let's have a brief look at the basic data structures used in this project.
+But first, let's get into the basics of the data structures used in our project.
 
 ## Quadtree
 
-A quadtree is a tree-based data structure where each node has exactly four child nodes. Our quadtree represents a partition of space in two dimensions by decomposing the region into four equal quadrants. Each quadrant is then subdivided into four equal quadrants, and so on. Each node in the tree either has exactly four children or has no children (a leaf node). The height of quadtrees is sensitive to and dependent on the amount of interesting data in the space being decomposed.
+A quadtree is a tree-based data structure where each node has exactly four child nodes. Our quadtree represents a partition of space in two dimensions by dividing the region into four equal quadrants. Each quadrant is then subdivided into four equal quadrants, and so on. Each node in the tree has exactly four children or no children at all, which makes it a leaf node. The height of a quadtree depends on the amount of data being decomposed.
 
 ![quadtree](https://upload.wikimedia.org/wikipedia/commons/a/a0/Quad_tree_bitmap.svg)
 
-The root node is the image. Each node is the average value of all its children's pixel values. The tree is recursively subdivided until each leaf node is a single pixel. The tree is then traversed to compress the image. The tree is traversed again to decompress the image.
+The root node is the image. Each node is the average value of its children's pixel values. The tree is recursively subdivided until each leaf node is a single pixel. The tree is then traversed to compress the image. To decompress the image, the tree is traversed again.
 
 
 ### Member Functions
 
 Our quadtree has the following member functions:
-- **compressImageData** : compresses the image data. Takes the image data and the compression factor as the input and returns the quadtree.
-- **createQTreeOfHeight** : curates the quadtree. Takes the height of the tree and the bounding box as the input and returns the quadtree.
-- **populate** : populates the quadtree with the pixel values. Takes the quadtree and the image data as the input and returns the quadtree.
-- **getRGBValuesFromCoordinates** : returns the pixel value at the given coordinates. Takes the quadtree and the coordinates as the input and returns the pixel value.
+- **compressImageData** : compresses the image data. It takes the image data and the compression factor as the input and returns the quadtree.
+- **createQTreeOfHeight** : curates the quadtree. It takes the height of the tree and the bounding box as the input and returns the quadtree.
+- **populate** : populates the quadtree with the pixel values. It takes the quadtree and the image data as the input and returns the quadtree.
+- **getRGBValuesFromCoordinates** : returns the pixel value at the given coordinates. It takes the quadtree and the coordinates as the input and returns the pixel value.
 
 
 ### Node
@@ -78,9 +78,11 @@ The slider controls the depth of the tree.
 <script type="module" src="/blog/js/qtree/qdtree.js" ></script>
 {{< /rawhtml >}}
 
-## Working 
+## Setting up the Canvas
 
-The image is loaded into a canvas. We have two canvases, one for you to hover over and the other for you to control the depth of the tree using a slider and render the nodes evenly. Initially, we had multiple ways of taking an image as the input form, such as uploading an image, using query parameters, etc., but for this demonstration, we decided to keep it simple and use a static image.
+To start with, we need two canvases - one for you to hover over and the other for you to control the depth of the tree using a slider and render the nodes evenly. Initially, we had multiple ways of taking an image as the input form, such as uploading an image, using query parameters, etc. But for this demonstration, we'll keep it simple and use a static image.
+
+Here's some JavaScript code that will load the image into a canvas:
 
 
 ```js
@@ -92,7 +94,7 @@ img.onload = () => {
 };
 ```
 
-I'll go ahead and explain the working of the mouse hover canvas and you can explore the slider canvas. Source codes are available on [GitHub](https://github.com/cbrtl/qd-compression). 
+I'll go ahead and explain the working of the mouse hover canvas and you can explore the slider canvas. The code is available on [GitHub](https://github.com/cbrtl/qd-compression), and you can play around with it later if you are interested. 
 
 
 ```js
@@ -110,8 +112,7 @@ function initMouseCanvas(img){
 
 ### Image Data Compression
 
-
-We import the `compressImageData` function from the `qdtree.js` file. This function takes the image data and the compression factor as the input and returns the quadtree. The **height of the tree** is calculated by taking the log of the number of pixels in the image and dividing it by the log of 4. The log of 4 is 2, and the log of the number of pixels is the height of the tree. The height of the tree is then rounded down to the nearest integer. The tree is then created using the `createQTreeOfHeight` function that takes the height of the tree and the **bounding box** as the input and returns the quadtree.
+Now, let's get to the fun part - compressing images. We import the `compressImageData` function from the qdtree.js file. This function takes the image data and the compression factor as the input and returns the quadtree. The **height of the tree** is calculated by taking the log of the number of pixels in the image and dividing it by the log of 4. The log of 4 is 2, and the log of the number of pixels is the height of the tree. The height of the tree is then rounded down to the nearest integer. The tree is then created using the `createQTreeOfHeight` function that takes the height of the tree and the **bounding box** as the input and returns the quadtree.
 
 **qdtree.js**
 ```js
@@ -188,7 +189,7 @@ The bounding box is the area that the node represents. The bounding box is initi
 
 ### Image data to Quadtree
 
-The `reveal` function takes the x and y coordinates of the mouse as the input and reveals the nodes that are under the mouse. The `draw` function draws the nodes on the canvas. The `update` function is called every 30 milliseconds to update the canvas. The `update` function clears the canvas and draws the nodes on the canvas. The `update` function is called every 30 milliseconds to update the canvas. The `update` function clears the canvas and draws the nodes on the canvas.
+Alright, let's talk about the `reveal` function, which is like a magician revealing the hidden nodes under the mouse. And then there's the `draw` function, which is like an artist sketching the nodes on the canvas. The `update` function is like your mom constantly cleaning up after you every 30 milliseconds. It clears the canvas and redraws the nodes on the canvas, all to make sure it looks neat and tidy.
 
 ```js
 function initMouseCanvas(img){
@@ -221,7 +222,8 @@ function initMouseCanvas(img){
 
 ## Conclusion
 
-This was a short introduction to quadtree and how we can use it to compress and decompress images on an event that is triggered by hovering over the mouse on a particular area of the canvas. You can go ahead and explore the slider and its working and the entire source code on [GitHub](http://github.com/cbrtl/qd-compression). If you have any questions or suggestions, please feel free to reach out to us on GitHub.
+So, what's the point of all this? Well, we can use a quadtree to compress and decompress images when the mouse hovers over a specific area of the canvas. It's like a secret code that unlocks a hidden image!
 
+If you want to explore more, check out the slider and the entire source code on [GitHub](http://github.com/cbrtl/qd-compression). And don't hesitate to ask us any questions or give suggestions. We're always happy to chat on GitHub!
 
 *Ref: [Wikipedia](https://en.wikipedia.org/wiki/Quadtree)*
