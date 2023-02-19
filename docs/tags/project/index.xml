@@ -5,130 +5,195 @@
     <link>https://anubhavp.dev/blog/tags/project/</link>
     <description>Recent content in project on Chillpost.in</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 14 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/tags/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Rust: The next C&#43;&#43; ?</title>
-      <link>https://anubhavp.dev/blog/posts/rust/</link>
-      <pubDate>Fri, 14 Oct 2022 00:00:00 +0000</pubDate>
+      <title>QTree</title>
+      <link>https://anubhavp.dev/blog/posts/qtree/</link>
+      <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/blog/posts/rust/</guid>
-      <description>Rust is a multi-paradigm systems programming language created to ensure high performance similar to that offered by C and C&#43;&#43; but with emphasis on code safety</description>
-      <content:encoded><![CDATA[<p>Rust is a multi-paradigm systems programming language created to ensure high performance similar to that offered by C and C++, but with emphasis on code safety, the lack of which is probably why C and C++ are painful to deal with. It accomplishes memory safety without using a dedicated garbage collector. Rust is also an ahead-of-time compiled language, which means that you can compile a rust program, give it to someone else, and they can run it even without having Rust installed. However, Rust has more than just memory safety on its side. High performance while processing large amounts of data, support for concurrent programming, and an effective compiler are other reasons why well-known software heavyweights such as Firefox, Dropbox, Cloudflare, and many web-3 startups and large corporations use Rust in production.</p>
-<p>Some questions that may come to your mind are:</p>
-<ol>
-<li>If Rust is created to achieve performance similar to that offered by C++, then why not use C++ instead?</li>
-<li>I know Java, JavaScript, and Python to be more popular choices amongst peers. Why not use those languages instead?</li>
-<li>What about new languages like Go, Kotlin, Swift, etc.?</li>
-</ol>
-<p>To answer these questions, let us first go through how a programming language works.</p>
-<h2 id="programming-languages-and-their-working">Programming Languages and their working</h2>
-<p>A programming language is a set of instructions that can be used to interact with and control a computer. These languages can be used for a multitude of purposes, such as creating a website, analyzing data, writing a program to solve a mathematical problem, creating a game, piloting a car, building a robot, making rockets take off, controlling spacecraft and the list goes on. A computer, even though can control a rover on Mars, detect an incoming ballistic missile, and detonate it before it reaches you, cannot understand English, or anything else except <strong>&lsquo;0&rsquo;</strong> &amp; <strong>&lsquo;1&rsquo;</strong>. Computers can be thought of to be made up of tiny switches, and can be either &lsquo;on&rsquo; (1) or &lsquo;off&rsquo; (0) called <strong>&lsquo;bits&rsquo;</strong>. Whatever instruction you want to execute on a computer, has to be converted into a series of &lsquo;0&rsquo;s and &lsquo;1&rsquo;s before it can be executed. Even a simple &ldquo;Hi&rdquo; is parsed as <strong>01001000 01101001</strong>. Yes, this is what Siri responds when you <em>Hey Siri</em>. Since the English language is vast and complicated, it is not possible to convert it into a series of &lsquo;0&rsquo; and &lsquo;1&rsquo; directly. A subset of English or any other language is created, which is called a <strong>programming language</strong>. High-Level Programming Languages have English-like syntax and are designed to be easy to read and write, whereas low-Level Programming Languages are designed to be easy for the computer to understand. To make things easier for us, there are tools that convert whatever we want the computer to do into a series of &lsquo;0&rsquo;s and &lsquo;1&rsquo;s. This series of &lsquo;0&rsquo;s and &lsquo;1&rsquo;s is then executed by the computer.</p>
-<h3 id="compilers-and-interpreters">Compilers and interpreters</h3>
-<p>A <strong>compiler</strong> or an <strong>interpreter</strong> is a tool that converts a program written in a programming language <em>(source code)</em> into a series of &lsquo;0&rsquo;s and &lsquo;1&rsquo;s that can be executed by a computer. Compilers and interpreters differ in the way they work. A compiler converts the entire program into a series of &lsquo;0&rsquo;s and &lsquo;1&rsquo;s <em>(machine code)</em> and then executes it. An interpreter, on the other hand, executes the program line by line.</p>
-<p><strong>Why did we need interpreters?</strong></p>
-<p>Compiled languages need a “build” step. You need to compile your program before you can run it. To run your program on a different computer, you will have to compile it on that computer as well. Interpreters run through a program line by line and execute each command. You can run a program without having to compile it first. This makes it easier to run programs on different computers.</p>
-<p>Another notable disadvantage of compilers is <strong>platform dependency</strong> of the generated binary code. Compilers are designed to be CPU specific and run on a specific CPU architecture. This means that if you want to run a program on a different CPU architecture, you will have to compile it again.</p>
-<p><strong>Why do we still make use of compilers ?</strong></p>
-<p>Compilers are designed to be CPU specific, and as a result, they tend to be a lot <strong>faster and more efficient</strong> than interpreters. They also give the developer <strong>more control</strong> over hardware aspects, like memory management and CPU usage.</p>
-<p>A compiler is faster and more efficient than an interpreter, but an interpreter is easier to write than a compiler.</p>
-<h3 id="compiled-vs-interpreted-languages">Compiled Vs Interpreted languages</h3>
-<p>Interpreted languages were once significantly slower than compiled languages. But, with the development of <a href="https://guide.freecodecamp.org/computer-science/just-in-time-compilation">just-in-time compilation</a>, that gap is shrinking. Modern scripting languages like Python and JavaScript are compiled to machine code at runtime using both compilers and interpreters, which makes them as fast as compiled languages. They are first compiled into an intermediate representation called <strong>bytecode</strong>, and then interpreted by a virtual machine which converts it to machine code.</p>
-<p>If you&rsquo;re wondering what language should you choose to build your next project with, ask yourself this: what kind of platform do I want the application to run in? If you want to run your application on a web browser, you should go with JavaScript or TypeScript. If you want to run your application on a server, you may want to use Python or Go. In a mobile device, Swift or Kotlin might be the way to go. C++ is used for building complex applications and systems software, such as operating systems, browsers, and video games which require a heavy performance overhead.</p>
-<p><em>Rust</em>, <em>Go</em> and <em>C++</em> are popular compiled languages that are used for building high-performance applications. <em>Python</em> and <em>JavaScript</em> are popular interpreted languages that are used for building web applications.</p>
-<p>The speed advantage of the compiled language such as Golang (Go) in comparison to an interpreted language such as Java is one of the reasons why organizations write their microservices in Go. In complex computing environments such as cloud computing environments, where users get charged for every clock cycle, it makes sense to use the most efficient deployment artifact.</p>
-<h2 id="c-the-king-of-programming-languages">C++: The king of programming languages</h2>
-<p>C++ is a low-level, statically typed object-oriented language that allows you to have a good grasp of your computer&rsquo;s resources and utilize them at your convenience. Since it is a compiled language, it surpasses the performance of most of the other interpreted languages. It is an extremely powerful language and is used in many applications such as operating systems, video games, the development of compilers and interpreters, etc. It has a huge community and is one of the most popular languages in the world.</p>
-<p>Reasons why C++&rsquo;s performance is unparalleled:</p>
-<ol>
-<li>A compiled language. C++ is extremely fast because it is a compiled language.</li>
-<li>A low-level language. It allows you to cheaply use computing resources.</li>
-<li>Statically typed. It allows the compiler to optimize the code.</li>
-<li>Object-oriented programming. It allows you to create reusable code.</li>
-<li>A general purpose language. It can be used to create any kind of application.</li>
-</ol>
-<p>The issue with C++ boils down to how it <strong>manages memory</strong>. C++ is prone to memory leaks and dangling pointers, if not written properly.</p>
-<h2 id="memory-management-in-programming-languages">Memory Management in programming languages</h2>
-<p><strong>Variables</strong> are named memory locations that store data. A variable is a container that holds a value. The value can be of any type, such as <em>integer</em>, <em>float</em>, <em>character</em>, etc. Example:</p>
-<pre><code>int a = 10;
-float b = 10.5;
-char c = 'a';
-</code></pre>
-<p>Computer programs need to allocate memory to store variables, data values, and data structures and deallocate memory when done using them. Memory is also used to store the program itself and the run-time system needed to support it. Programming languages can be categorized as those which provide <strong>automatic memory management</strong> and those which ask the programmer to allocate and <strong>free memory manually</strong>. Requiring the programmer to manage memory manually leads to a simpler compiler and run-time but requires more work from the programmer and is more error-prone. While automatic memory management is more convenient for the programmer, it is also more complex and slower and it is achieved by the use of <strong>garbage collection</strong>.</p>
-<h3 id="c">C++</h3>
-<p>C++ is a low-level language with manual memory management. C++ programs manually allocate and free memory using <strong>pointers</strong>.</p>
-<p><strong>Pointers</strong>
-Pointers are variables that store the <strong>address</strong> of another variable and access the memory location of a variable. Pointers are used to pass large data structures to functions, to return multiple values from a function, to dynamically allocate memory, etc. Since there is no automatic memory management in C++, you need to be responsible for allocating and freeing memory. This process is achieved using the <strong>malloc</strong>, <strong>calloc</strong>, <strong>new</strong>, and <strong>delete</strong> keywords.</p>
-<p>With manual memory management, a few things can go wrong like memory leaks and dangling pointers. For instance, the dangling pointer problem arises when there is an attempt to use a pointer after it has been freed. Dangling pointer errors can arise whenever there is an error in the control flow logic of a program. The use of a pointer before allocation may be a fatal run-time error. Use after deallocation is not always fatal but neither of these is a good thing.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="">#include</span> <span style="">&lt;stdio.h&gt;</span><span style="">
-</span></span></span><span style="display:flex;"><span><span style=""></span>  <span style="">int</span> main()  
-</span></span><span style="display:flex;"><span>  {
-</span></span><span style="display:flex;"><span>    <span style="">int</span> *ptr=(<span style="">int</span> *)malloc(<span style="font-weight:bold">sizeof</span>(<span style="">int</span>));  
-</span></span><span style="display:flex;"><span>    <span style="">int</span> a=560;  
-</span></span><span style="display:flex;"><span>    ptr=&amp;a;  
-</span></span><span style="display:flex;"><span>    free(ptr);  
-</span></span><span style="display:flex;"><span>    <span style="font-style:italic">// dangling pointer
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>    printf(<span style="font-style:italic">&#34;%d&#34;</span>,*ptr);
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> 0;  
-</span></span><span style="display:flex;"><span>}  
-</span></span></code></pre></div><p>The above code will produce a segmentation fault since the pointer is pointing to a memory location that has been freed. To avoid this, we can set the pointer to NULL after freeing it.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    free(ptr);
-</span></span><span style="display:flex;"><span>    ptr=NULL;
-</span></span></code></pre></div><p>Memory leaks and dangling pointer bugs are some reasons why C++ is not preferred for applications that require a lot of memory management. To avoid such issues, languages that provide automatic memory management are preferred over C++. Scripting languages manage memory using a <strong>garbage collector</strong>.</p>
-<h3 id="garbage-collection">Garbage collection</h3>
-<p>Garbage is a memory that was once used by objects but will never be read or written by the program again. A garbage collector (GC) is a background process that provides automatic memory management for modern languages by taking care of the allocation and deallocation of a program’s computer memory resources. As a result, certain categories of bugs are eliminated or substantially reduced such as:-</p>
-<p><strong>Dangling pointer bugs</strong> - a piece of memory is freed, but the objects still have references – one of these references is used in the program.</p>
-<p><strong>Double-free bugs</strong> – the program attempts to free a piece of memory that has already been freed.</p>
-<p><strong>Memory leaks</strong> – if a program does not free memory that is no longer referenced by any object, it can lead to memory exhaustion over time.</p>
-<p>Garbage collection seemed like a really good solution to the memory leak issues occurring in low-level languages such as C/C++ but, it had a few CPU issues. CPU usage increases when a significant amount of CPU time is spent in garbage collection. <em>Heap</em> is the memory that is used to allocate memory dynamically as opposed to the <em>stack</em> memory which is used to store the local variables. Local memory is quite automatic and local variables are allocated automatically. An increased allocation rate of objects on the managed heap causes garbage collection to occur more frequently.</p>
-<p>Here are a few types of Garbage collectors:</p>
-<p><strong>Mark &amp; Sweep GC</strong>(Tracing GC): A two-phase algorithm that first marks objects that are being referenced as “alive” and in the next phase frees the memory of objects that are not alive. JVM, C#, Ruby, JavaScript, and Golang employ this approach. JavaScript engines like V8 use a Mark &amp; Sweep GC along with Reference counting GC to complement it. This kind of GC is also available for C &amp; C++ as an external library.</p>
-<p><strong>Reference counting GC</strong>: Every object gets a reference count which is incremented or decremented as references to it change. Garbage is collected when the count becomes zero. This is not preferred as it cannot handle cyclic references. PHP, Perl, and Python use this kind of GC with workarounds to overcome cyclic references. This type of GC can be enabled for C++ as well.</p>
-<p><strong>Automatic Reference Counting(ARC)</strong>: Similar to Reference counting GC but instead of running a runtime process at a specific interval the retain and release instructions are inserted into the compiled code at compile-time and when an object&rsquo;s reference becomes zero, it is cleared automatically as a part of the code execution. It also cannot handle cyclic references and relies on the developer. ARC is a feature of the Clang compiler and provides ARC for Objective C &amp; Swift.</p>
-<p><strong>Resource Acquisition is Initialization (RAII)</strong>: Objects and variables are <em>scoped</em>, and an object’s memory allocation is tied to its lifetime, which is from construction until destruction. It was introduced in C++ and is also used by Ada and Rust.</p>
-<h2 id="rust">Rust</h2>
-<p>Rust is a general-purpose systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety. It is a multi-paradigm language that supports imperative, functional, and object-oriented programming. Rust is not only used to create low-level systems software such as operating systems, device drivers, and embedded software, but also used to create high-level applications such as web servers, command-line tools, and graphical user interfaces.</p>
-<p>Rust builds on <strong>RAII</strong>( Resource Acquisition is Initialization) to provide automatic memory management. RAII is a programming technique that uses the lifetime of an object to manage the lifetime of its resources. In Rust, the compiler ensures that the memory is freed as soon as the object goes out of scope. This is achieved by the use of <strong>smart pointers</strong>. Rust implements borrow checking and ownership rules to ensure that memory is freed as soon as the object goes out of scope. Additionally, Rust also provides a <strong>garbage collector</strong> that can be used to free memory when the object goes out of scope.</p>
-<blockquote>
-<p>Ownership and Borrowing</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="">#[derive(Debug)]</span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">struct</span> <span style="font-weight:bold">Employee</span> {
-</span></span><span style="display:flex;"><span>    id : <span style="">i32</span>
+      <guid>https://anubhavp.dev/blog/posts/qtree/</guid>
+      <description>Inspired by KoalasToTheMax, QTree is a short live demonstration of image compression and decompression using Quadtrees that partition a two-dimensional image by recursively subdividing it into four quadrants.</description>
+      <content:encoded><![CDATA[<p>I stumbled upon <a href="https://koalastothemax.com/">KoalasToTheMax</a> while reading a blog post about the most exciting web pages built for fun, and I was blown away. <a href="https://injuly.in/">Srijan</a> explained how it works, and we were inspired to create something similar.</p>
+<p>But first, let&rsquo;s get into the basics of the data structures used in our project.</p>
+<h2 id="quadtree">Quadtree</h2>
+<p>A quadtree is a tree-based data structure where each node has exactly four child nodes. Our quadtree represents a partition of space in two dimensions by dividing the region into four equal quadrants. Each quadrant is then subdivided into four equal quadrants, and so on. Each node in the tree has exactly four children or no children at all, which makes it a leaf node. The height of a quadtree depends on the amount of data being decomposed.</p>
+<p>
+  <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Quad_tree_bitmap.svg" alt="quadtree"  /></p>
+<p>The root node is the image. Each node is the average value of its children&rsquo;s pixel values. The tree is recursively subdivided until each leaf node is a single pixel. The tree is then traversed to compress the image. To decompress the image, the tree is traversed again.</p>
+<h3 id="member-functions">Member Functions</h3>
+<p>Our quadtree has the following member functions:</p>
+<ul>
+<li><strong>compressImageData</strong> : It takes the image data and the compression factor as the input and returns the quadtree.</li>
+<li><strong>createQTreeOfHeight</strong> : It takes the height of the tree and the bounding box as the input and returns the quadtree.</li>
+<li><strong>populate</strong> : It populates the quadtree with the pixel values.</li>
+<li><strong>getRGBValuesFromCoordinates</strong> : It takes the quadtree and the coordinates as the input and returns the pixel value at the given coordinates.</li>
+</ul>
+<h3 id="node">Node</h3>
+<p>The QTNODE class represents a node in the quadtree. It has the following properties:</p>
+<ul>
+<li><strong>x</strong> : x-coordinate</li>
+<li><strong>y</strong> : y-coordinate</li>
+<li><strong>w</strong> : width of the bounding box.</li>
+<li><strong>h</strong> : height of the bounding box.</li>
+<li><strong>children</strong> : array of four children.</li>
+<li><strong>rgb</strong> : pixel value of the node.</li>
+</ul>
+<p>Functions:</p>
+<ul>
+<li><strong>draw</strong> : draws the node. Takes the canvas context as the input and returns nothing.</li>
+<li><strong>insert</strong>: inserts a node into the quadtree. Takes the quadtree and the node as the input and returns the quadtree.</li>
+<li><strong>drawAtHeight</strong>: draws the nodes at a given height. Takes the canvas context, the height of the tree, and the current height as the input and returns nothing.</li>
+<li><strong>draw</strong>: draws the nodes. Takes the canvas context and the height of the tree as the input and returns nothing.</li>
+<li><strong>reveal</strong>: reveals the nodes. Takes the canvas context and the height of the tree as the input and returns nothing.</li>
+<li><strong>computeAverageColor</strong>: computes the average color of the node. Takes the quadtree and the image data as the input and returns the pixel value.</li>
+</ul>
+<h2 id="demonstration">Demonstration</h2>
+
+
+<div class="container" style="text-align: center;">
+	<canvas id="canvas-2"  style="border: 1px solid black;"	>
+	</canvas>
+	<br>
+	
+Hover over any part of the canvas to recursively divide it into four quadrants.
+</div>
+
+
+
+<div class="container" style="text-align: center;">
+	<canvas id="canvas-1" style="border: 1px solid black;"> </canvas>
+	<br>
+	<input type="range" id="slider" min="0" max="100" value="0">
+	<br>
+
+The slider controls the depth of the tree.
+</div>
+ The slider is set to 0 by default, which means the entire image is compressed into a single pixel. The slider when set to 100 means the image is not compressed at all. The slider can be set to any value between 0 and 100.
+
+
+
+<script type="module" src="/blog/js/qtree/index.js" ></script>
+<script type="module" src="/blog/js/qtree/qdtree.js" ></script>
+
+<h2 id="setting-up-the-canvas">Setting up the Canvas</h2>
+<p>To start with, we need two canvases - one for you to hover over and the other for you to control the depth of the tree using a slider and render the nodes evenly. Initially, we had multiple ways of taking an image as the input form, such as uploading an image, using query parameters, etc. But for this demonstration, we&rsquo;ll keep it simple and use a static image.</p>
+<p>Here&rsquo;s some JavaScript code that will load the image into a canvas:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="font-weight:bold">const</span> image = <span style="font-weight:bold">new</span> Image();
+</span></span><span style="display:flex;"><span>img.src = <span style="font-style:italic">&#34;/blog/assets/images/qtree/cryptopunk.jpeg&#34;</span>;
+</span></span><span style="display:flex;"><span>img.onload = () =&gt; {
+</span></span><span style="display:flex;"><span>    initSliderCanvas(img);
+</span></span><span style="display:flex;"><span>    initMouseCanvas(img);
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>I&rsquo;ll go ahead and explain the working of the mouse hover canvas and you can explore the slider canvas. The code is available on <a href="https://github.com/cbrtl/qd-compression">GitHub</a>, and you can play around with it later if you are interested.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="font-weight:bold">import</span> { compressImageData } from <span style="font-style:italic">&#34;./qdtree.js&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">function</span> initMouseCanvas(img){
+</span></span><span style="display:flex;"><span>	<span style="font-weight:bold">const</span> canvas = document.getElementById(<span style="font-style:italic">&#34;canvas-2&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> ctx = canvas.getContext(<span style="font-style:italic">&#34;2d&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> imageData = readImageDataUsingCanvas(canvas, ctx, image);
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> qTree = compressImageData(imageData, 1);
+</span></span><span style="display:flex;"><span>    qTree.draw(ctx);
+</span></span><span style="display:flex;"><span>	...
 </span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="image-data-compression">Image Data Compression</h3>
+<p>Now, let&rsquo;s get to the fun part - compressing images. We import the <code>compressImageData</code> function from the qdtree.js file. This function takes the image data and the compression factor as the input and returns the quadtree. The <strong>height of the tree</strong> is calculated by taking the log of the number of pixels in the image and dividing it by the log of 4. The log of 4 is 2, and the log of the number of pixels is the height of the tree. The height of the tree is then rounded down to the nearest integer. The tree is then created using the <code>createQTreeOfHeight</code> function that takes the height of the tree and the <strong>bounding box</strong> as the input and returns the quadtree.</p>
+<p><strong>qdtree.js</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="font-weight:bold">export</span> <span style="font-weight:bold">function</span> compressImageData(imageData, factor) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> { width, height } = imageData;
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> newWidth = Math.ceil(width / factor);
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> newHeight = Math.ceil(height / factor);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">fn</span> main() {
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">let</span> a = Employee{id: 43} ;
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">let</span> b  = a ;
-</span></span><span style="display:flex;"><span>    <span style="font-style:italic">// println!(&#34;{:?}&#34;, a) ; // error: borrow of moved value: `a`
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>    <span style="font-weight:bold">let</span> c= a ;
-</span></span><span style="display:flex;"><span>    <span style="font-style:italic">// println!(&#34;{:?}&#34;, a) ; // error: borrow of moved value: `a`
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>} 
-</span></span></code></pre></div><blockquote>
-<p>RAII</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span>    <span style="font-weight:bold">fn</span> main() {
-</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">let</span> foo = <span style="font-style:italic">&#34;value&#34;</span>; <span style="font-style:italic">// owner is foo and is valid within this method
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        <span style="font-style:italic">// bar is not valid here 
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>
-</span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">let</span> bar = <span style="font-style:italic">&#34;bar value&#34;</span>; <span style="font-style:italic">// owner is bar and is valid 
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>            <span style="font-style:italic">//within this block scope
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>            println!(<span style="font-style:italic">&#34;value of bar is {}&#34;</span>, bar); <span style="font-style:italic">// bar is valid 
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>            <span style="font-style:italic">//here
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>            println!(<span style="font-style:italic">&#34;value of foo is {}&#34;</span>, foo); <span style="font-style:italic">// foo is valid 
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>            <span style="font-style:italic">//here
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        }
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> qTreeHeight = Math.floor(Math.log(newWidth * newHeight) / Math.log(4));
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        println!(<span style="font-style:italic">&#34;value of foo is {}&#34;</span>, foo); <span style="font-style:italic">// foo is valid here
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        println!(<span style="font-style:italic">&#34;value of bar is {}&#34;</span>, bar); <span style="font-style:italic">// bar is not valid 
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        <span style="font-style:italic">//here as its out of scope
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>    }
-</span></span></code></pre></div><h3 id="rust--c-">Rust &gt; C++ ?</h3>
-<p>C++ is a high-performance, general-purpose programming language that has been widely used for decades. It is known for its flexibility and ability to handle low-level tasks, making it a popular choice for systems programming and game development. C++ also has a large and active community, which means that there are many libraries and resources available for developers to use. Rust, on the other hand, is a relatively <strong>new programming language</strong> that was first released in 2010. It is designed to be a safe and concurrent language, with a strong focus on preventing common programming errors such as null pointer dereferences and buffer overflows.</p>
-<p>Coming back to our questions that we were pondering upon earlier, now we get that compiled languages are preferred over interpreted languages as they are much faster and hence C++/ Go are preferred over Python/JavaScript. While C++ is extremely fast, it is also prone to memory leaks. Other languages such as Rust and Go offer better automatic memory management. Go implements a garbage collector which has a CPU usage overhead while Rust builds over RAII and implements borrow checking and ownership rules to ensure that memory is freed as soon as the object goes out of scope. Rust also provides a garbage collector that can be used to free memory when the object goes out of scope.</p>
-<p>Will rust replace C++ anytime soon? <strong>No</strong>. Rust is a relatively new language and is still in its early stages of development. It is not yet widely used in production, and there are still many features that are missing. However, it is gaining popularity and is being used in many large projects, such as Firefox and Servo. C++ has been widely used for decades and has a vast amount of <em>legacy code</em>, making it difficult for Rust to replace it. C++ has a much larger community and ecosystem, with a wealth of libraries, tools, and resources, making it easier for developers to find help and resources. Rust&rsquo;s tooling is still evolving and may not be as mature or widely used as C++.</p>
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">const</span> qTree = createQTreeOfHeight(qTreeHeight, {
+</span></span><span style="display:flex;"><span>    x: 0,
+</span></span><span style="display:flex;"><span>    y: 0,
+</span></span><span style="display:flex;"><span>    w: width,
+</span></span><span style="display:flex;"><span>    h: height,
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  populate(qTree, imageData);
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">return</span> qTree;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The <code>createQTreeOfHeight</code> function takes in the height of the tree and the bounding box as the input and returns the quadtree.</p>
+<h4 id="bounding-box">Bounding Box</h4>
+<p>The bounding box is the area that the node represents. The bounding box is initially the entire image. The bounding box is then divided into four equal quadrants, and the process is repeated until the height of the tree is 0. The <code>populate</code> function takes the quadtree and the image data as the input and populates the tree with the average pixel values of the children&rsquo;s pixel values.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span> <span style="font-weight:bold">function</span> createQTreeOfHeight(height, aabb) {
+</span></span><span style="display:flex;"><span>  <span style="font-weight:bold">function</span> recursiveCreate(node, height) {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">if</span> (height === 0) <span style="font-weight:bold">return</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> { x, y, w, h } = node.aabb;
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> halfW = w / 2;
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> halfH = h / 2;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="font-style:italic">//top left
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>    node.tl = <span style="font-weight:bold">new</span> QTNode({
+</span></span><span style="display:flex;"><span>      x,
+</span></span><span style="display:flex;"><span>      y,
+</span></span><span style="display:flex;"><span>      w: halfW,
+</span></span><span style="display:flex;"><span>      h: halfH,
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>		<span style="font-style:italic">//top right
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>    node.tr = <span style="font-weight:bold">new</span> QTNode({
+</span></span><span style="display:flex;"><span>      x: x + halfW,
+</span></span><span style="display:flex;"><span>      y,
+</span></span><span style="display:flex;"><span>      w: halfW,
+</span></span><span style="display:flex;"><span>      h: halfH,
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>		<span style="font-style:italic">//bottom left
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>    node.bl = <span style="font-weight:bold">new</span> QTNode({
+</span></span><span style="display:flex;"><span>      x,
+</span></span><span style="display:flex;"><span>      y: y + halfH,
+</span></span><span style="display:flex;"><span>      w: halfW,
+</span></span><span style="display:flex;"><span>      h: halfH,
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>		<span style="font-style:italic">//bottom right
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>    node.br = <span style="font-weight:bold">new</span> QTNode({
+</span></span><span style="display:flex;"><span>      x: x + halfW,
+</span></span><span style="display:flex;"><span>      y: y + halfH,
+</span></span><span style="display:flex;"><span>      w: halfW,
+</span></span><span style="display:flex;"><span>      h: halfH,
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    recursiveCreate(node.tl, height - 1);
+</span></span><span style="display:flex;"><span>    recursiveCreate(node.tr, height - 1);
+</span></span><span style="display:flex;"><span>    recursiveCreate(node.bl, height - 1);
+</span></span><span style="display:flex;"><span>    recursiveCreate(node.br, height - 1);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span> }
+</span></span></code></pre></div><h3 id="image-data-to-quadtree">Image data to Quadtree</h3>
+<p>Alright, let&rsquo;s talk about the <code>reveal</code> function, which is like a magician revealing the hidden nodes under the mouse. And then there&rsquo;s the <code>draw</code> function, which is like an artist sketching the nodes on the canvas. The <code>update</code> function is like your mom constantly cleaning up after you every 30 milliseconds. It clears the canvas and redraws the nodes on the canvas, all to make sure it looks neat and tidy.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="font-weight:bold">function</span> initMouseCanvas(img){
+</span></span><span style="display:flex;"><span>	...
+</span></span><span style="display:flex;"><span> <span style="font-weight:bold">const</span> mousePos = { x: 0, y: 0 };
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">let</span> lastUpdateTime = -<span style="font-weight:bold">Infinity</span>;
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> frameTime = 30;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">function</span> update() {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">const</span> currentTime = Date.now();
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">const</span> diff = currentTime - lastUpdateTime;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">if</span> (diff &lt; frameTime) <span style="font-weight:bold">return</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        lastUpdateTime = currentTime;
+</span></span><span style="display:flex;"><span>        ctx.clearRect(0, 0, canvas.width, canvas.height);
+</span></span><span style="display:flex;"><span>        qTree.reveal(mousePos.x, mousePos.y);
+</span></span><span style="display:flex;"><span>        qTree.draw(ctx);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    canvas.addEventListener(<span style="font-style:italic">&#34;mousemove&#34;</span>, (e) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">const</span> rect = canvas.getBoundingClientRect();
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">const</span> x = e.clientX - rect.left;
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">const</span> y = e.clientY - rect.top;
+</span></span><span style="display:flex;"><span>        mousePos.x = x;
+</span></span><span style="display:flex;"><span>        mousePos.y = y;
+</span></span><span style="display:flex;"><span>        update();
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>So, what&rsquo;s the point of all this? Well, we can use a quadtree to compress and decompress images when the mouse hovers over a specific area of the canvas. It&rsquo;s like a secret code that unlocks a hidden image!</p>
+<p>If you want to explore more, check out the slider and the entire source code on <a href="http://github.com/cbrtl/qd-compression">GitHub</a>. And don&rsquo;t hesitate to ask us any questions or give suggestions. We&rsquo;re always happy to chat on GitHub!</p>
+<p><em>Ref: <a href="https://en.wikipedia.org/wiki/Quadtree">Wikipedia</a></em></p>
 ]]></content:encoded>
     </item>
     
@@ -269,171 +334,6 @@ possible through atomic swaps and multi-currency transfer is possible with an ex
 <p>The approaches may be justified once some of the important issues are addressed. Other than the mentioned problems, a lot of other factors need to pitch in to improve and make the platform more a feasible good product to be sold. The product being built is excellent, no doubt. The deep learning models in the ACB mechanism, the tech being used, the next generation Polkadot blockchains which are much, much faster (1000 transactions per second as compared to 7-10 transactions in traditional blockchain networks) and allow a huge on queries in a much faster time, the faster and more efficient transaction mechanisms, interoperability, the economic scalability, user-driven governance, the forkless upgrades, and the claimed security and transparency, are a step in the right direction, but there are grave issues those still need to be discussed before the product is introduced and launched.</p>
 <p><em>Ref: <a href="https://sovereignwallet-network.github.io/whitepaper/MetaMUI-Blockchain-White-Paper.pdf">Whitepaper</a></em></p>
 ]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>zuzu: A Static Site Generator (SSG)</title>
-      <link>https://anubhavp.dev/blog/posts/zuzu/</link>
-      <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://anubhavp.dev/blog/posts/zuzu/</guid>
-      <description>Zuzu is a static site generator that converts all your markdown files into static htmls pages. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets.</description>
-      <content:encoded><![CDATA[<p>Zuzu is a static site generator that takes in markdown files and render htmls pages. <a href="https://anubhavp.dev/oldblog">This blog</a>, for example, has been written using this generator. This enables noobs like me to write blogs without having to learn a lot of code! It is a very simple and easy to use generator. All you need to do is to write a markdown file and it will be rendered as a page ;) You can create a new page by creating a new markdown file.</p>
-<h2 id="how-does-it-work">How does it work?</h2>
-<p>Zuzu parses the markdown file using <em>javascript</em> and renders it as <em>html documents</em>. It then saves the html files in the <code>public</code> folder. The public folder, with <code>index.html</code> file, is the final output of the generator and this can be deployed and hosted in various platforms. This particular blog has been deployed on <a href="https://anubhavp.dev/oldblog/">Github Pages</a>.</p>
-<h3 id="1-create-a-markdown-file">1. Create a markdown file</h3>
-<pre><code># This is a title
-This is a paragraph
-This is another paragraph
-This is a list:
-* Item 1
-* Item 2
-* Item 3
-This is a code block:
-```
-print(&quot;Hello World&quot;)
-```
-This is a table:
-| Column 1 | Column 2 | Column 3 |
-| -------- | -------- | -------- |
-| 1        | 2        | 3        |
-| 4        | 5        | 6        |
-| 7        | 8        | 9        |
-This is a link: [zuzu](https://anubhavp.dev/blog/zuzu.html)
-</code></pre>
-<h3 id="2-run-the-generator-and-find-your-blog">2. Run the generator and find your blog</h3>
-<p>Run <code>npm run generate</code> in the console.
-You&rsquo;ll now see the blog in the public folder! Run the index.html file in your browser to see your blog. You may now deploy your site
-to a server.</p>
-<h2 id="the-static-site-generator">The Static Site Generator</h2>
-<h3 id="1-libraries-used">1. Libraries used</h3>
-<ul>
-<li><a href="https://www.npmjs.com/package/markdown-it">MarkdownIt</a> <em>Markdown parser done right.</em></li>
-<li><a href="https://www.npmjs.com/package/markdown-it-anchor">MarkdownItAnchor</a> <em>Header anchors for markdown-it.</em></li>
-<li><a href="https://www.npmjs.com/package/glob">Glob</a> <em>&ldquo;Globs&rdquo; are the patterns you type when you do stuff like ls .js on the command line, or put build/ in a .gitignore file.</em></li>
-<li><a href="https://www.npmjs.com/package/gray-matter">Gray-Matter</a> <em>Parse front-matter from a string or file.</em></li>
-<li><a href="https://npmjs.com/package/mkdirp">Mkdirp</a> <em>Create Dirs if they do not exist.</em></li>
-</ul>
-<h3 id="2-workflow">2. Workflow</h3>
-<p>This is the code for the generator.js.
-The code works in the following way:</p>
-<ol>
-<li><code>fs.readfile() from fs</code> reads all the files from the said directory and stores then in <code>filename</code> using <code>glob</code>. It is a <code>glob</code> that matches all the files in the directory. The <code>file system</code> module allows you to work with the file system on your computer.</li>
-<li><code>gray-matter</code> helps extracting front matter from the a string or file.
-Converts a string with front-matter, like this:</li>
-</ol>
-<pre tabindex="0"><code>    title: Hello
-    slug: home
-    ---
-    &lt;h1&gt;Hello world!&lt;/h1&gt;
-</code></pre><p>Into an object like this:</p>
-<pre><code>{
-content: '&lt;h1&gt;Hello world!&lt;/h1&gt;',
-data: { 
-    title: 'Hello', 
-    slug: 'home' 
-}
-}
-</code></pre>
-<p>It then extracts the front matter and stores it in <code>data</code>. It then stores the content in <code>content</code> and returns the <code>filename</code> to the <code>main()</code> function. It then repeats the process for all the files in the directory.</p>
-<ol start="3">
-<li>
-<p>The <code>main()</code> function then takes in one <code>filename</code> at a time and then parses it through <code>markdownit( ,{markdownitanchor})</code>. <code>markdownit</code> parses the file and converts the markdown content into HTML files. It then creates a <code>html</code> file and writes the parsed content into it. It then saves the <code>html</code> file in the <code>public</code> folder. This process repeats for all the files in the directory.</p>
-</li>
-<li>
-<p>The converted html files are stored in the specified directories then using <code>mkdirp</code>. The <code>index.html</code> file isalready present in the <code>public</code> folder. <code>mkdirp</code> creates the directories if they do not exist.</p>
-</li>
-</ol>
-<h3 id="3-generator-code">3. Generator Code</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> fs from <span style="font-style:italic">&#39;fs&#39;</span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> glob from <span style="font-style:italic">&#39;glob&#39;</span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> matter from <span style="font-style:italic">&#39;gray-matter&#39;</span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> mkdirp from <span style="font-style:italic">&#39;mkdirp&#39;</span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> path from <span style="font-style:italic">&#39;path&#39;</span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> hljs from <span style="font-style:italic">&#39;highlight.js&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> MarkdownIt from <span style="font-style:italic">&#39;markdown-it&#39;</span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> markdownItAnchor from <span style="font-style:italic">&#39;markdown-it-anchor&#39;</span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> string from <span style="font-style:italic">&#39;string&#39;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> slugify = s =&gt; string(s).slugify().toString()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> md = MarkdownIt({
-</span></span><span style="display:flex;"><span>    html: <span style="font-weight:bold">true</span>,
-</span></span><span style="display:flex;"><span>    linkify: <span style="font-weight:bold">true</span>,
-</span></span><span style="display:flex;"><span>    typographer: <span style="font-weight:bold">true</span>,
-</span></span><span style="display:flex;"><span>    highlight(str, language) {
-</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">if</span> (language &amp;&amp; hljs.getLanguage(language)) {
-</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">try</span> {
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                <span style="font-weight:bold">return</span> hljs.highlight(str, { language: language }).value;
-</span></span><span style="display:flex;"><span>            } <span style="font-weight:bold">catch</span> (err) {
-</span></span><span style="display:flex;"><span>                console.log(err)
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">return</span> <span style="font-weight:bold">null</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}).use(markdownItAnchor, { slugify });
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> readFile = (filename) =&gt; {
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> rawFile = fs.readFileSync(filename, <span style="font-style:italic">&#39;utf8&#39;</span>)
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> parsed = matter(rawFile)
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> html = md.render(parsed.content)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> {...parsed, html }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> templatize = (template, { date, title, content, author }) =&gt;
-</span></span><span style="display:flex;"><span>    template
-</span></span><span style="display:flex;"><span>    .replace(<span style="font-style:italic">/&lt;!-- PUBLISH_DATE --&gt;/g</span>, date)
-</span></span><span style="display:flex;"><span>    .replace(<span style="font-style:italic">/&lt;!-- TITLE --&gt;/g</span>, title)
-</span></span><span style="display:flex;"><span>    .replace(<span style="font-style:italic">/&lt;!-- CONTENT --&gt;/g</span>, content)
-</span></span><span style="display:flex;"><span>    .replace(<span style="font-style:italic">/&lt;!-- AUTHOR --&gt;/g</span>, author)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> saveFile = (filename, contents) =&gt; {
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> dir = path.dirname(filename)
-</span></span><span style="display:flex;"><span>    mkdirp.sync(dir)
-</span></span><span style="display:flex;"><span>    fs.writeFileSync(filename, contents)
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> getOutputFilename = (filename, outPath) =&gt; {
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> basename = path.basename(filename)
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> newfilename = basename.substring(0, basename.length - 3) + <span style="font-style:italic">&#39;.html&#39;</span>
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> outfile = path.join(outPath, newfilename)
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> outfile
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> processFile = (filename, template, outPath) =&gt; {
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> file = readFile(filename)
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> outfilename = getOutputFilename(filename, outPath)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> templatized = templatize(template, {
-</span></span><span style="display:flex;"><span>        date: file.data.date,
-</span></span><span style="display:flex;"><span>        title: file.data.title,
-</span></span><span style="display:flex;"><span>        content: file.html,
-</span></span><span style="display:flex;"><span>        author: file.data.author,
-</span></span><span style="display:flex;"><span>    })
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    saveFile(outfilename, templatized)
-</span></span><span style="display:flex;"><span>    console.log(<span style="font-style:italic">`📝 </span><span style="font-weight:bold;font-style:italic">${</span>outfilename<span style="font-weight:bold;font-style:italic">}</span><span style="font-style:italic">`</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> main = () =&gt; {
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> srcPath = path.resolve(<span style="font-style:italic">&#39;content&#39;</span>)
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> outPath = path.resolve(<span style="font-style:italic">&#39;public&#39;</span>)
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> template = fs.readFileSync(<span style="font-style:italic">&#39;./templates/initial/template.html&#39;</span>, <span style="font-style:italic">&#39;utf8&#39;</span>)
-</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> filenames = glob.sync(srcPath + <span style="font-style:italic">&#39;/**/*.md&#39;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    filenames.forEach((filename) =&gt; {
-</span></span><span style="display:flex;"><span>        processFile(filename, template, outPath)
-</span></span><span style="display:flex;"><span>    })
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>main()
-</span></span></code></pre></div>]]></content:encoded>
     </item>
     
     <item>

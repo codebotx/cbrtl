@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>project, markdown, javascript, html, css on Chillpost.in</title>
+    <link>https://anubhavp.dev/blog/tags/project-markdown-javascript-html-css/</link>
+    <description>Recent content in project, markdown, javascript, html, css on Chillpost.in</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 29 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/tags/project-markdown-javascript-html-css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>zuzu: A Static Site Generator (SSG)</title>
+      <link>https://anubhavp.dev/blog/posts/zuzu/</link>
+      <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://anubhavp.dev/blog/posts/zuzu/</guid>
+      <description>Zuzu is a static site generator that converts all your markdown files into static htmls pages. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets.</description>
+      <content:encoded><![CDATA[<p>Zuzu is a static site generator that takes in markdown files and render htmls pages. <a href="https://anubhavp.dev/oldblog">This blog</a>, for example, has been written using this generator. This enables noobs like me to write blogs without having to learn a lot of code! It is a very simple and easy to use generator. All you need to do is to write a markdown file and it will be rendered as a page ;) You can create a new page by creating a new markdown file.</p>
+<h2 id="how-does-it-work">How does it work?</h2>
+<p>Zuzu parses the markdown file using <em>javascript</em> and renders it as <em>html documents</em>. It then saves the html files in the <code>public</code> folder. The public folder, with <code>index.html</code> file, is the final output of the generator and this can be deployed and hosted in various platforms. This particular blog has been deployed on <a href="https://anubhavp.dev/oldblog/">Github Pages</a>.</p>
+<h3 id="1-create-a-markdown-file">1. Create a markdown file</h3>
+<pre><code># This is a title
+This is a paragraph
+This is another paragraph
+This is a list:
+* Item 1
+* Item 2
+* Item 3
+This is a code block:
+```
+print(&quot;Hello World&quot;)
+```
+This is a table:
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| 1        | 2        | 3        |
+| 4        | 5        | 6        |
+| 7        | 8        | 9        |
+This is a link: [zuzu](https://anubhavp.dev/blog/zuzu.html)
+</code></pre>
+<h3 id="2-run-the-generator-and-find-your-blog">2. Run the generator and find your blog</h3>
+<p>Run <code>npm run generate</code> in the console.
+You&rsquo;ll now see the blog in the public folder! Run the index.html file in your browser to see your blog. You may now deploy your site
+to a server.</p>
+<h2 id="the-static-site-generator">The Static Site Generator</h2>
+<h3 id="1-libraries-used">1. Libraries used</h3>
+<ul>
+<li><a href="https://www.npmjs.com/package/markdown-it">MarkdownIt</a> <em>Markdown parser done right.</em></li>
+<li><a href="https://www.npmjs.com/package/markdown-it-anchor">MarkdownItAnchor</a> <em>Header anchors for markdown-it.</em></li>
+<li><a href="https://www.npmjs.com/package/glob">Glob</a> <em>&ldquo;Globs&rdquo; are the patterns you type when you do stuff like ls .js on the command line, or put build/ in a .gitignore file.</em></li>
+<li><a href="https://www.npmjs.com/package/gray-matter">Gray-Matter</a> <em>Parse front-matter from a string or file.</em></li>
+<li><a href="https://npmjs.com/package/mkdirp">Mkdirp</a> <em>Create Dirs if they do not exist.</em></li>
+</ul>
+<h3 id="2-workflow">2. Workflow</h3>
+<p>This is the code for the generator.js.
+The code works in the following way:</p>
+<ol>
+<li><code>fs.readfile() from fs</code> reads all the files from the said directory and stores then in <code>filename</code> using <code>glob</code>. It is a <code>glob</code> that matches all the files in the directory. The <code>file system</code> module allows you to work with the file system on your computer.</li>
+<li><code>gray-matter</code> helps extracting front matter from the a string or file.
+Converts a string with front-matter, like this:</li>
+</ol>
+<pre tabindex="0"><code>    title: Hello
+    slug: home
+    ---
+    &lt;h1&gt;Hello world!&lt;/h1&gt;
+</code></pre><p>Into an object like this:</p>
+<pre><code>{
+content: '&lt;h1&gt;Hello world!&lt;/h1&gt;',
+data: { 
+    title: 'Hello', 
+    slug: 'home' 
+}
+}
+</code></pre>
+<p>It then extracts the front matter and stores it in <code>data</code>. It then stores the content in <code>content</code> and returns the <code>filename</code> to the <code>main()</code> function. It then repeats the process for all the files in the directory.</p>
+<ol start="3">
+<li>
+<p>The <code>main()</code> function then takes in one <code>filename</code> at a time and then parses it through <code>markdownit( ,{markdownitanchor})</code>. <code>markdownit</code> parses the file and converts the markdown content into HTML files. It then creates a <code>html</code> file and writes the parsed content into it. It then saves the <code>html</code> file in the <code>public</code> folder. This process repeats for all the files in the directory.</p>
+</li>
+<li>
+<p>The converted html files are stored in the specified directories then using <code>mkdirp</code>. The <code>index.html</code> file isalready present in the <code>public</code> folder. <code>mkdirp</code> creates the directories if they do not exist.</p>
+</li>
+</ol>
+<h3 id="3-generator-code">3. Generator Code</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> fs from <span style="font-style:italic">&#39;fs&#39;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> glob from <span style="font-style:italic">&#39;glob&#39;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> matter from <span style="font-style:italic">&#39;gray-matter&#39;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> mkdirp from <span style="font-style:italic">&#39;mkdirp&#39;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> path from <span style="font-style:italic">&#39;path&#39;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> hljs from <span style="font-style:italic">&#39;highlight.js&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> MarkdownIt from <span style="font-style:italic">&#39;markdown-it&#39;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> markdownItAnchor from <span style="font-style:italic">&#39;markdown-it-anchor&#39;</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> string from <span style="font-style:italic">&#39;string&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> slugify = s =&gt; string(s).slugify().toString()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> md = MarkdownIt({
+</span></span><span style="display:flex;"><span>    html: <span style="font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>    linkify: <span style="font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>    typographer: <span style="font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>    highlight(str, language) {
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">if</span> (language &amp;&amp; hljs.getLanguage(language)) {
+</span></span><span style="display:flex;"><span>            <span style="font-weight:bold">try</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="font-weight:bold">return</span> hljs.highlight(str, { language: language }).value;
+</span></span><span style="display:flex;"><span>            } <span style="font-weight:bold">catch</span> (err) {
+</span></span><span style="display:flex;"><span>                console.log(err)
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">return</span> <span style="font-weight:bold">null</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}).use(markdownItAnchor, { slugify });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> readFile = (filename) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> rawFile = fs.readFileSync(filename, <span style="font-style:italic">&#39;utf8&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> parsed = matter(rawFile)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> html = md.render(parsed.content)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> {...parsed, html }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> templatize = (template, { date, title, content, author }) =&gt;
+</span></span><span style="display:flex;"><span>    template
+</span></span><span style="display:flex;"><span>    .replace(<span style="font-style:italic">/&lt;!-- PUBLISH_DATE --&gt;/g</span>, date)
+</span></span><span style="display:flex;"><span>    .replace(<span style="font-style:italic">/&lt;!-- TITLE --&gt;/g</span>, title)
+</span></span><span style="display:flex;"><span>    .replace(<span style="font-style:italic">/&lt;!-- CONTENT --&gt;/g</span>, content)
+</span></span><span style="display:flex;"><span>    .replace(<span style="font-style:italic">/&lt;!-- AUTHOR --&gt;/g</span>, author)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> saveFile = (filename, contents) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> dir = path.dirname(filename)
+</span></span><span style="display:flex;"><span>    mkdirp.sync(dir)
+</span></span><span style="display:flex;"><span>    fs.writeFileSync(filename, contents)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> getOutputFilename = (filename, outPath) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> basename = path.basename(filename)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> newfilename = basename.substring(0, basename.length - 3) + <span style="font-style:italic">&#39;.html&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> outfile = path.join(outPath, newfilename)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> outfile
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> processFile = (filename, template, outPath) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> file = readFile(filename)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> outfilename = getOutputFilename(filename, outPath)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> templatized = templatize(template, {
+</span></span><span style="display:flex;"><span>        date: file.data.date,
+</span></span><span style="display:flex;"><span>        title: file.data.title,
+</span></span><span style="display:flex;"><span>        content: file.html,
+</span></span><span style="display:flex;"><span>        author: file.data.author,
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    saveFile(outfilename, templatized)
+</span></span><span style="display:flex;"><span>    console.log(<span style="font-style:italic">`📝 </span><span style="font-weight:bold;font-style:italic">${</span>outfilename<span style="font-weight:bold;font-style:italic">}</span><span style="font-style:italic">`</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">const</span> main = () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> srcPath = path.resolve(<span style="font-style:italic">&#39;content&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> outPath = path.resolve(<span style="font-style:italic">&#39;public&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> template = fs.readFileSync(<span style="font-style:italic">&#39;./templates/initial/template.html&#39;</span>, <span style="font-style:italic">&#39;utf8&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">const</span> filenames = glob.sync(srcPath + <span style="font-style:italic">&#39;/**/*.md&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    filenames.forEach((filename) =&gt; {
+</span></span><span style="display:flex;"><span>        processFile(filename, template, outPath)
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>main()
+</span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
