@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ahead-of-time on Chillpost.in</title>
-    <link>https://anubhavp.dev/blog/tags/ahead-of-time/</link>
+    <link>https://anubhavp.dev/paperblog/tags/ahead-of-time/</link>
     <description>Recent content in ahead-of-time on Chillpost.in</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 14 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/tags/ahead-of-time/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/paperblog/tags/ahead-of-time/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rust: The next C&#43;&#43; ?</title>
-      <link>https://anubhavp.dev/blog/posts/rust/</link>
+      <link>https://anubhavp.dev/paperblog/posts/rust/</link>
       <pubDate>Fri, 14 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/blog/posts/rust/</guid>
+      <guid>https://anubhavp.dev/paperblog/posts/rust/</guid>
       <description>Rust is a multi-paradigm systems programming language created to ensure high performance similar to that offered by C and C&#43;&#43; but with emphasis on code safety</description>
       <content:encoded><![CDATA[<p>Rust is a multi-paradigm systems programming language created to ensure high performance similar to that offered by C and C++, but with emphasis on code safety, the lack of which is probably why C and C++ are painful to deal with. It accomplishes memory safety without using a dedicated garbage collector. Rust is also an ahead-of-time compiled language, which means that you can compile a rust program, give it to someone else, and they can run it even without having Rust installed. However, Rust has more than just memory safety on its side. High performance while processing large amounts of data, support for concurrent programming, and an effective compiler are other reasons why well-known software heavyweights such as Firefox, Dropbox, Cloudflare, and many web-3 startups and large corporations use Rust in production.</p>
 <p>Some questions that may come to your mind are:</p>

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>web on Chillpost.in</title>
-    <link>https://anubhavp.dev/blog/tags/web/</link>
+    <link>https://anubhavp.dev/paperblog/tags/web/</link>
     <description>Recent content in web on Chillpost.in</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 14 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/paperblog/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>QTree</title>
-      <link>https://anubhavp.dev/blog/posts/qtree/</link>
+      <link>https://anubhavp.dev/paperblog/posts/qtree/</link>
       <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/blog/posts/qtree/</guid>
+      <guid>https://anubhavp.dev/paperblog/posts/qtree/</guid>
       <description>Inspired by KoalasToTheMax, QTree is a short live demonstration of image compression and decompression using Quadtrees that partition a two-dimensional image by recursively subdividing it into four quadrants.</description>
       <content:encoded><![CDATA[<p>I stumbled upon <a href="https://koalastothemax.com/">KoalasToTheMax</a> while reading a blog post about the most exciting web pages built for fun, and I was blown away. <a href="https://injuly.in/">Srijan</a> explained how it works, and we were inspired to create something similar.</p>
 <p>But first, let&rsquo;s get into the basics of the data structures used in our project.</p>

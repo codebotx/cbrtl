@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>project, markdown, javascript, html, css on Chillpost.in</title>
-    <link>https://anubhavp.dev/blog/tags/project-markdown-javascript-html-css/</link>
+    <link>https://anubhavp.dev/paperblog/tags/project-markdown-javascript-html-css/</link>
     <description>Recent content in project, markdown, javascript, html, css on Chillpost.in</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 29 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/blog/tags/project-markdown-javascript-html-css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anubhavp.dev/paperblog/tags/project-markdown-javascript-html-css/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>zuzu: A Static Site Generator (SSG)</title>
-      <link>https://anubhavp.dev/blog/posts/zuzu/</link>
+      <link>https://anubhavp.dev/paperblog/posts/zuzu/</link>
       <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://anubhavp.dev/blog/posts/zuzu/</guid>
+      <guid>https://anubhavp.dev/paperblog/posts/zuzu/</guid>
       <description>Zuzu is a static site generator that converts all your markdown files into static htmls pages. It uses Github falvoured Markdown CSS and highlight js to beautify code snippets.</description>
       <content:encoded><![CDATA[<p>Zuzu is a static site generator that takes in markdown files and render htmls pages. <a href="https://anubhavp.dev/oldblog">This blog</a>, for example, has been written using this generator. This enables noobs like me to write blogs without having to learn a lot of code! It is a very simple and easy to use generator. All you need to do is to write a markdown file and it will be rendered as a page ;) You can create a new page by creating a new markdown file.</p>
 <h2 id="how-does-it-work">How does it work?</h2>
